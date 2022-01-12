@@ -402,13 +402,13 @@ knitr::include_graphics("image/dimensionesAreaTrabajo.svg")
 .panelset[
 .panel[.panel-name[Obtener objetivo de biopsia]
 ```{r GUI_tab1, echo=FALSE,out.width = '70%', fig.align='center'}
-knitr::include_graphics("image/GUI_mainRUN.png")
+knitr::include_graphics("image/GUI_inicio.png")
 ```
 ]
 
 .panel[.panel-name[Definición de inserción]
 ```{r GUI_tab11, echo=FALSE,out.width = '70%', fig.align='center'}
-knitr::include_graphics("image/GUI_mainInsertionAngleRUN.png")
+knitr::include_graphics("image/GUI_inserion.png")
 ```
 ]
 
@@ -420,7 +420,7 @@ knitr::include_graphics("image/GUI_prePlacementSetSafetyPositionRUN.png")
 
 .panel[.panel-name[Posposicionamiento]
 ```{r GUI_tab3, echo=FALSE,out.width = '70%', fig.align='center'}
-knitr::include_graphics("image/biopsyRobotResult.png")
+knitr::include_graphics("image/GUI_resumen.png")
 ```
 ]
 ]
