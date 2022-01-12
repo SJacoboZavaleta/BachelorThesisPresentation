@@ -1,7 +1,7 @@
 .pull-leftNN[
 ## Del Modelamiento: .orange[Dispositivo sujetador]
 ```{r resCopasSujetador, echo=FALSE, fig.cap="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.", out.width = '95%'}
-knitr::include_graphics("image/copasSUjetadores.svg")
+knitr::include_graphics("image/tipoSujetadores.png")
 ```
 ]
 
@@ -400,19 +400,19 @@ knitr::include_graphics("image/dimensionesAreaTrabajo.svg")
 ---
 ## De la simulación. .orange[De la GUI]
 .panelset[
-.panel[.panel-name[Getting Biopsy Target]
+.panel[.panel-name[Obtener objetivo de biopsia]
 ```{r GUI_tab1, echo=FALSE,out.width = '70%', fig.align='center'}
 knitr::include_graphics("image/GUI_mainRUN.png")
 ```
 ]
 
-.panel[.panel-name[Defining Biopsy Target]
+.panel[.panel-name[Definición de inserción]
 ```{r GUI_tab11, echo=FALSE,out.width = '70%', fig.align='center'}
 knitr::include_graphics("image/GUI_mainInsertionAngleRUN.png")
 ```
 ]
 
-.panel[.panel-name[Preposcionamiento]
+.panel[.panel-name[Preposicionamiento]
 ```{r GUI_tab2, echo=FALSE,out.width = '70%', fig.align='center'}
 knitr::include_graphics("image/GUI_prePlacementSetSafetyPositionRUN.png")
 ```

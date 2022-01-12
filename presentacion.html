@@ -4,7 +4,7 @@
     <title>Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</title>
     <meta charset="utf-8" />
     <meta name="author" content="Br. Sergio Augusto Antenor Jácobo Zavaleta" />
-    <meta name="date" content="2022-01-11" />
+    <meta name="date" content="2022-01-12" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -14,6 +14,10 @@
     <script src="libs/freezeframe/freezeframe.min.js"></script>
     <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
     <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="Rutgers.css" type="text/css" />
@@ -27,7 +31,7 @@ class: center, middle, inverse, title-slide
 # Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama
 ## Tesis para obtar el Título Profesional de Ingeniero Mecatrónico
 ### Br. Sergio Augusto Antenor Jácobo Zavaleta
-### 2022-01-11
+### 2022-01-12
 
 ---
 
@@ -35,11 +39,6 @@ class: center, middle, inverse, title-slide
 
 
 <style>.panelset{--panel-tab-active-foreground: #0051BA;--panel-tab-hover-foreground: #d22;--panel-tab-font-family: Roboto;}</style>
-
-
-
-
-
 ---
 class: inverse, center, middle 
 # Introducción
@@ -770,7 +769,7 @@ class: inverse, center, middle
 .pull-leftNN[
 ## Del Modelamiento: .orange[Dispositivo sujetador]
 &lt;div class="figure"&gt;
-&lt;img src="image/copasSUjetadores.svg" alt="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D." width="95%" /&gt;
+&lt;img src="image/tipoSujetadores.png" alt="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D." width="95%" /&gt;
 &lt;p class="caption"&gt;Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.&lt;/p&gt;
 &lt;/div&gt;
 ]
@@ -1144,15 +1143,15 @@ Utilizando la función **getPathtPlanner**.
 ---
 ## De la simulación. .orange[De la GUI]
 .panelset[
-.panel[.panel-name[Getting Biopsy Target]
+.panel[.panel-name[Obtener objetivo de biopsia]
 &lt;img src="image/GUI_mainRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
-.panel[.panel-name[Defining Biopsy Target]
+.panel[.panel-name[Definición de inserción]
 &lt;img src="image/GUI_mainInsertionAngleRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
-.panel[.panel-name[Preposcionamiento]
+.panel[.panel-name[Preposicionamiento]
 &lt;img src="image/GUI_prePlacementSetSafetyPositionRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
@@ -1267,13 +1266,21 @@ class: inverse, center, middle
 
 
 * Un robot clínico para guiado de biopsias percutáneas de mama requiere de la definición del órgano femenino como espacio de trabajo (forma, dimensiones y ubicación). 
+--
 * Una biopsia percutánea de mama guiada robóticamente y asistida por US 3D impulsa la descripción de un nuevo flujo de trabajo clínico en el servicio de Diagnóstico por Imágenes. 
+--
 * La morfología de un robot clínico para guiado de biopsias percutáneas de mama asistido por US 3D requiere del estudio comparativo entre las principales técnicas convencionales de biopsia de mama (ventajas, desventajas y procedimientos). 
+--
 * La propuesta de un dispositivo sujetador de mama con forma cónica truncada, tapas desplegables y material fotoacústico puede unir de forma secuencial las etapas de adquisición de imágenes con US 3D y biopsia percutánea para mejora el diagnóstico temprano de cáncer de mama. 
+--
 * La cinemática directa del robot basada en la teoría de screw theory permite obtener un modelo cinemático general, sencillo y de fácil implementación, sin la dependencia de múltiples frames por cada DOF. Todo lo contrario, para el modelo de cinemática inversa que utiliza un método intuitivo, a partir de cálculos geométricos y algebraicos, para obtener una solución particular, rápida y siempre convergente.
+--
 * Los modelos dinámicos inverso y directo basados en el algoritmo de Newton-Euler y soluciones parciales de la ecuación dinámica para cuerpos rígidos (cinemáticamente compatibles), permiten metódicamente obtener los torques y aceleraciones robóticas respectivamente. 
+--
 * La implementación de modelos CAD para el robot y demás elementos involucrados en el espacio de trabajo, facilitan la verificación espacial del procedimiento de biopsia guiado robóticamente y su interacción con los mismos. Además, de simplificar el cálculo de variables dinámicas como masas y momentos de inercia. 
+--
 * La inserción de agujas rígidas en línea recta (sin deflexiones) para una biopsia percutánea de mama implica la generación de trayectorias simples a partir del movimiento rectilíneo del efector final por desplazamiento manual y controlado del médico radiólogo. 
+--
 * La simulación por computador permite explorar el concepto de guiado robótico y verificar de forma visual, gráfica y numérica su influencia en una biopsia percutánea de mama asistida por US 3D.
 
 ---
