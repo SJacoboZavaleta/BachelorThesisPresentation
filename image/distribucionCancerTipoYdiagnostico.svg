@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="152.30193mm"
+   height="183.62096mm"
+   viewBox="0 0 152.30193 183.62096"
+   version="1.1"
+   id="svg1733"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="distribucionCancerTipoYdiagnostico.svg">
+  <defs
+     id="defs1727">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1757">
+      <path
+         d="M 0,0 H 595.276 V 841.89 H 0 Z"
+         id="path1755" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1861">
+      <path
+         d="M 67.266,418.592 H 524.409 V 659.055 H 67.266 Z"
+         id="path1859" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1873">
+      <path
+         d="M 80.023,418.592 H 511.658 V 659.055 H 80.023 Z"
+         id="path1871" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1883">
+      <path
+         d="m 260.645,435.751 h 241.806 v 214.01 H 260.645 Z"
+         id="path1881" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1899">
+      <path
+         d="M 80.023,418.592 H 511.658 V 659.055 H 80.023 Z"
+         id="path1897" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2023">
+      <path
+         d="M 67.266,82.204 H 528.718 V 347.952 H 67.266 Z"
+         id="path2021" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.96407581"
+     inkscape:cx="164.00681"
+     inkscape:cy="389.52089"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1743"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1730">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-33.255181,-63.32758)">
+    <g
+       id="g1743"
+       inkscape:label="boletinEpidemiologico_2020SE36"
+       transform="matrix(0.35277777,0,0,-0.35277777,213.11232,299.78461)">
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9px;font-family:Ebrima;-inkscape-font-specification:Ebrima-Bold;writing-mode:lr-tb;fill:#00070c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text1773"
+         x="-466.27817"
+         y="-663.50433"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-440.93417 -434.30118 -431.74518 -427.78519 -424.28418 -420.70218 -418.14618 -412.56616 -407.12119 -402.80118 -400.24518 -394.74619 -389.30118 -386.81717 -381.24619 -376.37717 -373.89316 -371.33716 -365.83817 -361.87817 -359.39417 -355.07416 -350.23218 -346.27219 -340.77316 -336.81317 -334.32916 -328.75818 -323.88916 -321.40518 -317.08517 -312.24316 -306.79819 -302.47818 -297.60916 -294.02716 -291.54318 -285.96317 -280.46417 -276.88217 -274.39816 -271.84216 -266.34317 -262.02316 -257.18118 -254.62517 -252.06917 -247.75816 -242.91617 -238.59616 -236.04016 -230.54117 -225.09616 -222.61217 -219.11116 -213.61217 -208.03217 -202.53317 -196.96216 -193.38016 -188.53818 -182.53516 -178.21518 -173.37317 -170.88916 -166.04718 -163.56317 -159.60318 -154.73416 -149.76617 -144.26718 -141.82816 -139.34418 -133.81818 -128.94916 -125.36716 -119.92219 -117.48316"
+           sodipodi:role="line"
+           id="tspan1771">Distribución de los casos de cáncer por localización topográfca y sexo, Perú.</tspan></text>
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9px;font-family:Ebrima;-inkscape-font-specification:Ebrima-Bold;writing-mode:lr-tb;fill:#00070c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text1777"
+         x="-345.54727"
+         y="-652.70435"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-345.54727 -340.02127 -336.43927 -333.88327 -325.63928 -320.77026 -317.18826 -314.70428 -310.74426 -305.87527 -297.63129 -292.76227 -288.80228 -285.30127 -281.71927 -276.85028 -274.36627 -268.79529 -263.92627 -261.37027 -258.88626 -253.71127 -248.53627 -243.36128"
+           y="-652.70435"
+           sodipodi:role="line"
+           id="tspan1775">Primer semestre del 2020</tspan></text>
+      <text
+         transform="scale(1,-1)"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#00070c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text1849"
+         x="-495.62259"
+         y="-394.44775"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           sodipodi:role="line"
+           id="tspan2442"
+           x="-495.62259"
+           y="-394.44775">Base del diagnóstico en los tumores malignos al primer semestre del año 2020</tspan></text>
+      <g
+         id="g1877"
+         transform="translate(-589.85357,-10.384746)"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002">
+        <g
+           id="g1879"
+           clip-path="url(#clipPath1883)">
+          <path
+             d="m 337.059,449.003 h 4.044 V 436.87 h -4.044 z m -5.593,13.338 h 9.638 v -12.133 h -9.638 z m 3.184,13.338 h 6.454 v -12.133 h -6.454 z m 2.409,13.338 h 4.044 v -12.133 h -4.044 z m -5.593,13.338 h 9.638 v -12.133 h -9.638 z m 4.819,13.338 h 4.819 V 503.56 h -4.819 z m -4.819,13.338 h 9.638 v -12.133 h -9.638 z m 4.819,26.676 h 4.819 v -12.133 h -4.819 z m -41.047,13.338 h 45.866 v -12.133 h -45.866 z m 37.002,13.338 h 8.863 V 570.25 h -8.863 z m -4.044,13.338 h 12.908 v -12.133 h -12.908 z m -40.961,13.338 h 53.868 v -12.133 h -53.868 z m 25.73,13.338 h 28.139 v -12.133 h -28.139 z"
+             style="fill:#a5a5a5;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1885" />
+          <path
+             d="m 341.104,449.003 h 3.184 V 436.87 h -3.184 z m 0,13.338 h 5.593 v -12.133 h -5.593 z m 0,13.338 h 6.454 v -12.133 h -6.454 z m 0,13.338 h 8.089 v -12.133 h -8.089 z m 0,13.338 h 8.863 v -12.133 h -8.863 z m 0,13.338 h 9.638 V 503.56 h -9.638 z m 0,13.338 h 9.638 v -12.133 h -9.638 z m 0,13.338 h 10.498 v -12.133 h -10.498 z m 0,13.338 h 11.273 v -12.133 h -11.273 z m 0,26.676 h 15.317 V 570.25 h -15.317 z m 0,13.338 h 16.092 v -12.133 h -16.092 z m 0,13.338 h 36.228 v -12.133 h -36.228 z m 0,13.338 h 37.777 v -12.133 h -37.777 z m 0,13.338 h 58.687 v -12.133 h -58.687 z m 0,13.338 H 465.019 V 636.94 H 341.104 Z"
+             style="fill:#ffc000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1887" />
+          <path
+             d="m 337.059,449.003 h 4.044 V 436.87 h -4.044 z m -5.593,13.338 h 9.638 v -12.133 h -9.638 z m 3.184,13.338 h 6.454 v -12.133 h -6.454 z m 2.409,13.338 h 4.044 v -12.133 h -4.044 z m -5.593,13.338 h 9.638 v -12.133 h -9.638 z m 4.819,13.338 h 4.819 V 503.56 h -4.819 z m -4.819,13.338 h 9.638 v -12.133 h -9.638 z m 4.819,26.676 h 4.819 v -12.133 h -4.819 z m -41.047,13.338 h 45.866 v -12.133 h -45.866 z m 37.002,13.338 h 8.863 V 570.25 h -8.863 z m -4.044,13.338 h 12.908 v -12.133 h -12.908 z m -40.961,13.338 h 53.868 v -12.133 h -53.868 z m 25.73,13.338 h 28.139 v -12.133 h -28.139 z"
+             style="fill:#5b9bd5;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1889" />
+          <path
+             d="m 341.104,449.003 h 3.184 V 436.87 h -3.184 z m 0,13.338 h 5.593 v -12.133 h -5.593 z m 0,13.338 h 6.454 v -12.133 h -6.454 z m 0,13.338 h 8.089 v -12.133 h -8.089 z m 0,13.338 h 8.863 v -12.133 h -8.863 z m 0,13.338 h 9.638 V 503.56 h -9.638 z m 0,13.338 h 9.638 v -12.133 h -9.638 z m 0,13.338 h 10.498 v -12.133 h -10.498 z m 0,13.338 h 11.273 v -12.133 h -11.273 z m 0,26.676 h 15.317 V 570.25 h -15.317 z m 0,13.338 h 16.092 v -12.133 h -16.092 z m 0,13.338 h 36.228 v -12.133 h -36.228 z m 0,13.338 h 37.777 v -12.133 h -37.777 z m 0,13.338 h 58.687 v -12.133 h -58.687 z m 0,13.338 H 465.019 V 636.94 H 341.104 Z"
+             style="fill:#ed7d31;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1891" />
+        </g>
+      </g>
+      <g
+         id="g1893"
+         transform="translate(-589.85357,-10.384746)"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002">
+        <g
+           id="g1895"
+           clip-path="url(#clipPath1899)">
+          <g
+             id="g1901"
+             transform="translate(260.6451,436.2672)">
+            <path
+               d="M 0,0 H 241.375"
+               style="fill:none;stroke:#898989;stroke-width:0.344;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path1903" />
+          </g>
+          <g
+             id="g1905"
+             transform="translate(260.6451,436.2672)">
+            <path
+               d="M 0,0 V -2.237 M 40.272,0 V -2.237 M 80.458,0 V -2.237 M 120.645,0 V -2.237 M 160.917,0 V -2.237 M 201.103,0 V -2.237 M 241.375,0 v -2.237"
+               style="fill:none;stroke:#898989;stroke-width:0.344;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path1907" />
+          </g>
+          <g
+             id="g1909"
+             transform="translate(341.1036,436.2672)">
+            <path
+               d="M 0,0 V 213.409"
+               style="fill:none;stroke:#898989;stroke-width:0.344;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path1911" />
+          </g>
+          <g
+             id="g1913"
+             transform="translate(338.8662,436.2672)">
+            <path
+               d="M 0,0 H 2.237 M 0,13.338 H 2.237 M 0,26.676 H 2.237 M 0,40.014 H 2.237 M 0,53.352 H 2.237 M 0,66.69 H 2.237 M 0,80.028 H 2.237 M 0,93.366 H 2.237 M 0,106.704 H 2.237 M 0,120.042 H 2.237 M 0,133.38 H 2.237 M 0,146.718 H 2.237 M 0,160.056 H 2.237 M 0,173.394 H 2.237 M 0,186.732 H 2.237 M 0,200.07 H 2.237 M 0,213.409 h 2.237"
+               style="fill:none;stroke:#898989;stroke-width:0.344;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path1915" />
+          </g>
+        </g>
+      </g>
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.1423px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2009"
+         x="-262.88327"
+         y="-430.13416"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-262.88327 -260.73343"
+           y="-430.13416"
+           sodipodi:role="line"
+           id="tspan1917">-5</tspan><tspan
+           x="-272.13971 -269.98987 -266.37585"
+           y="-443.47598"
+           sodipodi:role="line"
+           id="tspan1919">-12</tspan><tspan
+           x="-265.29736 -263.14755"
+           y="-456.81778"
+           sodipodi:role="line"
+           id="tspan1921">-8</tspan><tspan
+           x="-262.88327 -260.73343"
+           y="-470.15961"
+           sodipodi:role="line"
+           id="tspan1923">-5</tspan><tspan
+           x="-272.13971 -269.98987 -266.37585"
+           y="-483.50143"
+           sodipodi:role="line"
+           id="tspan1925">-12</tspan><tspan
+           x="-263.69037 -261.54053"
+           y="-496.84323"
+           sodipodi:role="line"
+           id="tspan1927">-6</tspan><tspan
+           x="-272.13971 -269.98987 -266.37585"
+           y="-510.18506"
+           sodipodi:role="line"
+           id="tspan1929">-12</tspan><tspan
+           x="-263.69037 -261.54053"
+           y="-536.86151"
+           sodipodi:role="line"
+           id="tspan1931">-6</tspan><tspan
+           x="-308.34402 -306.19418 -302.58017"
+           y="-550.20337"
+           sodipodi:role="line"
+           id="tspan1933">-57</tspan><tspan
+           x="-271.34689 -269.19705 -265.58307"
+           y="-563.54517"
+           sodipodi:role="line"
+           id="tspan1935">-11</tspan><tspan
+           x="-275.36801 -273.21817 -269.60419"
+           y="-576.88696"
+           sodipodi:role="line"
+           id="tspan1937">-16</tspan><tspan
+           x="-316.39337 -314.24356 -310.62955"
+           y="-590.22882"
+           sodipodi:role="line"
+           id="tspan1939">-67</tspan><tspan
+           x="-290.65253 -288.50272 -284.8887"
+           y="-603.57062"
+           sodipodi:role="line"
+           id="tspan1941">-35</tspan><tspan
+           x="-241.28496"
+           y="-430.16986"
+           id="tspan1943">4</tspan><tspan
+           x="-238.87086"
+           y="-443.51169"
+           id="tspan1945">7</tspan><tspan
+           x="-238.06378"
+           y="-456.85349"
+           id="tspan1947">8</tspan><tspan
+           x="-236.44247 -232.82848"
+           y="-470.19531"
+           sodipodi:role="line"
+           id="tspan1949">10</tspan><tspan
+           x="-235.63539 -232.02139"
+           y="-483.53714"
+           sodipodi:role="line"
+           id="tspan1951">11</tspan><tspan
+           x="-234.82832 -231.21431"
+           y="-496.87894"
+           sodipodi:role="line"
+           id="tspan1953">12</tspan><tspan
+           x="-234.82832 -231.21431"
+           y="-510.22076"
+           sodipodi:role="line"
+           id="tspan1955">12</tspan><tspan
+           x="-234.02124 -230.40723"
+           y="-523.56256"
+           sodipodi:role="line"
+           id="tspan1957">13</tspan><tspan
+           x="-233.21416 -229.60016"
+           y="-536.90442"
+           sodipodi:role="line"
+           id="tspan1959">14</tspan><tspan
+           x="-229.19304 -225.57904"
+           y="-563.58087"
+           sodipodi:role="line"
+           id="tspan1961">19</tspan><tspan
+           x="-228.38596 -224.77196"
+           y="-576.92267"
+           sodipodi:role="line"
+           id="tspan1963">20</tspan><tspan
+           x="-208.27324 -204.65924"
+           y="-590.26453"
+           sodipodi:role="line"
+           id="tspan1965">45</tspan><tspan
+           x="-206.66623 -203.05223"
+           y="-603.60632"
+           sodipodi:role="line"
+           id="tspan1967">47</tspan><tspan
+           x="-185.75357 -182.13957"
+           y="-616.94812"
+           sodipodi:role="line"
+           id="tspan1969">73</tspan><tspan
+           x="-120.58723 -116.97322 -113.35922"
+           y="-630.28998"
+           sodipodi:role="line"
+           id="tspan1971">154</tspan><tspan
+           x="-334.63483 -331.02081 -327.3204 -292.59525 -288.98123"
+           y="-414.61392"
+           sodipodi:role="line"
+           id="tspan1973">10050</tspan><tspan
+           x="-250.55566 -212.15152 -208.53751 -173.74738 -170.13336 -166.43294 -133.52907 -129.91507 -126.21465 -93.310791 -89.696777 -85.996353"
+           y="-414.61392"
+           sodipodi:role="line"
+           id="tspan1975">050100150200</tspan><tspan
+           x="-404.02228 -400.49396 -394.38446 -392.74887 -388.96201 -385.43372 -383.79813 -382.16327 -378.72137 -377.08578 -373.90247 -370.28775 -368.56647 -366.93158 -363.57471 -360.13284 -358.49725 -354.71112 -352.21487 -350.58002 -346.79388 -343.43771 -340.85648 -339.22089"
+           y="-430.60556"
+           sodipodi:role="line"
+           id="tspan1977">TM de la vejiga urinaria</tspan><tspan
+           x="-508.74268 -505.21439 -499.10486 -497.46927 -493.68314 -490.15485 -488.51926 -484.73383 -482.32474 -479.82922 -476.38663 -473.63327 -471.99768 -468.21155 -464.76895 -462.27414 -459.86435 -456.33676 -453.49698 -451.86139 -448.67737 -447.04178 -445.40689 -441.96429 -439.12454 -437.48895 -433.78851 -430.00311 -428.36752 -424.75281 -421.99945 -418.21332 -414.685 -411.5874 -409.95251 -407.80127 -406.16638 -403.06805 -399.62546 -395.92505 -392.48245 -389.64267 -388.00708 -384.30737 -380.69266 -379.05707 -377.42148 -373.97888 -371.22552 -369.58994 -366.31949 -364.68463 -361.24203 -358.48868 -356.85309 -353.06696 -351.43137 -349.79651 -348.16162 -344.71902 -342.22351 -338.6095"
+           y="-443.94736"
+           sodipodi:role="line"
+           id="tspan1979">TM de otras partes y las no especificadas de las vías biliares</tspan><tspan
+           x="-481.90906 -478.38077 -472.27124 -470.63565 -466.84879 -463.3205 -461.68564 -460.05005 -456.26392 -454.62903 -451.27216 -447.82956 -444.04343 -440.25729 -438.6217 -435.43839 -433.8028 -430.78876 -427.00189 -423.21576 -419.42963 -415.64279 -412.62875 -410.21964 -406.4335 -403.67944 -402.04385 -398.25772 -396.62213 -394.98724 -393.35239 -389.91052 -387.41428 -383.80026 -381.04691 -379.41132 -377.77646 -373.99033 -371.58051 -369.08499 -365.64313 -364.00754 -360.22141 -356.69308 -352.90625 -349.46439 -347.05457 -345.41968 -342.40564 -338.61951"
+           y="-457.28918"
+           sodipodi:role="line"
+           id="tspan1981">TM del hígado y conductos biliares intra hepáticos</tspan><tspan
+           x="-373.13895 -369.61066 -363.50113 -361.86554 -358.0787 -354.55042 -352.91553 -351.27994 -348.78442 -347.14957 -343.3627 -339.57657"
+           y="-470.63098"
+           sodipodi:role="line"
+           id="tspan1983">TM del riñón</tspan><tspan
+           x="-500.28619 -496.7579 -490.64838 -489.01279 -485.22665 -481.69836 -480.06277 -478.42789 -474.64249 -471.8884 -470.25281 -467.41376 -465.77817 -462.93909 -460.5293 -457.00101 -451.23572 -447.88028 -445.0405 -443.40491 -439.61877 -436.09119 -430.32523 -426.88263 -424.47354 -420.68811 -416.98767 -413.20227 -409.93253 -406.40424 -403.99512 -402.35953 -399.26193 -395.4765 -393.84091 -390.65689 -389.0213 -386.52576 -382.91177 -380.58838 -378.8671 -375.8559 -372.06903 -370.43417 -366.64874 -365.01315 -361.48486 -357.69873 -353.9126 -350.1272 -347.8038 -344.18979 -342.5549 -340.92004 -337.47745"
+           y="-483.97281"
+           sodipodi:role="line"
+           id="tspan1985">TM de los sistemas hematopoyético y retículo endotelial</tspan><tspan
+           x="-417.67834 -414.15005 -408.04053 -406.40494 -402.6181 -399.08978 -397.45422 -395.81934 -392.0332 -389.27911 -387.64355 -384.20166 -380.84549 -377.05936 -373.70248 -371.9812 -370.34631 -366.55948 -363.80612 -362.17053 -360.53564 -358.90005 -355.11392 -352.87625 -349.52008 -347.11099 -345.4761 -342.37778 -338.59164"
+           y="-497.31464"
+           sodipodi:role="line"
+           id="tspan1987">TM de los ganglios linfáticos</tspan><tspan
+           x="-435.01984 -431.49155 -425.38202 -423.74643 -419.96103 -416.43274 -414.79715 -413.16226 -409.37613 -406.62207 -404.98648 -401.20105 -398.70554 -394.9194 -391.134 -387.34857 -383.64813 -381.92685 -378.14072 -375.38736 -373.75177 -370.48059 -368.845 -365.14529 -361.53128 -359.89642 -358.26083 -354.4754 -350.7757 -349.14011 -343.37485 -339.58871"
+           y="-510.65643"
+           sodipodi:role="line"
+           id="tspan1989">TM de los bronquios y del pulmón</tspan><tspan
+           x="-376.05301 -372.52472 -366.41519 -364.7796 -360.99277 -357.46518 -355.82959 -354.194 -350.40787 -347.13812 -343.78125 -341.28574 -339.56442"
+           y="-523.99823"
+           sodipodi:role="line"
+           id="tspan1991">TM del ovario</tspan><tspan
+           x="-433.29141 -429.76312 -423.65359 -422.01801 -418.23117 -414.70285 -413.06729 -410.31393 -408.59262 -406.26923 -404.54794 -400.76181 -399.21265 -395.42651 -392.931 -391.29611 -385.53012 -382.08826 -379.59274 -377.95786 -374.17102 -372.53543 -368.7493 -365.22101 -362.38123 -359.36719 -355.58105 -351.79492 -348.00806 -344.99402 -343.35913 -339.573"
+           y="-537.34009"
+           sodipodi:role="line"
+           id="tspan1993">TM de sitio primario desconocido</tspan><tspan
+           x="-418.39972 -414.87143 -408.7619 -407.12631 -403.33948 -399.81116 -398.17557 -396.54071 -393.09885 -391.46326 -388.10635 -386.4715 -383.0296 -379.24347 -375.45663 -371.75693 -370.12134 -366.67947 -365.04388 -361.25775 -358.76224 -354.97537 -352.13559 -349.81219 -346.37033 -343.96051 -342.32565 -339.22803"
+           y="-550.68188"
+           sodipodi:role="line"
+           id="tspan1995">TM de la glándula prostática</tspan><tspan
+           x="-372.96042 -369.4321 -363.32257 -361.68698 -357.90085 -354.37256 -352.7377 -351.10211 -348.6066 -345.07828 -341.98068 -339.57086"
+           y="-564.02368"
+           sodipodi:role="line"
+           id="tspan1997">TM del recto</tspan><tspan
+           x="-373.6889 -370.16061 -364.05109 -362.4155 -358.62866 -355.10037 -353.46548 -351.8299 -348.81586 -345.02972 -343.39484 -339.608"
+           y="-577.36554"
+           sodipodi:role="line"
+           id="tspan1999">TM del colon</tspan><tspan
+           x="-386.55219 -383.0239 -376.9144 -375.27881 -371.49265 -367.96436 -366.3295 -364.69391 -361.16562 -358.32584 -355.91672 -352.12988 -346.45175 -343.00916 -339.56729"
+           y="-590.70734"
+           sodipodi:role="line"
+           id="tspan2001">TM del estómago</tspan><tspan
+           x="-373.36038 -369.83206 -363.72256 -362.08698 -358.30084 -354.77252 -353.13696 -351.50208 -348.06021 -346.42462 -342.72491 -341.0036 -337.47531"
+           y="-604.04913"
+           sodipodi:role="line"
+           id="tspan2003">TM de la piel</tspan><tspan
+           x="-381.05978 -377.53146 -371.42194 -369.78638 -366.00024 -362.47192 -360.83633 -359.20148 -355.75961 -354.12402 -348.44589 -345.004 -339.23804"
+           y="-617.39099"
+           sodipodi:role="line"
+           id="tspan2005">TM de la mama</tspan><tspan
+           x="-398.17273 -394.64444 -388.53491 -386.89932 -383.11246 -379.58417 -377.94928 -376.31372 -373.29965 -369.51352 -365.98523 -364.26395 -362.62906 -358.84293 -357.29376 -353.50763 -351.09781 -347.48383 -344.98831 -343.35342 -339.56659"
+           y="-630.73279"
+           sodipodi:role="line"
+           id="tspan2007">TM del cuello uterino</tspan></text>
+      <g
+         id="g2011"
+         transform="translate(-329.12247,638.34425)"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002">
+        <path
+           d="M 0,0 V -212.119"
+           style="fill:none;stroke:#a6a6a6;stroke-width:0.344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+           id="path2013" />
+      </g>
+      <g
+         id="g2017"
+         transform="translate(-602.31527,39.692543)"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002">
+        <g
+           id="g2019"
+           clip-path="url(#clipPath2023)">
+          <g
+             id="g2025"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="M 0,0 19.143,78.103 C 13.018,79.579 6.612,80.361 0.01,80.362 Z"
+               style="fill:#5b9bd5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2027" />
+          </g>
+          <g
+             id="g2029"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="M 0,0 19.143,78.103 C 13.018,79.579 6.612,80.361 0.01,80.362 Z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2031" />
+          </g>
+          <g
+             id="g2033"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 34.017,72.924 c -4.707,2.18 -9.666,3.92 -14.826,5.167 z"
+               style="fill:#ed7d31;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2035" />
+          </g>
+          <g
+             id="g2037"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 34.017,72.924 c -4.707,2.18 -9.666,3.92 -14.826,5.167 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2039" />
+          </g>
+          <g
+             id="g2041"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 58.474,55.328 c -6.9,7.294 -15.163,13.281 -24.4,17.569 z"
+               style="fill:#a5a5a5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2043" />
+          </g>
+          <g
+             id="g2045"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 58.474,55.328 c -6.9,7.294 -15.163,13.281 -24.4,17.569 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2047" />
+          </g>
+          <g
+             id="g2049"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 67.799,43.379 c -2.716,4.258 -5.822,8.238 -9.271,11.891 z"
+               style="fill:#ffc000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2051" />
+          </g>
+          <g
+             id="g2053"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 67.799,43.379 c -2.716,4.258 -5.822,8.238 -9.271,11.891 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2055" />
+          </g>
+          <g
+             id="g2057"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 72.243,35.448 c -1.328,2.724 -2.805,5.359 -4.421,7.896 z"
+               style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2059" />
+          </g>
+          <g
+             id="g2061"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 72.243,35.448 c -1.328,2.724 -2.805,5.359 -4.421,7.896 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2063" />
+          </g>
+          <g
+             id="g2065"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 77.248,22.391 c -1.291,4.515 -2.963,8.862 -4.98,13.006 z"
+               style="fill:#70ad47;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2067" />
+          </g>
+          <g
+             id="g2069"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 77.248,22.391 c -1.291,4.515 -2.963,8.862 -4.98,13.006 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2071" />
+          </g>
+          <g
+             id="g2073"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 80.161,5.768 c -0.4,5.751 -1.396,11.328 -2.927,16.67 z"
+               style="fill:#255e91;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2075" />
+          </g>
+          <g
+             id="g2077"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 80.161,5.768 c -0.4,5.751 -1.396,11.328 -2.927,16.67 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2079" />
+          </g>
+          <g
+             id="g2081"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="m 0,0 79.834,-9.339 c 0.349,3.062 0.528,6.178 0.528,9.339 0,1.94 -0.068,3.863 -0.201,5.768 z"
+               style="fill:#9e480e;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2083" />
+          </g>
+          <g
+             id="g2085"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="m 0,0 79.834,-9.339 c 0.349,3.062 0.528,6.178 0.528,9.339 0,1.94 -0.068,3.863 -0.201,5.768 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2087" />
+          </g>
+          <g
+             id="g2089"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="M 0,0 -7.814,79.993 C -48.741,76.11 -80.362,42.008 -80.362,0 c 0,-44.645 35.717,-80.362 80.362,-80.362 41.484,0 75.259,30.838 79.834,71.023 z"
+               style="fill:#adb9ca;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2091" />
+          </g>
+          <g
+             id="g2093"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="M 0,0 -7.814,79.993 C -48.741,76.11 -80.362,42.008 -80.362,0 c 0,-44.645 35.717,-80.362 80.362,-80.362 41.484,0 75.259,30.838 79.834,71.023 z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2095" />
+          </g>
+          <g
+             id="g2097"
+             transform="translate(297.0444,248.1622)">
+            <path
+               d="M 0,0 -0.065,80.362 C -2.701,80.359 -5.306,80.233 -7.874,79.987 Z"
+               style="fill:#997300;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               id="path2099" />
+          </g>
+          <g
+             id="g2101"
+             transform="translate(297.0445,248.1622)">
+            <path
+               d="M 0,0 -0.065,80.362 C -2.701,80.359 -5.306,80.233 -7.874,79.987 Z"
+               style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path2103" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g2105"
+         transform="translate(-235.26057,327.25134)"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002">
+        <path
+           d="M 0,0 4.552,2.124 H 7.359"
+           style="fill:none;stroke:#a6a6a6;stroke-width:0.455;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path2107" />
+      </g>
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2129"
+         x="-294.64188"
+         y="-371.67645"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-294.64188 -289.55606"
+           y="-371.67645"
+           sodipodi:role="line"
+           id="tspan2109">4%</tspan><tspan
+           x="-278.10287 -273.01706"
+           y="-366.36862"
+           sodipodi:role="line"
+           id="tspan2111">3%</tspan><tspan
+           x="-254.86354 -249.77773"
+           y="-353.26056"
+           sodipodi:role="line"
+           id="tspan2113">6%</tspan><tspan
+           x="-241.33165 -236.24583"
+           y="-338.14438"
+           sodipodi:role="line"
+           id="tspan2115">3%</tspan><tspan
+           x="-227.00256 -221.91676"
+           y="-329.17358"
+           sodipodi:role="line"
+           id="tspan2117">2%</tspan><tspan
+           x="-228.10248 -223.01666"
+           y="-312.36212"
+           sodipodi:role="line"
+           id="tspan2119">3%</tspan><tspan
+           x="-224.03584 -218.95003"
+           y="-297.91196"
+           sodipodi:role="line"
+           id="tspan2121">3%</tspan><tspan
+           x="-225.65039 -220.56458"
+           y="-282.75543"
+           sodipodi:role="line"
+           id="tspan2123">3%</tspan><tspan
+           x="-339.21338 -334.12756 -329.04175"
+           y="-265.15692"
+           sodipodi:role="line"
+           id="tspan2125">72%</tspan><tspan
+           x="-313.05777 -307.97195"
+           y="-371.83789"
+           sodipodi:role="line"
+           id="tspan2127">1%</tspan></text>
+      <path
+         d="m -497.24427,203.86854 h 5.614 v -5.614 h -5.614 z"
+         style="fill:#5b9bd5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2131"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -497.24427,203.86854 h 5.614 v -5.614 h -5.614 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2133"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2137"
+         x="-489.11588"
+         y="-198.15204"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-489.11588 -483.72733 -478.71921 -475.15411 -471.73935 -469.46384 -466.35281 -464.07733 -459.75235 -454.89661 -449.58881 -444.27795 -441.99741 -436.68961 -431.6058 -429.33032 -424.02249 -419.0144 -415.90439 -410.59656 -405.28876 -401.03946 -398.68729 -393.37643"
+           y="-198.15204"
+           sodipodi:role="line"
+           id="tspan2135">Certificado de defunción</tspan></text>
+      <path
+         d="m -367.04927,203.86854 h 5.539 v -5.614 h -5.539 z"
+         style="fill:#ed7d31;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2139"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2143"
+         x="-358.98557"
+         y="-198.15204"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-358.98557 -353.59702 -351.24484 -348.96832 -343.66052 -341.30933 -337.06006"
+           y="-198.15204"
+           sodipodi:role="line"
+           id="tspan2141">Clínico</tspan></text>
+      <path
+         d="m -236.93027,203.86854 h 5.539 v -5.614 h -5.539 z"
+         style="fill:#a5a5a5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2145"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -236.92927,203.86854 h 5.539 v -5.614 h -5.539 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2147"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2151"
+         x="-228.85536"
+         y="-198.15204"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-228.85536 -226.27614 -218.23369 -213.37694 -208.59789 -203.58977 -198.27893 -193.27081"
+           y="-198.15204"
+           sodipodi:role="line"
+           id="tspan2149">Imágenes</tspan></text>
+      <path
+         d="m -497.24427,187.78354 h 5.614 v -5.539 h -5.614 z"
+         style="fill:#ffc000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2153"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -497.24427,187.78354 h 5.614 v -5.539 h -5.614 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2155"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2159"
+         x="-489.11588"
+         y="-182.13394"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-489.11588 -484.18445 -478.8736 -473.56177 -468.17523 -464.22971 -459.98041 -454.67261 -449.36176 -447.00958 -442.15384 -439.65027 -437.36972 -433.04477 -427.73697 -425.38477 -420.07697 -414.76611 -409.45831 -405.51376 -401.18881 -395.88101 -390.56915 -388.21695"
+           y="-182.13394"
+           sodipodi:role="line"
+           id="tspan2157">Endoscopía, colonoscopía</tspan></text>
+      <path
+         d="m -367.04927,187.78354 h 5.539 v -5.539 h -5.539 z"
+         style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2161"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -367.04927,187.78354 h 5.539 v -5.539 h -5.539 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2163"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2167"
+         x="-358.98557"
+         y="-182.13394"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-358.98557 -353.59906 -351.24686 -347.7554 -342.44455 -337.66452 -335.31232 -330.53226 -328.18109 -323.17398 -318.77332 -313.46149 -311.18597 -305.79846 -302.30701 -297.45126 -294.0365 -288.72565 -285.23422 -282.88202"
+           y="-182.13394"
+           sodipodi:role="line"
+           id="tspan2165">Cirugía exploratoria</tspan></text>
+      <path
+         d="m -236.93027,187.78354 h 5.539 v -5.539 h -5.539 z"
+         style="fill:#70ad47;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2169"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -236.92927,187.78354 h 5.539 v -5.539 h -5.539 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2171"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2175"
+         x="-228.85536"
+         y="-182.13394"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-228.85536 -223.92091 -219.52028 -214.66454 -206.62209 -201.53931 -196.23149 -191.22337 -187.27884 -184.99829 -179.69049 -177.3383 -172.02745 -166.71964 -161.41182 -159.05963 -151.0172 -148.66501 -144.41673 -139.03021"
+           y="-182.13394"
+           sodipodi:role="line"
+           id="tspan2173">Exámenes bioquímicos</tspan></text>
+      <path
+         d="m -497.24427,171.77454 h 5.614 v -5.539 h -5.614 z"
+         style="fill:#255e91;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2177"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -497.24427,171.77454 h 5.614 v -5.539 h -5.614 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2179"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2183"
+         x="-489.11588"
+         y="-166.11575"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-489.11588 -483.72934 -481.37717 -478.03708 -472.64954 -470.37909 -464.99155 -460.28818 -457.936 -453.08026 -450.57669 -448.29617 -442.98532 -437.90152 -429.86008 -425.00433 -421.5896 -416.27875 -413.92654 -408.61572 -403.83566 -401.55914"
+           y="-166.11575"
+           sodipodi:role="line"
+           id="tspan2181">Citología, hematología</tspan></text>
+      <path
+         d="m -367.04927,171.77454 h 5.539 v -5.539 h -5.539 z"
+         style="fill:#9e480e;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2185"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -367.04927,171.77454 h 5.539 v -5.539 h -5.539 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2187"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2191"
+         x="-358.98557"
+         y="-166.11575"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-358.98557 -352.68884 -350.33667 -346.39111 -342.98038 -337.67056 -335.39404 -330.00754 -325.22446 -322.94794 -318.09219 -315.81671 -310.50586 -305.49774 -303.14557 -295.10413 -290.09601 -286.68527 -281.82953 -277.884 -274.47327 -269.61752 -265.672 -263.39648"
+           y="-166.11575"
+           sodipodi:role="line"
+           id="tspan2189">Histología de metástasis</tspan></text>
+      <path
+         d="m -236.93027,171.77454 h 5.539 v -5.539 h -5.539 z"
+         style="fill:#adb9ca;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2193"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -236.92927,171.77454 h 5.539 v -5.539 h -5.539 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2195"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2199"
+         x="-228.85536"
+         y="-166.11575"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-228.85536 -222.55763 -220.20645 -216.26091 -212.84616 -207.53531 -205.26486 -199.87733 -195.09828 -192.82178 -187.96603 -185.68549 -180.37465 -175.36754 -173.01535 -169.67526 -164.36443 -156.24529 -150.93445 -147.36832 -145.09282 -139.78198 -136.29153 -133.93935 -125.8969 -121.04117 -117.47605 -115.19955"
+           y="-166.11575"
+           sodipodi:role="line"
+           id="tspan2197">Histología de tumor primario</tspan></text>
+      <path
+         d="m -497.24427,155.76554 h 5.614 v -5.539 h -5.614 z"
+         style="fill:#997300;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path2201"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <path
+         d="m -497.24427,155.76554 h 5.614 v -5.539 h -5.614 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.91;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path2203"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002" />
+      <text
+         transform="scale(1,-1)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0909px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text2207"
+         x="-489.11588"
+         y="-150.09755"
+         inkscape:export-xdpi="97.400002"
+         inkscape:export-ydpi="97.400002"><tspan
+           x="-489.11588 -482.89987 -477.89175 -473.87054 -469.62225 -464.31143 -459.0036 -453.61609 -449.36783 -447.01562 -441.70782"
+           y="-150.09755"
+           sodipodi:role="line"
+           id="tspan2205">Desconocido</tspan></text>
+    </g>
+  </g>
+</svg>

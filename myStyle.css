@@ -1,0 +1,202 @@
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+/* Comentario*/
+
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: red;
+}
+
+div.my-footer span {
+    font-size: 12pt;
+    color: #FFFFFF;
+    position: absolute;
+    left: 15px;
+    bottom: 7px;
+}
+
+div.my-footer {
+    background-color: #272822;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 2em;
+  padding-right: 4em;
+  font-size: 80%;
+}
+
+/**************
+ *
+ * Font size and colours
+ *
+ **************/
+.Large { font-size: 144% }
+.large { font-size: 120% }
+.small { font-size: 90% }
+.footnotesize { font-size: 80% }
+.scriptsize { font-size: 70% }
+.tiny { font-size: 60% }
+
+.black { color: black; }
+.red { color: #CC3300; }
+.blue { color: #003366; }
+.green { color: #6CF767;}
+.greenC { color: #2f9207;}
+.yellow { color: #FFD960; }
+.orange { color: #F09905; }
+.purple { color: #993399; }
+.gray { color: #666666; }
+.grey { color: #B5B5B5; }
+
+
+/******************
+ * 
+ * Coloured content boxes
+ *
+ ****************/
+
+
+.content-box { 
+    box-sizing: content-box;
+    	background-color: #e2e2e2;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+     Content box width: 160px
+     Content box height: 80px */
+}
+
+
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+    border-radius: 15px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+}
+
+.content-box-blue {
+    background-color: #F0F8FF;}
+
+.content-box-gray {
+    background-color: #e2e2e2;}
+
+.content-box-grey {
+	background-color: #F5F5F5;}
+
+.content-box-army {
+	background-color: #737a36;}
+
+.content-box-green {
+	background-color: #d9edc2;}
+
+.content-box-purple {
+	background-color: #e2e2f9;}
+
+.content-box-red {
+	background-color: #f9dbdb;}
+
+.content-box-yellow {
+	background-color: #fef5c4;}
+
+.full-width {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+/* For code and outputs in two columns*/
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  padding-left: 1%;
+}
+
+/* Required: Clear floats after the columns */
+.multicolrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create Columns for Remark.js / xaringan: Color header boxes */
+.multicolhead {
+    background-color:#00bfff;
+    color: #000000;
+}
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+.multicolcol {
+  min-height: 1px;
+}
+
+/* Create middle position */
+.middlePos{
+  position: absolute;
+  top: 50%;
+  /* bring your own prefixes */
+  transform: translate(0, -50%);
+}
+
+/* Create divider LINE */
+hr.divider {
+  border-top: 3px solid orangered;
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+  border-top: 3px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Br. Sergio Augusto Antenor Jácobo Zavaleta" />
+    <meta name="date" content="2022-01-11" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Rutgers.css" type="text/css" />
+    <link rel="stylesheet" href="myStyle.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama
+## Tesis para obtar el Título Profesional de Ingeniero Mecatrónico
+### Br. Sergio Augusto Antenor Jácobo Zavaleta
+### 2022-01-11
+
+---
+
+
+
+
+<style>.panelset{--panel-tab-active-foreground: #0051BA;--panel-tab-hover-foreground: #d22;--panel-tab-font-family: Roboto;}</style>
+
+
+
+
+
+---
+class: inverse, center, middle 
+# Introducción
+
+---
+
+.pull-leftN[
+# Realidad Problemática
+## .purple[Del paciente]
+  * Elevadas tasas de incidencia, nuevos casos y mortalidad de cáncer de mama a nivel nacional.
+  * Diagnóstico tardío del cáncer.
+  * Disminuir la experiencia traumática del cribado (&lt;b style="color :blue;"&gt;screnning&lt;/b&gt;):
+      + Minimizar el dolor por comprensión de la mama (Rx&lt;sup&gt;a&lt;/sup&gt;).
+      + Repeticiones innecesarias de biopsia.
+      + Daño por dosis de radiación (Rx).]
+
+--
+.pull-rightN[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/distribucionCancerTipoYdiagnostico.svg" alt="(Centro Nacional de Epidemiologia Prevención y Control de Enfermedades, 2020)" width="83%" /&gt;
+&lt;p class="caption"&gt;(Centro Nacional de Epidemiologia Prevención y Control de Enfermedades, 2020)&lt;/p&gt;
+&lt;/div&gt;
+]
+.footnote[
+[a] Radiografía
+]
+
+---
+
+.pull-leftN[
+# Realidad Problemática
+## .purple[Del paciente]
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/radiografiaComprension2.svg" alt="Adaptado de (Hologic, 2013)" width="75%" /&gt;
+&lt;p class="caption"&gt;Adaptado de (Hologic, 2013)&lt;/p&gt;
+&lt;/div&gt;
+]
+--
+.pull-rightN[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/numeroMujeres_ExamenClinicoYDepartamental.svg" alt="(Centro Nacional de Epidemiologia Prevención y Control de Enfermedades, 2018)" width="75%" /&gt;
+&lt;p class="caption"&gt;(Centro Nacional de Epidemiologia Prevención y Control de Enfermedades, 2018)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+
+---
+
+.pull-left[
+# Realidad Problemática
+## .blue[Del médico radiólogo]
+  * Biopsia y diagnóstico por imagen más rápidos y precisos para detención y control de cáncer mamario.
+  * Naturaleza .green[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
+      - Fatiga por localización anatómica de la zona de sospecha y ubicación precisa de agujas.
+      - Baja reproducibilidad.
+  * Indisponibilidad para acceder a todos los diversos screenings guiados por imagen:
+      - Radiografía.
+      - Imagen de Resonancia Magnética (MRI).
+      - Tomografía Computarizada (TC).]
+--
+.pull-right[
+&lt;div class="figure"&gt;
+&lt;img src="image/tecnologiasScreening.svg" alt="a) (Dominique, 2018). b) (Gao Kong, et al., 2020). c) (Siemens Healthineers, 2018) . d-e)(Hologic, 2018)" width="80%" /&gt;
+&lt;p class="caption"&gt;a) (Dominique, 2018). b) (Gao Kong, et al., 2020). c) (Siemens Healthineers, 2018) . d-e)(Hologic, 2018)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+# Planteamiento del Problema
+![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
+![:col_list 
+¿Puede mejorarse el proceso actual de biopsias percutáneas de mama guiados por US para beneficio de pacientes y médicos?, 
+
+¿Puede automatizarse el diagnóstico por imagen y biopsia de mama bajo US para mejorar la detección temprana de cáncer a nivel hospitalario?, 
+
+¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusón robótica que aproveche las ventajas del diagnóstico de cáncer por imagen con US?
+]
+
+--
+## Formulación del Problema
+.full-width[.content-box-blue[
+.Large[*¿Cómo mejorar el guiado de agujas de manera precisa y autónoma en biopsia percutánea de
+mama para el diagnóstico de cáncer en mujeres?*]
+]]
+
+---
+# Objetivos
+.left-column[.full-width[.content-box-yellow[
+### Objetivo General
+- Determinar el efecto del modelamiento y simulación de un robot clínico asistido por US&lt;sup&gt;a&lt;/sup&gt; 3D
+como sistema de guiado de agujas en biopsia percutánea de mama.
+]]]
+
+--
+.right-column[.full-width[.content-box-green[
+### Objetivos Específicos
+- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot
+clínico para biopsia percutánea de mama guiado por US 3D.
+- Determinar la morfología del robot clínico cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
+- Determinar un modelo cinemático para el robot clínico.
+- Determinar un modelo dinámico pare el robot clínico.
+- Definir un modelo CAD&lt;sup&gt;b&lt;/sup&gt; de la estructura física del robot clínico.
+- Generar trayectorias de inserción para agujas en biopsia percutánea de mama guiada robóticamente.
+- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno
+virtual robótico.
+]]]
+
+.footnote[
+[a] Ultrasonido, Ultrasonografía, Ultrasound.
+
+[b] Dibujo Asistido por Computadora.
+]
+
+---
+.left-column[
+# Hipótesis
+.full-width[.content-box-red[
+Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
+]]
+]
+--
+.right-column[
+# Justificación
+&lt;img src="image/flowCharts/justificacion.svg" width="88%" /&gt;
+]
+
+---
+class: inverse, center, middle
+# Métodos y Materiales
+
+---
+
+.pull-leftNN[
+## .orange[Diseño de requerimientos]
+### Del flujo de trabajo para biopsia percutánea de mama
+&lt;img src="tablas/tab_principalesVentajasDesvetajasBiopsiaGuiadaPorImagen.svg" width="100%" /&gt;
+]
+
+.pull-right[.center[
+&lt;img src="image/flowCharts/flujoDeTrabajoBiopsia.svg" width="59%" /&gt;
+]]
+
+---
+&lt;div class="my-footer"&gt;&lt;span&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama&lt;/span&gt;&lt;/div&gt; 
+
+.pull-leftNN[
+## .orange[Diseño de requerimientos]
+### De la mama
+.middlePos[
+&lt;img src="tablas/tab_caracterizacionMedidasAnatomicas.svg" width="100%" /&gt;
+]
+]
+
+.pull-right[
+### Del robot clínico
+.middlePos[
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Requerimientos &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Características &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Exactitud y Precisión &lt;/td&gt;
+   &lt;td style="text-align:left;width: 16em; "&gt; Posición previa del robot. Error promedio 0.54-3.21 mm. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Fuente de Alimentación &lt;/td&gt;
+   &lt;td style="text-align:left;width: 16em; "&gt; Fuentes eléctrónicas y eléctricas. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Rigidez &lt;/td&gt;
+   &lt;td style="text-align:left;width: 16em; "&gt; De apariencia liviana y movimiento suave. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Seguridad &lt;/td&gt;
+   &lt;td style="text-align:left;width: 16em; "&gt; No interferir con el espacio de trabajo de otros elementos. Mecanismo de parada de emergencia. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Esterilización &lt;/td&gt;
+   &lt;td style="text-align:left;width: 16em; "&gt; De fácil limpieza supercial y uso hospitalario. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]]
+
+---
+
+
+## .orange[Diseño de requerimientos]
+### Del efector final
+&lt;div class="figure"&gt;
+&lt;img src="image/efectorFinalDexter.svg" alt="Componentes del sistema robótico Dexter. (a) Robot llevando el (b) Efector final para
+guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali Tonet, et al., 2001)" width="100%" /&gt;
+&lt;p class="caption"&gt;Componentes del sistema robótico Dexter. (a) Robot llevando el (b) Efector final para
+guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali Tonet, et al., 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+---
+## .orange[Diseño de requerimientos]
+### De la biopsia
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; N. &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Características &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Trayectoria ideal fue una línea recta. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Desplazamiento del objetivo de biopsia fue mínima (nulo) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Espacio de tarea (task space) no realista. Aproximado a un volumen cónico truncado a partir de dimensiones anatómicas. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Volumen cónico caracterizado en cuatro tamaños promedio o copa (A,B,C y D). &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Un objetivo de biopsia se define como el centroide de una posible anamolía o elegido por criterio médico (ausente). Posicón en el espacio cartersiano. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Localización y visualización mediante un Sistema Automatizado de Ultrasonido de Mama (ABUS). Rotación total y radial de 360° &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Uso de un Dispositivo Sujetador para:  Estabilización e inmovilización. Y soporte estructural de la mama. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Inserción de tipo oblícua. Confianza en la correcta localización del objetivo por el sistema ABUS. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Uso de dispositivos de biopsia básicos: Aguja fina para aspiración (FNA) y aguja gruesa (CN) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+.pull-left[
+## .greenC[Procedimiento]
+### Para el flujo de trabajo: .black[.footnotesize[Espacio de trabajo del Robot]]
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/perfilesMama.svg" alt="Basado en los datos de Huang, et al. (2011)" width="100%" /&gt;
+&lt;p class="caption"&gt;Basado en los datos de Huang, et al. (2011)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-rightNN[
+&lt;img src="image/perfilesHolder.svg" width="100%" /&gt;
+
+&lt;img src="tablas/tab_dimensionesPrincipalesModelamientoConico.svg" width="100%" /&gt;
+`$$z = {H_\text{holder}} - \frac{{{H_\text{holder}}(r - {R_\text{lower}})}}{{{R_\text{upper}} - {R_\text{lower}}}}$$`
+]
+
+---
+.pull-left[
+## .greenC[Procedimiento]
+### Para el flujo de trabajo: .black[.footnotesize[Dispositivo sujetador de mama]]
+.full-width[.content-box-blue[
+1. De **Capa intermedia** entre mama y transductor de US (.black[Etapa de diag. por imagen]).
+2. Para acceso a la mama manteniendo **fijo y estable** el tejido (.black[Etapa de biopsia]).
+]]
+.full-width[.content-box-red[
+Tres partes básicas:
+.center[
+* Soporte estructural
+* Tapas desplegables
+* Varillas de giro]
+]]
+]
+.pull-right[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/holderConcept.svg" alt="Estructura cónica" width="80%" /&gt;
+&lt;p class="caption"&gt;Estructura cónica&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/baseCanastilla.png" alt="Concepto de sujetador" width="60%" /&gt;
+&lt;p class="caption"&gt;Concepto de sujetador&lt;/p&gt;
+&lt;/div&gt;
+.full-width[.content-box-yellow[.large[Fenómeno de Acople Acústico requerido]]]
+]
+
+---
+.pull-left[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[La cadena cinemática]
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Joint &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Tipo de
+ movimiento &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Tipo de 
+ fuente &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; J_1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Revoluta &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Activo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; J_2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Prismático &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Activo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; J_3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Revoluta &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Activo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; J_4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Prismático &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Activo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; J_5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Prismático &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Pasivo &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-rightN[.middlePos[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/esquemaRobot1.svg" alt="Esquema del robot clínico" width="95%" /&gt;
+&lt;p class="caption"&gt;Esquema del robot clínico&lt;/p&gt;
+&lt;/div&gt;
+]]
+---
+.pull-left[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Cáculo de dimensiones]
+Utilizando el **Algoritmo 6: Modelo geométrico de robot clínico**.
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/flujoDimensionRobot.svg" alt="Esquema para cálculo de dimensiones" width="70%" /&gt;
+&lt;p class="caption"&gt;Esquema para cálculo de dimensiones&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-rightN[.middlePos[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/esquemaRobot2.svg" alt="Esquema para cálculo de dimensiones" width="95%" /&gt;
+&lt;p class="caption"&gt;Esquema para cálculo de dimensiones&lt;/p&gt;
+&lt;/div&gt;
+]]
+---
+.pull-leftNN[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Cinemática Directa]
+
+
+`$$\begin{equation}
+	{S_1} = \left[ {\begin{array}{*{20}{c}}
+			0\\
+			0\\
+			1\\
+			0\\
+			0\\
+			0
+	\end{array}} \right]{\rm{  }}{S_2} = \left[ {\begin{array}{*{20}{c}}
+			0\\
+			0\\
+			0\\
+			0\\
+			0\\
+			1
+	\end{array}} \right]{\rm{  }}{S_3} = \left[ {\begin{array}{*{20}{c}}
+			0\\
+			{ - 1}\\
+			0\\
+			{L_* + {H_2}}\\
+			0\\
+			{{H_1}}
+	\end{array}} \right]{\rm{  }}{S_4} = \left[ {\begin{array}{*{20}{c}}
+			0\\
+			0\\
+			0\\
+			0\\
+			0\\
+			1
+	\end{array}} \right]{\rm{  }}{S_5} = \left[ {\begin{array}{*{20}{c}}
+			0\\
+			0\\
+			0\\
+			0\\
+			0\\
+			1
+	\end{array}} \right]
+\end{equation}$$`
+`$$\begin{equation}
+	\begin{array}{c}
+		{M_1} =\left[ {\begin{array}{*{20}{c}}
+				1&amp;0&amp;0&amp;0\\
+				0&amp;1&amp;0&amp;0\\
+				0&amp;0&amp;1&amp;{{L_0} + {L_1}}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]
+		{M_2} = \left[ {\begin{array}{*{20}{c}}
+				1&amp;0&amp;0&amp;{ - {H_1}}\\
+				0&amp;1&amp;0&amp;0\\
+				0&amp;0&amp;1&amp;{{L_0} + {L_1}}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]\\
+		{M_3} = \left[ {\begin{array}{*{20}{c}}
+				1&amp;0&amp;0&amp;{ - {H_1}}\\
+				0&amp;{ - 1}&amp;0&amp;0\\
+				0&amp;0&amp;1&amp;{L_*}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]
+	\end{array}
+\end{equation}$$`
+
+]
+
+.pull-right[
+`$$\begin{equation}
+	\begin{array}{c}
+		{M_4} = \left[ {\begin{array}{*{20}{c}}
+				0&amp;0&amp;1&amp;{ - {H_1}}\\
+				0&amp;{ - 1}&amp;0&amp;{{H_3}}\\
+				1&amp;0&amp;0&amp;{L_* + {L_3}}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]\\
+		{M_5} = {M_{st}} = \left[ {\begin{array}{*{20}{c}}
+				0&amp;0&amp;1&amp;{{L_3} - {H_1}}\\
+				{ - 1}&amp;0&amp;0&amp;0\\
+				0&amp;{ - 1}&amp;0&amp;{L_* + {H_2}}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]\\
+		{M_6} = {M_{se}} = \left[ {\begin{array}{*{20}{c}}
+				0&amp;0&amp;0&amp;{{L_3} - {H_1} - {L_5}}\\
+				{ - 1}&amp;0&amp;0&amp;0\\
+				0&amp;{ - 1}&amp;1&amp;{L_* + {H_2}}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]
+	\end{array}
+\end{equation}$$`
+
+Donde, `$$L_* = L_0 + L_1 + L_2$$`
+
+Basado en la **Fórmula del Producto de Exponenciales** descrita por Park, et al. (1995) y Lynch and Park (2017):
+
+`$$\begin{equation}\label{eq:formulaPOE_spatial}
+			T = {e^{[{S_1}]{\theta _1}}}...{\text{ }}{e^{[{S_{n - 1}}]{\theta _{n - 1}}}}{e^{[{S_n}]{\theta _n}}}M
+		\end{equation}$$`
+]
+
+---
+.pull-leftN2[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Cinemática Directa]
+
+`$$\begin{equation}
+	\begin{array}{l}
+		T_{st} = \left(\begin{array}{cccc}
+			\mathrm{sin}\left(\theta_1 \right) &amp; \mathrm{cos}\left(\theta_1 \right)\,\mathrm{sin}\left(\theta_3 \right) &amp; \mathrm{cos}\left(\theta_1 \right)\,\mathrm{cos}\left(\theta_3 \right) &amp; \mathrm{cos}\left(\theta_1 \right)\,\sigma_1 \\
+			-\mathrm{cos}\left(\theta_1 \right) &amp; \mathrm{sin}\left(\theta_1 \right)\,\mathrm{sin}\left(\theta_3 \right) &amp; \mathrm{cos}\left(\theta_3 \right)\,\mathrm{sin}\left(\theta_1 \right) &amp; \mathrm{sin}\left(\theta_1 \right)\,\sigma_1 \\
+			0 &amp; -\mathrm{cos}\left(\theta_3 \right) &amp; \mathrm{sin}\left(\theta_3 \right) &amp; \sigma_2 + L_3\,\mathrm{sin}\left(\theta_3 \right)+\theta_4 \,\mathrm{sin}\left(\theta_3 \right)+\theta_5 \,\mathrm{sin}\left(\theta_3 \right)\\
+			0 &amp; 0 &amp; 0 &amp; 1
+		\end{array}\right)
+	\end{array}
+\end{equation}$$`
+
+`$$\begin{equation}
+	{T_{sc}} = \left[ {\begin{array}{*{20}{c}}
+			1&amp;0&amp;0&amp;0\\
+			0&amp;{ - 1}&amp;0&amp;0\\
+			0&amp;0&amp;{ - 1}&amp;{{H_\text{table}}}\\
+			0&amp;0&amp;0&amp;1
+	\end{array}} \right]
+\end{equation}$$`
+]
+
+.pull-rightN2[
+&lt;div class="figure" style="text-align: right"&gt;
+&lt;img src="image/equemaCadenaCinematica.svg" alt="Sistemas de referencias (frames)" width="75%" /&gt;
+&lt;p class="caption"&gt;Sistemas de referencias (frames)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+.pull-leftN[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Cinemática Inversa]
+Utilizando el **Algoritmo 7. Modelo de Cinemática Inversa**:
+`$$\begin{align}
+				\begin{array}{*{20}{c}}{\left[ {\begin{array}{*{20}{c}}{{h_s}}\\1\end{array}} \right] = {T_{sc}}\left[ {\begin{array}{*{20}{c}}{{h_c}}\\1\end{array}} \right]{\text{,  }}{{\hat n}_s} = {R_{sc}}{{\hat n}_c}}\\{\left[ {\begin{array}{*{20}{c}}{{c_s}}\\1\end{array}} \right] = {T_{sc}}\left[ {\begin{array}{*{20}{c}}c\\1\end{array}} \right]}\end{array}
+\end{align}$$`
+
+&lt;hr class="divider"&gt;
+`$$\begin{align}
+        {q_1} &amp;= atan2({h_{sy}},{h_{sx}}{\rm{)}}\\
+				&amp;{\theta_1} = {q_1} + \pi \\
+				&amp;{\theta_1} = {q_1} - \pi \\
+			{\theta_4} &amp;= \frac{{{r_{14}} + {H_1} - {L_3}\cos ({\theta_3})}}{{\cos ({\theta_3})}}\\
+			{\theta _3} &amp;= atan2({r_{33}},{r_{13}})\\
+			{\theta_2} &amp;= {r_{34}} - {L_2} - {H_2} - \sin(\theta_3) ({L_3} + {q_4})
+\end{align}$$`
+
+]
+.pull-rightN[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/cinematicaInversa.svg" alt="Esquema de cálculo" width="100%" /&gt;
+&lt;p class="caption"&gt;Esquema de cálculo&lt;/p&gt;
+&lt;/div&gt;
+]
+---
+.pull-leftN[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Dinámica Inversa]
+
+
+
+```r
+Algoritmo 4: Método Newton-Euler
+1. Inicialización
+*2. Iteración hacia adelante (Forward step)
+*3. Iteración hacia atras (Backward step)
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/esquemaDinamicaInversa.svg" alt="Diagrama de cuerpo libre. Adaptado de Lynch and Park (2017)" width="100%" /&gt;
+&lt;p class="caption"&gt;Diagrama de cuerpo libre. Adaptado de Lynch and Park (2017)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-rightNN[
+Para .black[paso 1],
+* `\(M_{l_{i},l_{i-1}}\)` : Configuración `\(\{l_{i-1}\}\)` en `\(\{l_{i}\}\)` cuando `\(\theta_i = 0\)`.
+* `\(\mathcal{A}_i\)` : Screw axis en `\(\{l_{i}\}\)`. `\({A_i} = A{d_{M_{l_i}^{ - 1}}}({S_i})\)`
+* `\(\mathcal{G}_i\)` : Matriz de inercia espacial. `\({\mathcal{G}_b} = \left[ {\begin{array}{*{20}{c}}{{I_b}}&amp;0 \\ 0&amp;{\mathfrak{m}I} \end{array}} \right]\)`
+* Dado `\(V_0 = 0\)`. Tamaño `\(1\times6\)`.
+* Dado `\(\dot V_{0}=({\dot{\omega}},{\dot{v}_0})=(0,-\mathfrak{g})\)`. Tamaño `\(1\times6\)`.
+* Dado `\(F_{n+1}=F_\text{tip}=({m_\text{tip}},{f_\text{tip}})\)`. Tamaño `\(1\times6\)`.
+
+
+Para .black[paso 2], dado `\(\theta, \dot \theta\)` y `\(\ddot{\theta}\)` para `\(i=1\)` a `\(n\)`:
+`$$\begin{align}
+			{T_{l_{i}, l_{i-1}}} &amp;= {e^{ - [{A_i}]{\theta _i}}}{M_{l_{i}, l_{i-1}}} \hfill \\
+			{V_i} &amp;= A{d_{{T_{l_{i}, l_{i-1}}}}}({V_{i - 1}}) + {A_i}{{\dot \theta }_i} \hfill \\
+			{{\dot V}_i} &amp;= A{d_{{T_{l_{i}, l_{i-1}}}}}({{\dot V}_{i - 1}}) + a{d_{{V_i}}}({A_i}){{\dot \theta }_i} + {A_i}{{\ddot \theta }_i} \hfill 
+		\end{align}$$`
+
+Para .black[paso 3], de `\(i=n-1\)` hacia `\(1\)`:
+`$$\begin{align}
+{F_i} &amp;= Ad_{{T_{l_{i+1}, l_{i}}}}^T({F_{i + 1}}) + {G_i}{{\dot V}_i} - ad_{{V_i}}^T({G_i}{V_i}) \\
+{\tau _i} &amp;= F_i^T{A_i} \\
+{\tau}  &amp;= {{\left[ {{{\begin{array}{*{20}{c}}{{F_i}}\\m\end{array}}_i}} \right]}^T} {\left[ {\begin{array}{*{20}{c}}{{v_i}} \\ {{\omega _i}} \end{array}} \right]} = {F_i}{v_i} + {m_i}{\omega _i} \\
+&amp;= {\text{Potencia lineal + Potencia rotacional (par motor)}}
+\end{align}$$`
+]
+---
+.pull-leftN[
+## .greenC[Procedimiento]
+### Para modelamiento del robot clínico: .black[Dinámica Directa]
+Dado `\(\theta, \dot{\theta}, \tau\)` y un wrench `\(F_\text{tip}\)` en el efector final:
+`$$\begin{align}
+  \tau  &amp;= M(\theta )\ddot \theta  + c(\theta ,\dot \theta ) + N(\theta ) + {J^T}(\theta ){F_\text{tip}}\\
+  \tau  &amp;= M(\theta )\ddot \theta  + h(\theta ,\dot \theta ) + {J^T}(\theta ){F_\text{tip}}\\
+  &amp; \text{Por lo tanto, para } \ddot{\theta} :\\ 
+  M(\theta )\ddot \theta  &amp;= \tau  - h(\theta ,\dot \theta ) - {J^T}(\theta ){F_\text{tip}}\\
+  \ddot \theta  &amp; = {M(\theta )^{ - 1}}\left( {\tau  - h(\theta ,\dot \theta ) - {J^T}(\theta ){F_\text{tip}}} \right)
+\end{align}$$`
+]
+.pull-rightNN[
+
+
+.middlePos[
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Elemento &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Algoritmo &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Basado en el Algoritmo Newton-Euler de Lynch and Park (2017) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Uso de Body Jacobian en link frames según Johan
+From, et al. (2014) y Murray, et al. (1994) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; modelo de Cuerpos Rígidos Compuestos de Featherstone (2009) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; C &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Por derivadas parciales. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; C &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Basado en el Algoritmo Newton-Euler &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; C &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Modelo basado en los símbolos de Christofell y teoría Lie Bracket &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; N &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Basado en el Algoritmo Newton-Euler &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; N &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Por derivadas parciales &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; N &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Fomulación fuerzas gravitacionales de Rao (2006) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; h &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Basado en el Algoritmo Newton-Euler &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; J*F &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Usando Body Jacobian &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;color: blue !important;"&gt; J*F &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Basado en el Algoritmo Newton-Euler &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+]
+
+---
+.pull-left[
+## .greenC[Procedimiento]
+### Para la generación de trayectorias. .blue[Planificación de ruta del Efector final(EE)] .black[Riesgo por colisiones]
+&lt;img src="image/riesgoPorColisiones.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&gt; .red[Alcanzabilidad]
+
+`$$\begin{equation}
+		\begin{array}{*{20}{c}}
+			\text{Si }{\forall {\theta _i} &lt; \theta_{i\max },}&amp;{{\text{el objetivo es alcanzable}}} \\ 
+			\text{Sino }{\exists {\theta _i} &gt; \theta_{i\max },}&amp;{{\text{el objetivo es inalcanzable}}} 
+		\end{array}
+	\end{equation}$$`
+]
+
+.pull-rightN[
+&gt; .red[Colisiones por inserción]
+  * Tipo 1: Con los soportes horizontales del dispositivo sujetador de mama.
+  * Tipo 2: Con los soportes verticales.
+  * Tipo 3: *Con una tapa vecina.*
+  * Tipo 4: Con la pared torácica de la paciente.
+
+&lt;img src="image/colision124.svg" width="100%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+---
+## .greenC[Procedimiento]
+### Para la generación de trayectorias: .black[Riesgo por colisiones]
+&lt;img src="image/algoritmoInsercion.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+## .greenC[Procedimiento]
+### Para la generación de trayectorias: .black[Casos de Inserción]
+&lt;img src="image/casosInserción.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## .greenC[Procedimiento]
+### Para la generación de trayectorias: .black[Casos de Inserción]
+&lt;img src="image/casosInserción4y5.svg" width="83%" style="display: block; margin: auto;" /&gt;
+
+---
+## .greenC[Procedimiento]
+### Para la generación de trayectorias: .black[Cálculo de desplazamiento del Efector Final]
+&lt;img src="image/diagramaCalculoDistancias.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+`$$\begin{align}
+	\text{Retiro mínimo del EE} &amp;= \begin{cases}
+		\text{Longitud de aguja FNA} - \left( \left\| {t{p_s}} \right\| + \text{Offset}_{\text{needle}} \right)\\
+		\text{Longitud de aguja CN} - \left( \left\| {t{p_s}} \right\| + \text{Offset}_{\text{needle}} \right) + \frac{\text{throw}}{2} - \text{dead space}
+	\end{cases}\\
+	{\text{Retiro máximo del EE}} &amp;= {\theta _4}{\text{ + Offse}}{{\text{t}}_{L5}}{\text{ - }}\left( {{\text{Offset}}{{\text{t}}_{{\text{needle}}}} + {\text{Longitud de aguja}}} \right)
+\end{align}$$`
+---
+## .greenC[Procedimiento]
+### Para la generación de trayectorias: .blue[Planificación de trayectorias del Efector Final]
+
+
+.left-column[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/trajectoryPlanning.svg" alt="Basado en Siciliano, et al. (2008)" width="100%" /&gt;
+&lt;p class="caption"&gt;Basado en Siciliano, et al. (2008)&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.right-column[
+&lt;img src="image/jointTrajectoryModel.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse, center, middle
+# Resultados
+
+---
+&lt;div class="my-footer"&gt;&lt;span&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama&lt;/span&gt;&lt;/div&gt; 
+
+
+.pull-leftNN[
+## Del Modelamiento: .orange[Dispositivo sujetador]
+&lt;div class="figure"&gt;
+&lt;img src="image/copasSUjetadores.svg" alt="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D." width="95%" /&gt;
+&lt;p class="caption"&gt;Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-rightNN[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="image/partesSujetador.svg" alt="Detalles del dispositivo sujetador" width="95%" /&gt;
+&lt;p class="caption"&gt;Detalles del dispositivo sujetador&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+.pull-leftNN[
+## Del Modelamiento. Robot clinico: .orange[Morfología]
+&lt;img src="image/valoresInicialesAreaTrabajo.svg" width="86%" /&gt;
+]
+
+.pull-rightNN[
+&lt;img src="image/dimensionesRobot.svg" width="100%" /&gt;
+]
+
+---
+.pull-left[
+## Del Modelamiento: .orange[Cinemático]
+`$$\begin{equation}
+	\begin{array}{*{5}{c}}
+		{{S_1} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					1 \\ 
+					0 \\ 
+					0 \\ 
+					0 
+			\end{array} } \right]}&amp;{{S_2} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 
+			\end{array} } \right]}&amp;{{S_3} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					{ - 1} \\ 
+					0 \\ 
+					{876} \\ 
+					0 \\ 
+					{300} 
+			\end{array}} \right]}\\
+			{{S_4} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 \\ 
+					0 \\ 
+					0 
+			\end{array} } \right]}&amp;{{S_5} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 \\ 
+					0 \\ 
+					0 
+			\end{array} } \right]} 
+	\end{array}
+\end{equation}$$`
+
+`$$\begin{array}{*{20}{c}}
+		{{M_1} = \left[ {\begin{array}{*{20}{c}}
+					1&amp;0&amp;0&amp;0 \\ 
+					0&amp;1&amp;0&amp;0 \\ 
+					0&amp;0&amp;1&amp;{666} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}&amp;{{M_2} = \left[ {\begin{array}{*{20}{c}}
+					1&amp;0&amp;0&amp;{ - 300} \\ 
+					0&amp;1&amp;0&amp;0 \\ 
+					0&amp;0&amp;1&amp;{660} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}
+	\end{array}$$`
+]
+
+.pull-rightN[
+`$$\begin{equation}\begin{array}{*{20}{c}}
+		{{M_3} = \left[ {\begin{array}{*{20}{c}}
+					1&amp;0&amp;0&amp;{ - 300} \\ 
+					0&amp;0&amp;{ - 1}&amp;0 \\ 
+					0&amp;1&amp;0&amp;{876} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}&amp;
+		{{M_4} = \left[ {\begin{array}{*{20}{c}}
+					0&amp;0&amp;1&amp;{ - 300} \\ 
+					0&amp;{ - 1}&amp;0&amp;{100} \\ 
+					1&amp;0&amp;0&amp;{876} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}\\
+		{{M_5} = \left[ {\begin{array}{*{20}{c}}
+					0&amp;0&amp;1&amp;{ - 78} \\ 
+					{ - 1}&amp;0&amp;0&amp;0 \\ 
+					0&amp;{ - 1}&amp;0&amp;{876} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}&amp;{{M_6} = \left[ {\begin{array}{*{20}{c}}
+					0&amp;0&amp;1&amp;{ - 83.5} \\ 
+					{ - 1}&amp;0&amp;0&amp;0 \\ 
+					0&amp;{ - 1}&amp;0&amp;{876.0} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]} 
+	\end{array}
+\end{equation}$$`
+
+&lt;img src="image/EspacioTrabajoRobot.svg" width="85%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+---
+## Del Modelamiento: .orange[Modelo CAD]
+&lt;img src="image/partesRobot.svg" width="88%" style="display: block; margin: auto;" /&gt;
+
+---
+.pull-leftNN[
+## Del Modelamiento: .orange[Dinámico]
+`$$\begin{equation}
+	\begin{array}{*{20}{l}}
+			{{M_{{l_1}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{ - 181.24} \\ 
+						0&amp;1&amp;0&amp;0 \\ 
+						0&amp;0&amp;1&amp;{653.20} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}\\
+				{{M_{{l_2}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{ - 300.3} \\ 
+						0&amp;1&amp;0&amp;{ - 20.00} \\ 
+						0&amp;0&amp;1&amp;{816.70} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]} &amp; 
+			{{M_{{l_3}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{ - 209.10} \\ 
+						0&amp;0&amp;{ - 1}&amp;{52.70} \\ 
+						0&amp;1&amp;0&amp;{877.00} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}\\
+				{{M_{{l_4}}} = \left[ {\begin{array}{*{20}{c}}
+						0&amp;0&amp;1&amp;{ - 144.30} \\ 
+						0&amp;{ - 1}&amp;0&amp;{75.40} \\ 
+						1&amp;0&amp;0&amp;{874.60} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]} &amp; 
+		{{M_{{l_5}}} = \left[ {\begin{array}{*{20}{c}}
+					0&amp;0&amp;1&amp;{ - 94.10} \\ 
+					0&amp;{ - 1}&amp;0&amp;{0.10} \\ 
+					1&amp;0&amp;0&amp;{876.00} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]}\\
+			{{M_{{l_1}{l_2}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{{\text{ - 119}}{\text{.03}}} \\ 
+						0&amp;1&amp;0&amp;{{\text{ - 20}}{\text{.04}}} \\ 
+						0&amp;0&amp;1&amp;{{\text{163}}{\text{.50}}} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}&amp; 
+			{{M_{{l_2}{l_3}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{{\text{91}}{\text{.19}}} \\ 
+						0&amp;0&amp;{ - 1}&amp;{{\text{72}}{\text{.78}}} \\ 
+						0&amp;1&amp;0&amp;{{\text{60}}{\text{.30}}} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}
+	\end{array} 
+\end{equation}$$`
+
+]
+
+.pull-rightNN[
+`$$\begin{equation}
+	\begin{array}{*{20}{c}}
+		\begin{array}{*{20}{c}}
+			{{M_{{l_3}{l_4}}} = \left[ {\begin{array}{*{20}{c}}
+						0&amp;0&amp;1&amp;{{\text{64}}{\text{.82}}} \\ 
+						1&amp;0&amp;0&amp;{{\text{ - 2}}{\text{.36}}} \\ 
+						0&amp;1&amp;0&amp;{{\text{ - 22}}{\text{.63}}} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}&amp; 
+			{{M_{{l_4}{l_5}}} = \left[ {\begin{array}{*{20}{c}}
+						1&amp;0&amp;0&amp;{{\text{1}}{\text{.40}}} \\ 
+						0&amp;1&amp;0&amp;{{\text{75}}{\text{.44}}} \\ 
+						0&amp;0&amp;1&amp;{{\text{50}}{\text{.20}}} \\ 
+						0&amp;0&amp;0&amp;1 
+				\end{array}} \right]}
+		\end{array}
+		\\{{M_{{l_5}6}} = \left[ {\begin{array}{*{20}{c}}
+					0&amp;0&amp;1&amp;{ - 83.5} \\ 
+					{ - 1}&amp;0&amp;0&amp;0 \\ 
+					0&amp;{ - 1}&amp;0&amp;{876.0} \\ 
+					0&amp;0&amp;0&amp;1 
+			\end{array}} \right]} 
+	\end{array} 
+\end{equation}$$`
+
+`$$\begin{equation}
+	\begin{array}{*{20}{r}}
+		{{A_1} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					1 \\ 
+					0 \\ 
+					{{\text{ - 181}}{\text{.24}}} \\ 
+					0 
+			\end{array}} \right]}&amp;{{A_2} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 
+			\end{array} } \right]}\\{{A_3} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					1 \\ 
+					{{\text{ - 0}}{\text{.96}}} \\ 
+					{{\text{90}}{\text{.92}}} \\ 
+					0 
+			\end{array}} \right]}&amp;{{A_4} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 
+			\end{array} } \right]}&amp;{{A_5} = \left[ {\begin{array}{*{20}{c}}
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					0 \\ 
+					1 
+			\end{array} } \right]} 
+	\end{array} 
+\end{equation}$$`
+
+]
+
+---
+.pull-leftN3[
+## Del Modelamiento: .orange[Dinámico]
+&lt;img src="image/variablesDinamicas.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-rightN3[
+`$$\begin{equation}
+	\begin{array}{*{20}{c}}
+		\begin{array}{*{20}{c}}
+			{{I_{c1}} = \left[ {\begin{array}{*{20}{c}}
+						{{\text{0}}{\text{.0265}}}&amp;{{\text{0}}{\text{.0000}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{{\text{0}}{\text{.0822}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{}&amp;{{\text{0}}{\text{.0990}}} 
+				\end{array}} \right]}&amp;{{I_{c2}} = \left[ {\begin{array}{*{20}{c}}
+						{{\text{0}}{\text{.0025}}}&amp;{{\text{0}}{\text{.0000}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{{\text{0}}{\text{.0121}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{}&amp;{{\text{0}}{\text{.0127}}} 
+				\end{array}} \right]} \\ 
+			{{I_{c3}} = \left[ {\begin{array}{*{20}{c}}
+						{{\text{0}}{\text{.0083}}}&amp;{{\text{0}}{\text{.0000}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{{\text{0}}{\text{.0106}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{}&amp;{{\text{0}}{\text{.0173}}} 
+				\end{array}} \right]}&amp;{{I_{c4}} = \left[ {\begin{array}{*{20}{c}}
+						{{\text{0}}{\text{.0016}}}&amp;{{\text{0}}{\text{.0000}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{{\text{0}}{\text{.0020}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+						{}&amp;{}&amp;{{\text{0}}{\text{.0035}}} 
+				\end{array}} \right]}
+		\end{array}\\
+		{{I_{c5}} = \left[ {\begin{array}{*{20}{c}}
+					{{\text{0}}{\text{.0602}}}&amp;{{\text{0}}{\text{.0000}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+					{}&amp;{{\text{0}}{\text{.3642}}}&amp;{{\text{0}}{\text{.0000}}} \\ 
+					{}&amp;{}&amp;{{\text{0}}{\text{.3908}}} 
+			\end{array}} \right] \cdot {{10}^{ - 3}}}{{\text{ kg}} \cdot {{\text{m}}^2}}\hfill
+	\end{array} 
+\end{equation}$$`
+
+`$$\begin{equation}
+	\begin{gathered}
+		{G_1} = {\text{Matriz Diagonal (}}\left[ {\begin{array}{*{20}{c}}
+				{{\text{0}}{\text{.0265}}}&amp;{{\text{0}}{\text{.0822}}}&amp;{{\text{0}}{\text{.0990}}}&amp;{{\text{4}}{\text{.8170}}}&amp;{{\text{4}}{\text{.8170}}}&amp;{{\text{4}}{\text{.8170}}} 
+		\end{array}} \right]{\text{)}} \hfill \\
+		{G_2} = {\text{Matriz Diagonal (}}\left[ {\begin{array}{*{20}{c}}
+				{{\text{0}}{\text{.0025}}}&amp;{{\text{0}}{\text{.0121}}}&amp;{{\text{0}}{\text{.0127}}}&amp;{{\text{1}}{\text{.9328}}}&amp;{{\text{1}}{\text{.9328}}}&amp;{{\text{1}}{\text{.9328}}} 
+		\end{array}} \right]{\text{)}} \hfill \\
+		{G_3} = {\text{Matriz Diagonal (}}\left[ {\begin{array}{*{20}{c}}
+				{{\text{0}}{\text{.0083}}}&amp;{{\text{0}}{\text{.0106}}}&amp;{{\text{0}}{\text{.0173}}}&amp;{{\text{2}}{\text{.2453}}}&amp;{{\text{2}}{\text{.2453}}}&amp;{{\text{2}}{\text{.2453}}} 
+		\end{array}} \right]{\text{)}} \hfill \\
+		{G_4} = {\text{Matriz Diagonal (}}\left[ {\begin{array}{*{20}{c}}
+				{{\text{0}}{\text{.0016}}}&amp;{{\text{0}}{\text{.0020}}}&amp;{{\text{0}}{\text{.0035}}}&amp;{{\text{0}}{\text{.7774}}}&amp;{{\text{0}}{\text{.7774}}}&amp;{{\text{0}}{\text{.7774}}} 
+		\end{array}} \right]{\text{)}} \hfill \\
+		{G_5} = {\text{Matriz Diagonal (}}\left[ {\begin{array}{*{20}{c}}
+				{{\text{0}}{\text{.0001}}}&amp;{{\text{0}}{\text{.0004}}}&amp;{{\text{0}}{\text{.0004}}}&amp;{{\text{0}}{\text{.2970}}}&amp;{{\text{0}}{\text{.2970}}}&amp;{{\text{0}}{\text{.2970}}} 
+		\end{array}} \right]{\text{)}} \hfill \\ 
+	\end{gathered} 
+\end{equation}$$`
+
+.full-width[.content-box-yellow[Usando las variables anteriores, la dinámica inversa mediante el **Algoritmo 4: Método Newton-Euler** resultó definido.]]
+.full-width[.content-box-blue[De igual modo, el modelo de dinámica directa se resolvió mediante las soluciones parciales `\(M, C , N, h, J*F\)` en la ecuación dinámica.]]
+
+]
+---
+## Del Modelamiento: .orange[Dinámico]
+.center[
+`$$\begin{equation}
+  \begin{array}{*{20}{c}}
+		M(\theta) = \left( {\begin{array}{*{20}{c}}
+				{{\sigma _1}}&amp;0&amp;{{\sigma _2}}&amp;{{\sigma _4}}&amp;{{\sigma _7}}\\
+				0&amp;{{m_2} + {m_3} + {m_4} + {m_5}}&amp;{{\sigma _3}}&amp;{{\sigma _5}}&amp;{{m_5}\sin ({\theta_3})}\\
+				{{\sigma _2}}&amp;{{\sigma _3}}&amp;{{\sigma _8}}&amp;{{\sigma _6}}&amp;{ - {\rm{c5x}}{\kern 1pt} {\kern 1pt} {m_5}}\\
+				{{\sigma _4}}&amp;{{\sigma _5}}&amp;{{\sigma _6}}&amp;{{m_4} + {m_5}}&amp;{{m_5}}\\
+				{{\sigma _7}}&amp;{{m_5}\sin ({\theta_3})}&amp;{ - {\rm{c5x}}{\kern 1pt} {\kern 1pt} {m_5}}&amp;{{m_5}}&amp;{{m_5}}
+		\end{array}} \right)\\
+		C(\theta,\dot{\theta}) = \left( {\begin{array}{*{20}{c}}
+				{{\sigma _7}}&amp;0&amp;{{\sigma _{9}}}&amp;{ - \frac{{\dot \theta_1}{\kern 1pt}}{2}{\sigma _5} - {\dot{\theta}_3}{\kern 1pt} {\rm{sin}}\left( {{\theta_3}} \right){\kern 1pt} {\sigma _3}}&amp;{{\sigma _6} - {\rm{c5y}}{\kern 1pt} {\dot{\theta}_3}{\kern 1pt} {m_5}{\kern 1pt} {\rm{sin}}\left( {{\theta_3}} \right)}\\
+				0&amp;0&amp;{{\sigma _{10}}}&amp;{{\dot{\theta}_3}{\kern 1pt} {\rm{cos}}\left( {{\theta_3}} \right){\kern 1pt} \left( {{m_4} + {m_5}} \right)}&amp;{{\dot{\theta}_3}{\kern 1pt} {m_5}{\kern 1pt} {\rm{cos}}\left( {{\theta_3}} \right)}\\
+				{ - \frac{{\dot{\theta}_1}{\kern 1pt}}{2}{\sigma _4}}&amp;0&amp;{{\sigma _{11}}}&amp;{{\sigma _2}}&amp;{{\dot{\theta}_3}{\kern 1pt} {m_5}{\kern 1pt} \left( {{L_3} + {\rm{c5z}} + {\theta_4} + {\theta_5}} \right)}\\
+				{{\sigma _{8}}}&amp;0&amp;{ - {\sigma _2}}&amp;0&amp;0\\
+				{ - {\sigma _6}}&amp;0&amp;{ - \frac{{\dot{\theta}_3}{\kern 1pt}}{2}{m_5}{\kern 1pt} {\sigma _1}}&amp;0&amp;0
+		\end{array}} \right)\\
+		N(\theta) = \left( {\begin{array}{*{20}{c}}
+				0\\
+				{ - g{\kern 1pt} \left( {{m_2} + {m_3} + {m_4} + {m_5}} \right)}\\
+				{ - {\rm{g}}\left( {{\kern 1pt} {\kern 1pt} {\rm{cos}}\left( {{\theta_3}} \right)\left( {{m_4}\left( {{\rm{c4z}} + {\theta_4}} \right) + {m_5}{\kern 1pt} \left( {{L_3} + {\rm{c5z}} + {\theta_4} + {\theta_5}} \right) + {\rm{c3x}}{\kern 1pt} {\kern 1pt} {m_3}} \right) - \sigma_1} \right)}\\
+				{ - g{\kern 1pt} {\rm{sin}}\left( {{\theta_3}} \right){\kern 1pt} \left( {{m_4} + {m_5}} \right)}\\
+				{ - g{\kern 1pt} {m_5}{\kern 1pt} {\rm{sin}}\left( {{\theta_3}} \right)}
+		\end{array}} \right)
+	\end{array}
+	\end{equation}$$`
+]
+
+
+---
+.pull-leftNN[
+## Del Modelamiento.Generación de trayectorias: .orange[Del robot]
+Utilizando la función **getPathtPlanner**.
+&lt;img src="image/pathRobot.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-rightNN[
+.content-box-blue[Trayectorias mediante la interpolación polinómica:]
+* Polinomios de tercer orden.
+* Polinomios de quinto orden.
+&lt;img src="image/trayectoriaRobot.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+---
+.pull-leftNN[
+## Del Modelamiento.Generación de trayectorias: .orange[De la inserción]
+&lt;img src="image/trayectoriaEE.svg" width="95%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-rightNN[
+**Poner Animación**
+**Poner Nuevo diagrama de flujo reducido simplificado**
+]
+
+---
+.pull-leftNN[
+## Del Modelamiento: .orange[Del Área de trabajo]
+&lt;img src="tablas/tab_dimensionesAreaTrabajo.svg" width="85%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-rightNN[
+&lt;img src="image/espacioDeTrabajoFrontal.png" width="74%" style="display: block; margin: auto;" /&gt;
+&lt;img src="image/areaTrabajoABUS.svg" width="78%" style="display: block; margin: auto;" /&gt;
+]
+---
+## Del Modelamiento: .orange[Del Área de trabajo]
+
+
+&lt;img src="image/dimensionesAreaTrabajo.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## De la simulación. .orange[De la GUI]
+.panelset[
+.panel[.panel-name[Getting Biopsy Target]
+&lt;img src="image/GUI_mainRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Defining Biopsy Target]
+&lt;img src="image/GUI_mainInsertionAngleRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Preposcionamiento]
+&lt;img src="image/GUI_prePlacementSetSafetyPositionRUN.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Posposicionamiento]
+&lt;img src="image/biopsyRobotResult.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+]
+---
+.panelset[
+.panel[.panel-name[Verificar colisiones tipo 1 y 2]
+&lt;img src="image/GUI_colisiones.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Verificar colsiones tipo 4]
+&lt;img src="image/GUI_colisiones2.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&gt; * La **profundidad del objetivo** y el **tipo de aguja** (sobre todo CN) condicionan un posible daño en la pared torácica (riesgo de neumotórax).
+&gt; * Su conocimiento y manipulación a priori influyen positivamente en el criterio medico.
+
+]
+
+.panel[.panel-name[Robot set-up]
+&lt;img src="image/GUI_robotSetup.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+## De la simulación.Del entorno robótico:.orange[Modelos de simulación]
+&lt;img src="image/SIM_GeneralModel.svg" width="75%" style="display: block; margin: auto;" /&gt;
+---
+## De la simulación.
+### Del entorno robótico: .orange[Procedimiento de biopsia]
+.pull-leftN3[
+.full-width[.content-box-yellow[
+Según flujo de trabajo clínico:
+1. **Preparación del paciente**
+2. **Localización de la lesión**
+3. **Selección del objetivo**
+4. **Preparación de biopsia**
+5. Preparación de zona de inserción
+6. Posicionamiento del robot
+7. Ejecución de biopsia
+8. Preparativos de finalización
+]]
+]
+
+.pull-rightN3[
+&lt;img src="image/sim_pasos1_4.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+---
+## De la simulación.
+### Del entorno robótico: .orange[Procedimiento de biopsia]
+.pull-leftN3[
+.full-width[.content-box-yellow[
+Según flujo de trabajo clínico:
+1. Preparación del paciente
+2. Localización de la lesión
+3. Selección del objetivo
+4. Preparación de biopsia
+5. **Preparación de zona de inserción**
+6. **Posicionamiento del robot**
+7. Ejecución de biopsia
+8. Preparativos de finalización
+]]
+]
+
+.pull-rightN3[
+&lt;img src="image/sim_pasos5_6.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## De la simulación.
+### Del entorno robótico: .orange[Procedimiento de biopsia]
+.pull-leftN3[
+.full-width[.content-box-yellow[
+Según flujo de trabajo clínico:
+1. Preparación del paciente
+2. Localización de la lesión
+3. Selección del objetivo
+4. Preparación de biopsia
+5. Preparación de zona de inserción
+6. Posicionamiento del robot
+7. **Ejecución de biopsia**
+8. Preparativos de finalización
+]]
+]
+
+.pull-rightN3[
+&lt;img src="image/sim_pasos7.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## De la simulación:.orange[Resultados de simulación múltiple]
+.panelset[
+.panel[.panel-name[Experimento aleatorio]
+&lt;img src="tablas/tab_SIM1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+.panel[.panel-name[Para posiciones]
+&lt;img src="tablas/tab_SIM2.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+.panel[.panel-name[Para orientaciones]
+&lt;img src="tablas/tab_SIM3.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+class: inverse, center, middle
+#Conclusiones
+
+---
+&lt;div class="my-footer"&gt;&lt;span&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama&lt;/span&gt;&lt;/div&gt;  
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+---
+class: center, middle
+# Muchas Gracias !!!
+
+---
+# Referencias
+Assured Imaging (2021). _SOFIA 3D Whole Breast Ultrasound_. URL:
+[https://www.assuredrad.com/wp-content/uploads/2019/10/Hitachi-Sofia-3D-Ultrasound-Brochure.pdf](https://www.assuredrad.com/wp-content/uploads/2019/10/Hitachi-Sofia-3D-Ultrasound-Brochure.pdf).
+
+Centro Nacional de Epidemiologia Prevención y Control de Enfermedades
+(2018). _Análisis de la situación del Cáncer en el Perú, 2018_.
+Ministerio de Salud. URL:
+[https://www.dge.gob.pe/epipublic/uploads/asis/asis_2020.pdf](https://www.dge.gob.pe/epipublic/uploads/asis/asis_2020.pdf).
+
+Centro Nacional de Epidemiologia Prevención y Control de Enfermedades
+(2020). _Boletin epidemiológico del Perú, 2020. Volumen 20 - SE 36.
+Semana Epidemiologica (30 de agosto al 05 de septiembre)_. Ministerio
+de Salud. URL:
+[https://www.dge.gob.pe/epipublic/uploads/boletin/boletin_202036.pdf](https://www.dge.gob.pe/epipublic/uploads/boletin/boletin_202036.pdf).
+
+Dominique, A. (2018). "Automatic Breast Ultrasound Scanning". In:
+_Lobar Approach to Breast Ultrasound_. 1st ed. Springer-Verlag. Chap.
+26, pp. 325-336. ISBN: 3319616803. DOI:
+[10.1007/978-3-319-61681-0](https://doi.org/10.1007%2F978-3-319-61681-0).
+URL:
+[https://www.springer.com/gp/book/9783319616803](https://www.springer.com/gp/book/9783319616803).
+
+Featherstone, R. (2009). _Rigid body dynamics algorithms_. 1st ed.
+Springer. ISBN: 0387743146. URL:
+[http://gen.lib.rus.ec/book/index.php?md5=80863f93195719261f8d9f4f03e200db](http://gen.lib.rus.ec/book/index.php?md5=80863f93195719261f8d9f4f03e200db).
+
+Gao, P., X. Kong, Y. Song, et al. (2020). "Recent Progress for the
+Techniques of MRI-Guided Breast Interventions and their applications on
+Surgical Strategy". In: _Journal of Cancer_ 11 (16), pp. 4671-4682.
+ISSN: 1837-9664. DOI:
+[10.7150/jca.46329](https://doi.org/10.7150%2Fjca.46329). URL:
+[http://doi.org/10.7150/jca.46329](http://doi.org/10.7150/jca.46329).
+
+Hologic (2021). _Technical Specifications for The Affirm® Prone Biopsy
+System_. URL:
+[https://www.affirmpronebiopsy.com/technical-specifications](https://www.affirmpronebiopsy.com/technical-specifications).
+
+---
+# Referencias
+Hologic (2013). _Eviva Breast Biopsy system a Choice Worth Making_.
+white paper. Hologic, pp. 1-7.
+
+Hologic (2018). _Hologic Breast and Skeletal Healt US. Product Catalog
+Summer_. Hologic Medical Solutions USA, Inc., pp. 1-5. URL:
+[http://www.hologic.ca](http://www.hologic.ca).
+
+Huang, S. Y., J. M. Boone, K. Yang, et al. (2011). "The
+characterization of breast anatomical metrics using dedicated breast
+CT". In: _Medical Physics_ 38 (4), pp. 2180-2191. ISSN: 0094-2405. DOI:
+[10.1118/1.3567147](https://doi.org/10.1118%2F1.3567147). URL:
+[http://doi.org/10.1118/1.3567147](http://doi.org/10.1118/1.3567147).
+
+Johan From, P., J. T. Gravdahl, and K. Y. Pettersen (2014).
+_Vehicle-Manipulator Systems: Modeling for Simulation, Analysis, and
+Control_. 1st ed. Advances in Industrial Control. Springer-Verlag
+London. ISBN: 978-1-4471-5462-4. DOI:
+[10.1007/978-1-4471-5463-1](https://doi.org/10.1007%2F978-1-4471-5463-1).
+URL:
+[https://www.springer.com/gp/book/9781447154624](https://www.springer.com/gp/book/9781447154624).
+
+Lynch, K. M. and F. C. Park (2017). _Modern Robotics: Mechanics,
+Planning, and Control_. 1st ed. Cambridge University Press. 544 pp.
+ISBN: 9781107156302. URL:
+[https://www.cambridge.org/cn/academic/subjects/computer-science/computer-graphics-image-processing-and-robotics/modern-robotics-mechanics-planning-and-control](https://www.cambridge.org/cn/academic/subjects/computer-science/computer-graphics-image-processing-and-robotics/modern-robotics-mechanics-planning-and-control).
+
+Megali, G., O. Tonet, C. Stefanini, et al. (2001). "A computer-assisted
+robotic ultrasound-guided biopsy system for video-assisted surgery".
+In: _International Conference on Medical Image Computing and
+Computer-Assisted Intervention. MICCAI_. Ed. by W. Niessen and M.
+Viergever. Vol. 2208. Springer-Verlag, pp. 343-350. DOI:
+[10.1007/3-540-45468-3_41](https://doi.org/10.1007%2F3-540-45468-3_41).
+
+Murray, R. M., Z. Li, S. S. Sastry, et al. (1994). _A mathematical
+introduction to robotic manipulation_. CRC press, p. 480. ISBN:
+978-0-8493-7981-9.
+
+# Referencias
+
+```
+## Warning in `[[.BibEntry`(x, ind): subscript out of bounds
+```
+
+Park, F. C., J. E. Bobrow, and S. R. Ploen (1995). "A Lie Group
+Formulation of Robot Dynamics". In: _Internatinal Journal of Robotics
+Research_ 14 (6), pp. 609-618. ISSN: 0278-3649. DOI:
+[10.1177/027836499501400606](https://doi.org/10.1177%2F027836499501400606).
+URL:
+[http://doi.org/10.1177/027836499501400606](http://doi.org/10.1177/027836499501400606).
+
+Rao, A. (2006). _Dynamics of particles and rigid bodies: A systematic
+approach_. Boston University: Cambridge University Press. URL:
+[https://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/dynamics-particles-and-rigid-bodies-systematic-approach](https://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/dynamics-particles-and-rigid-bodies-systematic-approach).
+
+Siciliano, B., L. Sciavicco, L. Villani, et al. (2008). _Robotics -
+Modelling, Planning and Control_. 2.th ed. Advanced Textbooks in
+Control and Signal Processing. Springer. ISBN: 9781846286414. DOI:
+[10.1007/978-1-84628-642-1](https://doi.org/10.1007%2F978-1-84628-642-1).
+URL:
+[https://www.springer.com/gp/book/9781846286414](https://www.springer.com/gp/book/9781846286414).
+
+Siemens Healthineers (2018). _3D Total Breast Ultrasound. ACUSON S2000
+Automated Breast Volume Scanner (ABVS), syngo.Ultrasound Breast
+Analysis (sUSBA)_. Siemens Medical Solutions USA, Inc. URL:
+[https://static.healthcare.siemens.com/siemens_hwem-hwem_ssxa_websites-context-root/wcm/idc/groups/public/@global/@imaging/@ultrasound/documents/download/mda4/nzcz/~edisp/us_acuson_s2000_abvs_brochure-05946935.pdf](https://static.healthcare.siemens.com/siemens_hwem-hwem_ssxa_websites-context-root/wcm/idc/groups/public/@global/@imaging/@ultrasound/documents/download/mda4/nzcz/~edisp/us_acuson_s2000_abvs_brochure-05946935.pdf).
+---
+class: title-slide-final, middle
+# Gracias de nuevo !!!
+
+Slides creados mediante el paquete de R [**xaringan**](https://github.com/yihui/xaringan).
+
+Con ayuda de [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), y [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightSpans": true,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

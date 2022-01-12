@@ -1,0 +1,268 @@
+---
+title: "Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama"
+subtitle: "Tesis para obtar el Título Profesional de Ingeniero Mecatrónico"
+author: "Br. Sergio Augusto Antenor Jácobo Zavaleta"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - Rutgers.css
+      - myStyle.css
+      - "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    lib_dir: libs
+    nature :
+      ratio: '16:9'
+      beforeInit: "macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      highlightSpans : true
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+header-includes:
+  - \usepackage{caption}
+  - \captionsetup[table]{textfont={it}, labelfont={bf}, singlelinecheck=false, labelsep=newline}
+  - \usepackage{booktabs}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(kableExtra)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = TRUE,
+           bibpunct = list("(",")" ,"[" ,"]" ,";", ","),
+           no.print.fields = "eprint") 
+biblio <- ReadBib("biblio.bib", check = FALSE)
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("panelset"))
+xaringanExtra::style_panelset_tabs(
+  active_foreground = "#0051BA",
+  hover_foreground = "#d22",
+  font_family = "Roboto")
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
+```
+
+---
+class: inverse, center, middle 
+# Introducción
+
+---
+```{r echo=FALSE}
+dominique2018 = Citep(biblio,"Dominique2018")
+ministerio2018cancer1 = Citep(biblio,"ministerio2018Cancer1")
+ministerio2020Cancer1 = Citep(biblio,"ministerio2020Cancer1")
+```
+.pull-leftN[
+# Realidad Problemática
+## .purple[Del paciente]
+  * Elevadas tasas de incidencia, nuevos casos y mortalidad de cáncer de mama a nivel nacional.
+  * Diagnóstico tardío del cáncer.
+  * Disminuir la experiencia traumática del cribado (<b style="color :blue;">screnning</b>):
+      + Minimizar el dolor por comprensión de la mama (Rx<sup>a</sup>).
+      + Repeticiones innecesarias de biopsia.
+      + Daño por dosis de radiación (Rx).]
+
+--
+.pull-rightN[
+```{r realidadPaciente1, echo=FALSE, fig.cap=ministerio2020Cancer1, out.width = '83%', fig.align="center"}
+knitr::include_graphics("image/distribucionCancerTipoYdiagnostico.svg")
+```
+]
+.footnote[
+[a] Radiografía
+]
+
+---
+```{r echo=FALSE}
+Eviva2013 = Citep(biblio,"Eviva2013")
+```
+.pull-leftN[
+# Realidad Problemática
+## .purple[Del paciente]
+```{r realidadPaciente2, echo=FALSE, fig.cap=paste0("Adaptado de ",Eviva2013), out.width = '75%', fig.align="center"}
+knitr::include_graphics("image/radiografiaComprension2.svg")
+```
+]
+--
+.pull-rightN[
+```{r realidadPaciente3, echo=FALSE, fig.cap=ministerio2018cancer1, out.width = '75%', fig.align="center"}
+knitr::include_graphics("image/numeroMujeres_ExamenClinicoYDepartamental.svg")
+```
+]
+
+
+---
+```{r include=FALSE}
+Dominique2018 = Citep(biblio,"Dominique2018")
+Gao2020 = Citep(biblio,"Gao2020",.opts = list(longnamesfirst = FALSE, max.names=2))
+Acuson2018 = Citep(biblio,"Acuson2018")
+HologicBrochure = Citep(biblio,"HologicBrochure")
+labelTecnologiaScreening = paste0("a) ",Dominique2018,". b) ",Gao2020, ". c) ",Acuson2018," . d-e)",HologicBrochure)
+```
+.pull-left[
+# Realidad Problemática
+## .blue[Del médico radiólogo]
+  * Biopsia y diagnóstico por imagen más rápidos y precisos para detención y control de cáncer mamario.
+  * Naturaleza .green[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
+      - Fatiga por localización anatómica de la zona de sospecha y ubicación precisa de agujas.
+      - Baja reproducibilidad.
+  * Indisponibilidad para acceder a todos los diversos screenings guiados por imagen:
+      - Radiografía.
+      - Imagen de Resonancia Magnética (MRI).
+      - Tomografía Computarizada (TC).]
+--
+.pull-right[
+```{r realidadMedico, echo=FALSE, fig.cap=labelTecnologiaScreening, out.width = '80%'}
+knitr::include_graphics("image/tecnologiasScreening.svg")
+```
+]
+
+---
+# Planteamiento del Problema
+![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
+![:col_list 
+¿Puede mejorarse el proceso actual de biopsias percutáneas de mama guiados por US para beneficio de pacientes y médicos?, 
+
+¿Puede automatizarse el diagnóstico por imagen y biopsia de mama bajo US para mejorar la detección temprana de cáncer a nivel hospitalario?, 
+
+¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusón robótica que aproveche las ventajas del diagnóstico de cáncer por imagen con US?
+]
+
+--
+## Formulación del Problema
+.full-width[.content-box-blue[
+.Large[*¿Cómo mejorar el guiado de agujas de manera precisa y autónoma en biopsia percutánea de
+mama para el diagnóstico de cáncer en mujeres?*]
+]]
+
+---
+# Objetivos
+.left-column[.full-width[.content-box-yellow[
+### Objetivo General
+- Determinar el efecto del modelamiento y simulación de un robot clínico asistido por US<sup>a</sup> 3D
+como sistema de guiado de agujas en biopsia percutánea de mama.
+]]]
+
+--
+.right-column[.full-width[.content-box-green[
+### Objetivos Específicos
+- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot
+clínico para biopsia percutánea de mama guiado por US 3D.
+- Determinar la morfología del robot clínico cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
+- Determinar un modelo cinemático para el robot clínico.
+- Determinar un modelo dinámico pare el robot clínico.
+- Definir un modelo CAD<sup>b</sup> de la estructura física del robot clínico.
+- Generar trayectorias de inserción para agujas en biopsia percutánea de mama guiada robóticamente.
+- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno
+virtual robótico.
+]]]
+
+.footnote[
+[a] Ultrasonido, Ultrasonografía, Ultrasound.
+
+[b] Dibujo Asistido por Computadora.
+]
+
+---
+.left-column[
+# Hipótesis
+.full-width[.content-box-red[
+Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
+]]
+]
+--
+.right-column[
+# Justificación
+```{r justificacion, echo=FALSE, out.width = '88%'}
+knitr::include_graphics("image/flowCharts/justificacion.svg")
+```
+]
+
+---
+class: inverse, center, middle
+# Métodos y Materiales
+
+---
+```{r child = 'materialesMetodos.Rmd'}
+```
+
+---
+class: inverse, center, middle
+# Resultados
+
+---
+<div class="my-footer"><span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</span></div> 
+
+```{r child = 'resultados.Rmd'}
+```
+
+---
+class: inverse, center, middle
+#Conclusiones
+
+---
+<div class="my-footer"><span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</span></div>  
+
+```{r child = 'conclusiones.Rmd'}
+```
+
+---
+class: center, middle
+# Muchas Gracias !!!
+
+---
+# Referencias
+```{r refs1, echo=FALSE, results="asis"}
+PrintBibliography(biblio, start = 1, end = 7)
+```
+
+---
+# Referencias
+```{r refs2, echo=FALSE, results="asis"}
+PrintBibliography(biblio, start = 8, end = 14)
+```
+
+# Referencias
+```{r refs3, echo=FALSE, results="asis"}
+PrintBibliography(biblio, start = 15, end = 21)
+```
+---
+class: title-slide-final, middle
+# Gracias de nuevo !!!
+
+Slides creados mediante el paquete de R [**xaringan**](https://github.com/yihui/xaringan).
+
+Con ayuda de [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), y [R Markdown](https://rmarkdown.rstudio.com).

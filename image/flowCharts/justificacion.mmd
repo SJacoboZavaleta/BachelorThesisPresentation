@@ -1,0 +1,62 @@
+flowchart LR
+    classDef itemClass fill:#F8FF4F,stroke:#FF0505,stroke-width:2px;
+    classDef justiNode fill:#F494F0,stroke:#C930A8,stroke-width:4px,color:#000000;
+    classDef tipoJusti fill:#9FFDF6,stroke:#1C15C9,stroke-width:3px,color:#000000;
+
+    id1(Justificación):::justiNode
+    id2("#149; Búsqueda de nuevas técnicas de diagnóstico\n #149; Manipulación de dispositivos médicos\n #8227; Más rápidas y precisas"):::itemClass%%Orden 6 - Relevancia social
+    id3("#149; Compatible con la realidad hospitalaria\n#8227; Universalidad de US (disponibilidad)\n #8227; Bajo costo"):::itemClass%%Orden 5 - Economico
+    id4("#149; Aporte a los estudios robóticos médicos a nivel mundial \n #149; Nueva línea de investigación a nivel local y Nacional"):::itemClass%%Orden 2 - Teorico
+    id5("#149; Aprovechar el potencial robótico en el sector salud \n #149; Alternativa frente a métodos convencionales"):::itemClass%%Orden 1 - tecnologico
+    id6("#149; Simulación computacional (Etapa de Verificación)\n #8227; Manipulación y control de variables y ambientes\n #8227; Bajo costo y tiempo\n #8227; Sin particición de pacientes"):::itemClass%%Orden 4 - metodologico
+    id7("#149; Mejorar el diagnóstico de cáncer de mama\n #149; Incentivar la radiología intervencionista\n #8227; Beneficios médico-paciente"):::itemClass%%Orden 3 - salud
+
+    idA[Tecnológica]:::tipoJusti
+    idB[Teórica]:::tipoJusti
+    idC[Salud]:::tipoJusti
+    idD[Metodológica]:::tipoJusti
+    idE[Económica]:::tipoJusti
+    idF[Relevancia social]:::tipoJusti
+
+    id1-->idF-->id2
+    id1-->idE-->id3
+    id1-->idB-->id4
+    id1-->idA-->id5
+    id1-->idD-->id6
+    id1-->idC-->id7
+
+%%    subgraph SEIS [Relevancia social]
+%%        id2
+%%    end
+%%    subgraph CINCO [Económica]
+%%        id3
+%%    end
+%%    subgraph CUATRO [Metodológico]
+%%        id6
+%%    end
+%%    subgraph TRES [Salud]
+%%        id7
+%%    end
+%%   subgraph DOS [Teórico]
+%%        id4
+%%    end
+%%    subgraph UNO [Tecnológico]
+%%        id5
+%%    end
+
+%%flowchart TD
+%%    subgraph imagen [Diagnóstico por imagen con US 3D]
+%%        id1[1. Preparación del paciente]-->id2[2. Localización de la lesión]
+%%        id2-->id3[3. Selección del objetivo]
+%%    end
+%%    subgraph biopsia [Biopsia percutánea guiado robóticamente]
+%%        id4[4. Preparación de biopsia]-->id5[5. Preparación de la zona de inserción]
+%%        id5-->id6[6. Posicionamiento del robot clínico]
+%%        id6-->id7[7. Ejecución de biopsia]
+%%        id7-->id8[8. Preparativos de finalización]
+%%    end
+
+%%    imagen-->B{Biopsia?}
+%%    B--SI-->biopsia
+%%    B--NO-->C(Fin)
+%%    biopsia-->C

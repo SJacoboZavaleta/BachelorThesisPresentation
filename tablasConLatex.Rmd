@@ -1,0 +1,99 @@
+---
+title: "tablasConLatex"
+author: "SergioJacobo"
+date: "16/12/2021"
+output: pdf_document
+header-includes:
+  - \usepackage{caption}
+  - \captionsetup[table]{textfont={it}, labelfont={bf}, singlelinecheck=false, labelsep=newline}
+  - \usepackage{booktabs}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+```
+
+```{r}
+tab_01 = data.frame(
+  scale = c("BAS-T", "SR", "BDI", "ASRM", "M-SRM"),
+  high = c("46.17 (2.87)", "17.94 (1.88)", "7.11 (6.50)", 
+           "6.46 (4.01)", "11.05 (3.36)"),
+  moderate = c("37.99 (1.32)", "11.52 (1.84)", "6.18 (6.09)", 
+               "5.63 (3.69)", "11.76 (2.75)"),
+  p = c("<.001", "<.001", ".254", ".109", ".078")
+)
+```
+
+
+
+```{r}
+kable(
+  tab_01,
+  format = "latex",
+  booktabs = TRUE,
+  col.names = c("Scale", "High BAS group", "Moderate BAS group", "p"),
+  align = c("l", "c", "c", "c"),
+  caption = "Means and Standard Deviations of Scores on Baseline Measures"
+)
+```
+
+```{r}
+kable(
+  tab_01,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  col.names = c("Scale", "High BAS group", "Moderate BAS group", "\\textit{p}"),
+  align = c("l", "c", "c", "c"),
+  caption = "Means and Standard Deviations of Scores on Baseline Measures"
+  )
+```
+
+```{r}
+kbl(mtcars[1:8, 1:4], caption = "Demo table", booktabs = T) %>%
+kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+
+```{r}
+text_tbl <- data.frame( "Requerimientos" = c("Exactitud y Precisión","Fuente de Alimentación","Rigidez","Seguridad","Esterilización"), "Características" = c("Posición previa del robot. Error promedio 0.54-3.21 mm.",
+"Fuentes eléctrónicas y eléctricas.","De apariencia liviana y movimiento suave.","No interferir con el espacio de trabajo de otros elementos. Mecanismo de parada de emergencia.","De fácil limpieza supercial y uso hospitalario."))
+kbl(text_tbl, booktabs = T) %>%
+kable_styling(full_width = F) %>%
+column_spec(1, bold = T, color = "blue") %>%
+column_spec(2, width = "20em")
+```
+
+
+```{r echo=TRUE}
+tab_robot = data.frame(
+  Joint = c("J_1", "J_2", "J_3", "J_4", "J_5"),
+  tipo1 = c("Revoluta", "Prismático", "Revoluta","Prismático", "Prismático"),
+  tipo2 = c("Activo", "Activo", "Activo", "Activo", "Pasivo")
+)
+
+kbl(
+  tab_robot,
+  format = "latex",
+  booktabs = TRUE,
+  col.names = c("Joint", "Tipo de\n movimiento", "Tipo de \n fuente"),
+  align = c("c", "c", "c"),
+)
+```
+
