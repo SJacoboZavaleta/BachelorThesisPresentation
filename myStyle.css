@@ -61,11 +61,17 @@ div.my-footer {
 .black { color: black; }
 .red { color: #CC3300; }
 .blue { color: #003366; }
+.blueC { color: #01cdfe;}
 .green { color: #6CF767;}
-.greenC { color: #2f9207;}
-.yellow { color: #FFD960; }
-.orange { color: #F09905; }
-.purple { color: #993399; }
+.greenC { color: #05ffa1;}
+.greenC2 {color: #00b159;}
+.greenC3 {color: #0bd3d3;}
+.yellow { color: #f37735;}
+.orange { color: #F09905;}
+.orange2 {color: #ffc425;}
+.purple { color: #993399;}
+.purple2 {color: #b967ff;}
+.purple3 {color: #f421e3;}
 .gray { color: #666666; }
 .grey { color: #B5B5B5; }
 

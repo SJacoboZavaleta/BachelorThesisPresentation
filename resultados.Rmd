@@ -1,6 +1,6 @@
 .pull-leftNN[
-## Del Modelamiento: .orange[Dispositivo sujetador]
-```{r resCopasSujetador, echo=FALSE, fig.cap="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.", out.width = '95%'}
+# Del Modelamiento: .orange[.footnotesize[Dispositivo sujetador]]
+```{r resCopasSujetador, echo=FALSE, fig.cap="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.", out.width = '90%'}
 knitr::include_graphics("image/tipoSujetadores.png")
 ```
 ]
@@ -11,10 +11,23 @@ knitr::include_graphics("image/partesSujetador.svg")
 ```
 ]
 
+???
+Respecto del disp....
+Se implementaron cuatro dispositivos sujetadores para copas A, B, C y D cumpliendo las exigencias anteriores: De tener una forma compacta para la etapa de diagnóstico por imagen, pero ser capaz de abrirse de forma parcial mediante alguna de sus tapas desplagables para permitir la biopsia. 
+
+---
+# Del Modelamiento: .orange[.footnotesize[Espacio de trabajo mamario]]
+```{r espacioMamario, echo=FALSE, out.width = '62%', fig.align='center'}
+knitr::include_graphics("image/espacioMamario.svg")
+```
+
+???
+Para esos mismos sujetadores y las ecuaciones del perfil cónico truncado se implementaron posibles espacios de trabajo mamario con múltiples puntos (posiciones vectoriales)  en su interior para emular distintos objetivos de biopsia.
+
 ---
 .pull-leftNN[
-## Del Modelamiento. Robot clinico: .orange[Morfología]
-```{r valoresInicialesAreaTrabajo, echo=FALSE,out.width = '86%'}
+# Del Modelamiento: .blue[.footnotesize[Robot clinico.]] .black[.scriptsize[Morfología]]
+```{r valoresInicialesAreaTrabajo, echo=FALSE,out.width = '84%'}
 knitr::include_graphics("image/valoresInicialesAreaTrabajo.svg")
 ```
 ]
@@ -25,11 +38,16 @@ knitr::include_graphics("image/dimensionesRobot.svg")
 ```
 ]
 
+???
+Sobre la morfología del robot, primero se consideraron diveras valores iniciales relaciones con la posible estructura mecánico-electrica del robot, sobre todo de motores. 
+
+Mediante el algoritmo de dimensiones del robot, esta tabla resume sus diferentes dimensiones parciales de la cadena cinemática según tamaño de copa.
+
+Un análisis simple de la misma, permite descubir que existen relaciones proporciales directas e inversas según el tamaño de copa, lo que reafirma el propósito de utilizar los casos extremos (A y D) para englobar los demas casos y finalmente obtener los valores finales en esta otra tabla.
 ---
 .pull-left[
-## Del Modelamiento: .orange[Cinemático]
+# Del Modelamiento: .orange[.footnotesize[Cinemático]]
 $$\begin{equation}
-	\begin{array}{*{5}{c}}
 		{{S_1} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
@@ -37,21 +55,21 @@ $$\begin{equation}
 					0 \\ 
 					0 \\ 
 					0 
-			\end{array} } \right]}&{{S_2} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_2} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					1 
-			\end{array} } \right]}&{{S_3} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_3} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					{ - 1} \\ 
 					0 \\ 
 					{876} \\ 
 					0 \\ 
 					{300} 
-			\end{array}} \right]}\\
+			\end{array}} \right]}
 			{{S_4} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
@@ -59,7 +77,7 @@ $$\begin{equation}
 					1 \\ 
 					0 \\ 
 					0 
-			\end{array} } \right]}&{{S_5} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_5} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
 					0 \\ 
@@ -67,7 +85,6 @@ $$\begin{equation}
 					0 \\ 
 					0 
 			\end{array} } \right]} 
-	\end{array}
 \end{equation}$$
 
 $$\begin{array}{*{20}{c}}
@@ -118,15 +135,19 @@ knitr::include_graphics("image/EspacioTrabajoRobot.svg")
 ```
 ]
 
+???
+Para ello se calcularon los 5 screw axis para cada joint del robot. Y de igual modo, las configuraciones matriciales en reposo. Con las mismas ecuaciones pero de forma simbólica fue posible visualizar las diversas variaciones angular del efector final para cada joint, manteniendo el reso a cero.
 ---
-## Del Modelamiento: .orange[Modelo CAD]
-```{r partesRobot, echo=FALSE,out.width = '88%', fig.align='center'}
+# Del Modelamiento: .orange[.footnotesize[Modelo CAD]]
+```{r partesRobot, echo=FALSE,out.width = '85%', fig.align='center'}
 knitr::include_graphics("image/partesRobot.svg")
 ```
 
+???
+Del mismo modo, se presenta el modelo CAD final del robot. La parte más resaltante es la último eslabón se compone de dos partes: una externa y otra interna que es intercambiable para cada tipo de dispositivo sujetador. 
 ---
 .pull-leftNN[
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 $$\begin{equation}
 	\begin{array}{*{20}{l}}
 			{{M_{{l_1}}} = \left[ {\begin{array}{*{20}{c}}
@@ -245,9 +266,12 @@ $$\begin{equation}
 
 ]
 
+???
+Tambien se contraron todas las configuraciones matriciales de cada frame definido en el centro de masa e incluido sis screw axis denotados como Ai.
+
 ---
 .pull-leftN3[
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 ```{r variablesInercia, echo=FALSE,out.width = '100%', fig.align='left'}
 knitr::include_graphics("image/variablesDinamicas.svg")
 ```
@@ -306,10 +330,15 @@ $$\begin{equation}
 
 .full-width[.content-box-yellow[Usando las variables anteriores, la dinámica inversa mediante el **Algoritmo 4: Método Newton-Euler** resultó definido.]]
 .full-width[.content-box-blue[De igual modo, el modelo de dinámica directa se resolvió mediante las soluciones parciales $M, C , N, h, J*F$ en la ecuación dinámica.]]
-
 ]
+
+???
+Gracias al modelo CAD, se pudo simplificar el cálculo variables inerciales como masas y momentos de inercial. Con todo ello y con ayuda del algoritmo Newton-Euler, el modelo dinámico inverso para hallar los torques articulares fueron definidos de forma numérica.
+
+Lo mismo se realizó para la dinámica directa, al calcular las matrices de Masa inercial, Fuerzas de coriolis, Fuerzas gravitaciones y los torques externos causados por alguna fuerza externa.
+
 ---
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 .center[
 $$\begin{equation}
   \begin{array}{*{20}{c}}
@@ -338,56 +367,61 @@ $$\begin{equation}
 	\end{equation}$$
 ]
 
-
+???
+Que justamente están aquí de forma simbólica para la implementación de algún sistema de control a bajo nivel.
 ---
 .pull-leftNN[
-## Del Modelamiento.Generación de trayectorias: .orange[Del robot]
-Utilizando la función **getPathtPlanner**.
-```{r pathPlannerRobot, echo=FALSE,out.width = '100%', fig.align='left'}
+# Del Modelamiento: .greenC3[.footnotesize[Generación de trayectorias.]] .black[.scriptsize[Del robot]]
+```{r pathPlannerRobot, echo=FALSE,out.width = '100%', fig.align='center'}
 knitr::include_graphics("image/pathRobot.svg")
 ```
 ]
 
 .pull-rightNN[
-.content-box-blue[Trayectorias mediante la interpolación polinómica:]
-* Polinomios de tercer orden.
-* Polinomios de quinto orden.
+.content-box-yellow[Path Planner: Mediante la función **getPathtPlanner**.]
+
+.content-box-blue[Trajectory Planner: Interpolación punto a punto:]
+> * Polinomios de tercer orden.
+> * Polinomios de quinto orden.
+
+
 ```{r interpolacionRobot, echo=FALSE,out.width = '100%', fig.align='left'}
 knitr::include_graphics("image/trayectoriaRobot.svg")
 ```
 ]
 
+???
+Respecto de la generación de trayectorias para el robot, los resultados de la planificación de ruta utilizando la función getPathPlanner implementada en Matlab, pueden apreciarse estas figuras. 
+
 ---
-.pull-leftNN[
-## Del Modelamiento.Generación de trayectorias: .orange[De la inserción]
-```{r interpolacionEE, echo=FALSE,out.width = '95%', fig.align='left'}
+# Del Modelamiento: .greenC3[.footnotesize[Generación de trayectorias.]] .black[.scriptsize[De la inserción]]
+Utilizando los casos de **riesgo por colisiones** y el **Algoritmo 8: Selección de la trayectoria de inserción de agujas** se obtuvo:
+
+```{r interpolacionEE, echo=FALSE,out.width = '50%', fig.align='center'}
 knitr::include_graphics("image/trayectoriaEE.svg")
 ```
-]
 
-.pull-rightNN[
-**Poner Animación**
-**Poner Nuevo diagrama de flujo reducido simplificado**
-]
+???
+Todas los resultados anteriores, junto al ........ permitieron simular el posicionamiento del robot cerca del dispositivo sujetador antes de la biopsia, se definió como preposicionmianto. Cualquier movimiento del robot (como el eslabón 5 que es no motorizado) se denominó posposcionamiento.
+
+Es retirado hasta una distancia segura (mayor a 90 mm), para volver a avanzar, es decir, producir la inserción de aguja hasta una distancia mínima que garantiza quel extremo de la aguja alcance el objetivo de biopsia. 
 
 ---
 .pull-leftNN[
-## Del Modelamiento: .orange[Del Área de trabajo]
-```{r dimensionAreaTrabajo, echo=FALSE,out.width = '85%', fig.align='left'}
+# Del Modelamiento: .purple[.footnotesize[Del Área de trabajo]]
+```{r dimensionAreaTrabajo, echo=FALSE,out.width = '85%', fig.align='center'}
 knitr::include_graphics("tablas/tab_dimensionesAreaTrabajo.svg")
 ```
 ]
 
 .pull-rightNN[
-```{r espacioTrabajo, echo=FALSE,out.width = '74%', fig.align='center'}
-knitr::include_graphics("image/espacioDeTrabajoFrontal.png")
-```
-```{r sistemaABUS, echo=FALSE,out.width = '78%', fig.align='center'}
+<img src="image/mesaBiopsia.gif" height="291" width="342"/>
+```{r sistemaABUS, echo=FALSE,out.width = '76%', fig.align='center'}
 knitr::include_graphics("image/areaTrabajoABUS.svg")
 ```
 ]
 ---
-## Del Modelamiento: .orange[Del Área de trabajo]
+# Del Modelamiento: .purple[.footnotesize[Del Área de trabajo]]
 ```{r include=FALSE}
 Assuredrad2020 = Citet(biblio,"Assuredrad2020",.opts = list(longnamesfirst = FALSE, max.names=1))
 HologicWeb1 = Citet(biblio,"HologicWeb1",.opts = list(longnamesfirst = FALSE, max.names=1))
@@ -398,7 +432,7 @@ knitr::include_graphics("image/dimensionesAreaTrabajo.svg")
 ```
 
 ---
-## De la simulación. .orange[De la GUI]
+# De la simulación: .orange[.footnotesize[De la GUI]]
 .panelset[
 .panel[.panel-name[Obtener objetivo de biopsia]
 ```{r GUI_tab1, echo=FALSE,out.width = '70%', fig.align='center'}
@@ -408,7 +442,7 @@ knitr::include_graphics("image/GUI_inicio.png")
 
 .panel[.panel-name[Definición de inserción]
 ```{r GUI_tab11, echo=FALSE,out.width = '70%', fig.align='center'}
-knitr::include_graphics("image/GUI_inserion.png")
+knitr::include_graphics("image/GUI_insercion.png")
 ```
 ]
 
@@ -423,16 +457,21 @@ knitr::include_graphics("image/GUI_prePlacementSetSafetyPositionRUN.png")
 knitr::include_graphics("image/GUI_resumen.png")
 ```
 ]
+
 ]
+
+---
+<img src="image/seleccionInsercion.gif" />
+
 ---
 .panelset[
-.panel[.panel-name[Verificar colisiones tipo 1 y 2]
+.panel[.panel-name[Verificar colisiones tipo 1, 2 y 4]
 ```{r GUI_colisiones, echo=FALSE,out.width = '100%', fig.align='center'}
 knitr::include_graphics("image/GUI_colisiones.svg")
 ```
 ]
 
-.panel[.panel-name[Verificar colsiones tipo 4]
+.panel[.panel-name[Verificar colisiones tipo 4]
 ```{r GUI_colisions2, echo=FALSE,out.width = '100%', fig.align='center'}
 knitr::include_graphics("image/GUI_colisiones2.svg")
 ```
@@ -449,17 +488,16 @@ knitr::include_graphics("image/GUI_robotSetup.svg")
 ]
 
 ---
-## De la simulación.Del entorno robótico:.orange[Modelos de simulación]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Modelos de simulación]]
 ```{r GUI_modeloSimulacion, echo=FALSE,out.width = '75%', fig.align='center'}
 knitr::include_graphics("image/SIM_GeneralModel.svg")
 ```
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
-1. **Preparación del paciente**
+1. Preparación del paciente
 2. **Localización de la lesión**
 3. **Selección del objetivo**
 4. **Preparación de biopsia**
@@ -476,8 +514,7 @@ knitr::include_graphics("image/sim_pasos1_4.png")
 ```
 ]
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
@@ -499,8 +536,7 @@ knitr::include_graphics("image/sim_pasos5_6.png")
 ]
 
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
@@ -522,7 +558,10 @@ knitr::include_graphics("image/sim_pasos7.png")
 ]
 
 ---
-## De la simulación:.orange[Resultados de simulación múltiple]
+<img src="image/procesoBiopsia2.gif" />
+
+---
+# De la simulación: .blue[.footnotesize[Resultados de simulaciones múltiples]]
 .panelset[
 .panel[.panel-name[Experimento aleatorio]
 ```{r simTab1, echo=FALSE,out.width = '100%', fig.align='center'}

@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="165.00017mm"
-   height="63.67429mm"
-   viewBox="0 0 165.00017 63.67429"
+   width="162.12204mm"
+   height="60.561527mm"
+   viewBox="0 0 162.12204 60.561528"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
@@ -23,16 +23,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.79952035"
-     inkscape:cx="325.88799"
-     inkscape:cy="406.14785"
+     inkscape:zoom="1.2785718"
+     inkscape:cx="201.48289"
+     inkscape:cy="91.929046"
      inkscape:document-units="mm"
      inkscape:current-layer="g20"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1046"
-     inkscape:window-height="1041"
-     inkscape:window-x="29"
+     inkscape:window-width="1284"
+     inkscape:window-height="1030"
+     inkscape:window-x="192"
      inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,7 +51,7 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(95.774308,510.00696)">
+     transform="translate(94.250502,506.8942)">
     <g
        id="g20"
        transform="matrix(0.35277777,0,0,-0.35277777,-97.021297,-398.87186)">
@@ -59,19 +59,20 @@
          transform="scale(1,-1)"
          style="font-style:italic;font-variant:normal;font-size:11.9552px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPS-ItalicMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text64"
-         x="75.038773"
-         y="-306.72772"><tspan
-           x="75.038773 82.343399 86.993973 90.31752 96.29512 101.60323 104.92677 110.90437 116.88197 120.20551 125.51363 133.153 138.46111 143.76921 149.74681 153.07036 159.04796 162.37151 168.34911 175.98848 184.28539 190.26299 195.57111 200.22166 205.52979 210.83789 216.81549 220.13904 226.11664 229.44019 235.41779 243.05716 249.03476 257.33167 263.30927 266.63281 271.28339 274.60693 277.93045 283.90805 287.2316 293.2092 300.84857 306.82617 310.14972 316.12732 322.10492 326.75549 330.07904 336.05664 343.69601 349.67361 355.65121 358.97476 364.95236 370.92996 376.90756 384.54694 390.52454 396.50214 404.14151 407.46506 416.09671 422.07431 428.05191 433.36002"
-           y="-306.72772"
+         x="73.002563"
+         y="-297.90414"><tspan
+           x="73.002563 80.30719 84.957764 88.281311 94.258911 99.567024 102.89056 108.86816 114.84576 118.1693 123.47742 131.11679 136.4249 141.733 147.7106 151.03415 157.01175 160.3353 166.3129 173.95227 182.24918 188.22678 193.5349 198.18546 203.49358 208.80168 214.77928 218.10283 224.08043 227.40398 233.38158 241.02095 246.99855 255.29546 261.27307 264.59662 269.24719 272.57074 275.89426 281.87186 285.1954 291.173 298.81238 304.78998 308.11353 314.09113 320.06873 324.7193 328.04285 334.02045 341.65982 347.63742 353.61502 356.93857 362.91617 368.89377 374.87137 382.51074 388.48834 394.46594 402.10532 405.42886 414.06052 420.03812 426.01572 431.32382"
+           y="-297.90414"
            sodipodi:role="line"
            id="tspan62">Principalesventajasydesventajasdedistintasbiopsiasguiadasporimagen</tspan></text>
       <g
          id="g66"
          transform="translate(4.6687724,465.00973)">
         <path
-           d="M -1.134,-173.056 H 466.583"
+           d="M 4.6252671,-173.056 462.74349,-173.53594"
            style="fill:none;stroke:#000000;stroke-width:0.9564;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path68" />
+           id="path68"
+           sodipodi:nodetypes="cc" />
       </g>
       <text
          transform="scale(1,-1)"
@@ -87,9 +88,10 @@
          id="g74"
          transform="translate(4.6687724,465.00973)">
         <path
-           d="M -1.134,-193.69 H 466.583"
+           d="M 4.1453282,-193.69 H 462.74349"
            style="fill:none;stroke:#000000;stroke-width:0.5978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path76" />
+           id="path76"
+           sodipodi:nodetypes="cc" />
       </g>
       <text
          transform="scale(1,-1)"
@@ -140,9 +142,10 @@
          id="g98"
          transform="translate(4.6687724,465.00973)">
         <path
-           d="M -1.134,-239.081 H 466.583"
+           d="M 5.585145,-239.081 H 462.26355"
            style="fill:none;stroke:#000000;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path100" />
+           id="path100"
+           sodipodi:nodetypes="cc" />
       </g>
       <text
          transform="scale(1,-1)"
@@ -180,9 +183,10 @@
          id="g116"
          transform="translate(4.6687724,465.00973)">
         <path
-           d="M -1.134,-287.001 H 466.583"
+           d="M 4.1453282,-287.001 461.30367,-287.48094"
            style="fill:none;stroke:#000000;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path118" />
+           id="path118"
+           sodipodi:nodetypes="cc" />
       </g>
       <text
          transform="scale(1,-1)"
@@ -225,9 +229,10 @@
          id="g136"
          transform="translate(4.6687724,465.00973)">
         <path
-           d="M -1.134,-317.735 H 466.583"
+           d="M 3.1854503,-317.735 H 460.82373"
            style="fill:none;stroke:#000000;stroke-width:0.9564;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path138" />
+           id="path138"
+           sodipodi:nodetypes="cc" />
       </g>
       <text
          transform="scale(1,-1)"
@@ -267,15 +272,42 @@
            y="-136.68472"
            sodipodi:role="line"
            id="tspan152">:ImagenporResonanciaMagnética</tspan></text>
-      <text
+      <rect
+         style="fill:none;stroke:#ff0004;stroke-width:2.83465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect878"
+         width="144.88823"
+         height="17.011162"
+         x="108.09442"
+         y="-214.3699"
          transform="scale(1,-1)"
-         style="font-variant:normal;font-weight:normal;font-size:11.9552px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text158"
-         x="465.27377"
-         y="-136.68472"><tspan
-           x="465.27377"
-           y="-136.68472"
-           id="tspan156">.</tspan></text>
+         rx="6.5751696" />
+      <rect
+         style="fill:none;stroke:#ff0004;stroke-width:2.83465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect882"
+         width="34.022335"
+         height="21.11731"
+         x="40.636341"
+         y="-258.10452"
+         transform="scale(1,-1)"
+         rx="8.3349457" />
+      <rect
+         style="fill:none;stroke:#ff0004;stroke-width:2.83465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect884"
+         width="95.614502"
+         height="14.664798"
+         x="109.85419"
+         y="-178.328"
+         transform="scale(1,-1)"
+         rx="4.8153934" />
+      <rect
+         style="fill:none;stroke:#ff0004;stroke-width:2.83465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect886"
+         width="129.05025"
+         height="26.983231"
+         x="113.37375"
+         y="-253.99838"
+         transform="scale(1,-1)"
+         rx="8.3349457" />
     </g>
   </g>
 </svg>

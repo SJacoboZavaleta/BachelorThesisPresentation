@@ -1,0 +1,20 @@
+* Verificación del modelo de dispositivo sujetador:
+    * Estáticamente y esfuerzos.  
+    * Fabricación, funcionamiento y material. Nuevos tamaños o formas.
+    
+* Mejora de los modelos CAD:
+  * Del robot
+    * Mecanismos y componentes internos.  
+  * De la aguja  
+    * Modelo flexible.
+        
+* Uso de simuladores Open-Source:
+    * Entornos más realistas. Interconectividad para aplicaciones biomédicas. 
+
+* Implementación de algún sistema de control:  
+    * Guiado realista de agujas flexibles.
+
+* Verificación y análisis estadístico de la biopsia guiada robóticamente:  
+    * Emulación de un diseño de investigación clínica de tipo prueba diagnóstica:  
+        * Precisión de biopsia y Estimadores de validez como sensibilidad, especificidad, etc.
+        * Comparación con otras técnicas de biopsia convencional.  

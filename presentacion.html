@@ -4,7 +4,6 @@
     <title>Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</title>
     <meta charset="utf-8" />
     <meta name="author" content="Br. Sergio Augusto Antenor Jácobo Zavaleta" />
-    <meta name="date" content="2022-01-12" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -31,23 +30,26 @@ class: center, middle, inverse, title-slide
 # Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama
 ## Tesis para obtar el Título Profesional de Ingeniero Mecatrónico
 ### Br. Sergio Augusto Antenor Jácobo Zavaleta
-### 2022-01-12
+### 14 de enero del 2022
 
 ---
 
+class: middle, center
 
 
 
 <style>.panelset{--panel-tab-active-foreground: #0051BA;--panel-tab-hover-foreground: #d22;--panel-tab-font-family: Roboto;}</style>
+
+&lt;img src="image/logoEscuela.png" width="32%" /&gt;
+
 ---
 class: inverse, center, middle 
 # Introducción
-
 ---
 
 .pull-leftN[
 # Realidad Problemática
-## .purple[Del paciente]
+## .purple3[De la paciente]
   * Elevadas tasas de incidencia, nuevos casos y mortalidad de cáncer de mama a nivel nacional.
   * Diagnóstico tardío del cáncer.
   * Disminuir la experiencia traumática del cribado (&lt;b style="color :blue;"&gt;screnning&lt;/b&gt;):
@@ -55,6 +57,16 @@ class: inverse, center, middle
       + Repeticiones innecesarias de biopsia.
       + Daño por dosis de radiación (Rx).]
 
+???
+La realidad problemática del presente estudio está basado en la situacion y condiciones actuales de los principales partícipes durante un diagnóstico de cáncer de mama en mujeres: Paciente y médico.
+
+Entonces, desde la perspectiva de la paciente, se tiene que:
+* Es preocupante que aún existan:: Elevadas tasas ..., aumento de nuevos casos, .. Y sobre todo que Mujeres son las principales afectadas ya que solo el 1% de varones sufren este cáncer.
+* A ello, se suma la pobre eduación clínica y familiar sobre la autoexaminación y chequeos periódicas que llevan ..:: Diagnóstico ...
+* Ya, durante la etapa de tratamiento, los testimonios recogidos coinciden que la experiencia no es la mejor ya que::
+	* Existen dolor durante el diagnóstico por mamografía.
+	* Complicado por el número de repeticiones ...
+	* Y quizas, lo más controversial, la exposición a 		pequeñas dosis de Rx también por Mamografía.
 --
 .pull-rightN[
 &lt;div class="figure" style="text-align: center"&gt;
@@ -66,16 +78,30 @@ class: inverse, center, middle
 [a] Radiografía
 ]
 
+???
+Así se tiene que, de los últimos reportes a nivel nacional sobre cáncer.
+
+En esta primera gráfica, se apecaia que el cáncer de mama sigue siendo uno de los prinpales cánceres femeninos en conjunto con el de cuello uterino.
+
+Y que de ellos, la principales base de diagnóstico es el uso de imágenes clínicas (US, Mamografía, Resonancia magnética y Tomografía). Lo que refleja su gran impacto y rol clínico.
+
+
 ---
 
 .pull-leftN[
 # Realidad Problemática
-## .purple[Del paciente]
+## .purple3[De la paciente]
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="image/radiografiaComprension2.svg" alt="Adaptado de (Hologic, 2013)" width="75%" /&gt;
 &lt;p class="caption"&gt;Adaptado de (Hologic, 2013)&lt;/p&gt;
 &lt;/div&gt;
 ]
+
+???
+Continuando, se ejemplifica una de las causas de dolor en mujeres durante el diagnóstico mamográfico que involucra:
+* Dos placas compresoras métalicas que reducen el espacio o ancho natural de la mama a un mínimo.
+* Así mismo, desde la decada pasada existe una tendencia de aumento del número de casos diagnóstico por cáncer, lo que ha llevado que las principales regiones donde ocurren sean:
+
 --
 .pull-rightN[
 &lt;div class="figure" style="text-align: center"&gt;
@@ -83,7 +109,8 @@ class: inverse, center, middle
 &lt;p class="caption"&gt;(Centro Nacional de Epidemiologia Prevención y Control de Enfermedades, 2018)&lt;/p&gt;
 &lt;/div&gt;
 ]
-
+???
+* Así mismo, desde la decada pasada existe una tendencia de aumento del número de casos diagnóstico por cáncer, lo que ha llevado que las principales regiones donde ocurren sean:
 
 ---
 
@@ -91,13 +118,19 @@ class: inverse, center, middle
 # Realidad Problemática
 ## .blue[Del médico radiólogo]
   * Biopsia y diagnóstico por imagen más rápidos y precisos para detención y control de cáncer mamario.
-  * Naturaleza .green[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
+  * Naturaleza .blue[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
       - Fatiga por localización anatómica de la zona de sospecha y ubicación precisa de agujas.
       - Baja reproducibilidad.
-  * Indisponibilidad para acceder a todos los diversos screenings guiados por imagen:
-      - Radiografía.
+  * Disponibilidad y acceso a screenings más costosos pero eficaces:
+      - Mamografía digital (Rx).
       - Imagen de Resonancia Magnética (MRI).
       - Tomografía Computarizada (TC).]
+      
+???
+El segúndo partícipe de esta realidad problemática, es la del médico, específicamente la del médico radiólogo encargado de diagnósticar e intervenir en actividades a fines al cáncer.
+* Lo que llevadado a la busqueda de nuevas tecnologías para su diagnóstico y control. Pero, que algunas de ellas depende de la experiencia y habilidad del médico (conocido como operador-dependencia). Tal es el caso de, 
+
+* Por otro lado, existe una indisponibilidad de acceder siempre a tecnologías validamente más eficases pero costosas.
 --
 .pull-right[
 &lt;div class="figure"&gt;
@@ -107,22 +140,55 @@ class: inverse, center, middle
 ]
 
 ---
-# Planteamiento del Problema
-![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
-![:col_list 
-¿Puede mejorarse el proceso actual de biopsias percutáneas de mama guiados por US para beneficio de pacientes y médicos?, 
-
-¿Puede automatizarse el diagnóstico por imagen y biopsia de mama bajo US para mejorar la detección temprana de cáncer a nivel hospitalario?, 
-
-¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusón robótica que aproveche las ventajas del diagnóstico de cáncer por imagen con US?
-]
-
---
-## Formulación del Problema
+# Formulación del Problema
 .full-width[.content-box-blue[
 .Large[*¿Cómo mejorar el guiado de agujas de manera precisa y autónoma en biopsia percutánea de
 mama para el diagnóstico de cáncer en mujeres?*]
 ]]
+
+???
+Entonces, con base a lo anterior, es que se formuló el siguiente problema de investigación.
+
+Que a su vez, derivó en intentar responder 3 preguntas de estudio. 
+
+--
+![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
+![:col_list 
+¿Puede mejorarse el proceso actual de biopsias percutáneas de mama para beneficio de pacientes y médicos?, 
+
+¿Puede automatizarse el diagnóstico por imagen y biopsia de mama para mejorar la detección temprana de cáncer?, 
+
+¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusión tecnológica que aproveche las ventajas del diagnóstico por imagen?
+]
+
+
+???
+Y para dar respuesta, es que se planteó la siguiente hipótesis
+
+---
+.left-column[
+# Hipótesis
+.full-width[.content-box-red[
+Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
+]]
+]
+
+???
+Como pueden notar, la ténica de US fue la escogida como base del estudio robótico porque? Por los siguiente motivos que justifican:
+--
+.right-column[
+# Justificación
+&lt;img src="image/flowCharts/justificacion.svg" width="88%" /&gt;
+]
+
+???
+*Relevancia social: Al Intenta ofrecer una alternativa para diagnóstico de cáncer. Mediante la manipulación de herramientas y dispositivo médicos, 
+* Tiene un gran impacto económico: Por que el US es la técnica más barata y por ende, ... hospitales de categoria media y alta.
+* A nivel teórico tambien, porque aporta conocimiento en el campo de la robótica medica ...
+Y porque puede abrir una nueva linea .... mecatrónica médica ...
+* A nivel tech., porque pretende aprovechar el potencial robótico para mejorar técnicas convencionales.
+* A nivel metodologíco, porque la hipotesis planteada funciona sobre la una simulación computacional que : ...
+* Y finalmente, por su gran impacto en salud, al buscar mejorar y aliviar el procedimiento de biopsia tanto para médico y paciente en cáncer de mama.
 
 ---
 # Objetivos
@@ -132,18 +198,20 @@ mama para el diagnóstico de cáncer en mujeres?*]
 como sistema de guiado de agujas en biopsia percutánea de mama.
 ]]]
 
+???
+* Así, el objetivo principal a lo largo de todo el estudio fue:...
+
 --
 .right-column[.full-width[.content-box-green[
 ### Objetivos Específicos
-- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot
-clínico para biopsia percutánea de mama guiado por US 3D.
-- Determinar la morfología del robot clínico cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
-- Determinar un modelo cinemático para el robot clínico.
-- Determinar un modelo dinámico pare el robot clínico.
-- Definir un modelo CAD&lt;sup&gt;b&lt;/sup&gt; de la estructura física del robot clínico.
+- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot clínico para biopsia percutánea de mama guiado por US 3D.
+- Determinar la morfología del robot cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
+- Determinar un modelo cinemático para el robot.
+- Determinar un modelo dinámico pare el robot.
+- Definir un modelo CAD&lt;sup&gt;b&lt;/sup&gt; de la estructura física del robot.
 - Generar trayectorias de inserción para agujas en biopsia percutánea de mama guiada robóticamente.
-- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno
-virtual robótico.
+- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno virtual robótico.
+
 ]]]
 
 .footnote[
@@ -152,49 +220,63 @@ virtual robótico.
 [b] Dibujo Asistido por Computadora.
 ]
 
----
-.left-column[
-# Hipótesis
-.full-width[.content-box-red[
-Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
-]]
-]
---
-.right-column[
-# Justificación
-&lt;img src="image/flowCharts/justificacion.svg" width="88%" /&gt;
-]
+???
+* Y para ello, se cumplió los siguiente objetivos específicos:
+
+Primero, ...
+Seguido por..
+Además de ...
+Obtener un ..
+Para luego...
+Y finalmente, ...
 
 ---
 class: inverse, center, middle
-# Métodos y Materiales
+# Materiales y Métodos
 
 ---
 
-.pull-leftNN[
-## .orange[Diseño de requerimientos]
-### Del flujo de trabajo para biopsia percutánea de mama
+.pull-leftN2[
+# .orange[Diseño de requerimientos]
+## .purple[Del flujo de trabajo cínico para biopsia percutánea de mama]
 &lt;img src="tablas/tab_principalesVentajasDesvetajasBiopsiaGuiadaPorImagen.svg" width="100%" /&gt;
 ]
 
-.pull-right[.center[
-&lt;img src="image/flowCharts/flujoDeTrabajoBiopsia.svg" width="59%" /&gt;
-]]
+--
+.pull-rightN2[
+&lt;img src="image/flowCharts/flujoDeTrabajoBiopsia.svg" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+
+???
+Así llegamos a la sección de materiales y métodos. Ordenada en dos etapas: La etapa de diseño de requerimientos y la de procedimiento.
+
+Para el diseño de requer. Dado que no existe un antecedente a nivel nacional para biopsias guiadas robóticamente, es que se propuso un nuevo flujo de trabajo clínico: Conjunto de procedimientos y responsabilidades del personal médico para obtener un resultado exitoso a nivel hospitalario. Según el MINSA, esta propuesta estaría orientada al área de Diagnóstico por Imagen. 
+
+Pero primero, se mustra la comparación realizada entre las principales sistemas de guiado para biopsia: 
+
+Por su parte, en mamagrafía ...
+
+Todas estas características, permitieron proponer el siguiente flujo de trabajo a realizar durante una consulta externa para evaluación y diagnóstico de cáncer de mama.
+
+La idea del fujo de trabajo, es permitir un proceso secuencial de dos etapas generalmente realizadas en tiempo y lugar distintos. En este caso, ambas etapas deberían ser funcionalmente compatibles. 
 
 ---
 &lt;div class="my-footer"&gt;&lt;span&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama&lt;/span&gt;&lt;/div&gt; 
 
+# .orange[Diseño de requerimientos]
 .pull-leftNN[
-## .orange[Diseño de requerimientos]
-### De la mama
-.middlePos[
+## .purple3[De la mama]
 &lt;img src="tablas/tab_caracterizacionMedidasAnatomicas.svg" width="100%" /&gt;
 ]
-]
+???
+Como el objetivo final es mejorar el diagnóstico de cáncer de mama, es indispensable el estudio del organo mamario. Para ello, su modelamiento debe basarse en al menos medidas anatómicas reales que caracterizen un modelo más realista. Así utilizando los resultados de Huang2011 mediante mamografía se obtuvo una clasificación de mujeres en 4 tamaños o copa mamaria.
 
-.pull-right[
-### Del robot clínico
-.middlePos[
+Se resalta, que el volumen mamamrio aumenta a mayor copa mamaria. De igual modo, para su diametro y altura.
+
+--
+.pull-rightNN[
+## .blueC[Del robot clínico]
 &lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -204,44 +286,57 @@ class: inverse, center, middle
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Exactitud y Precisión &lt;/td&gt;
-   &lt;td style="text-align:left;width: 16em; "&gt; Posición previa del robot. Error promedio 0.54-3.21 mm. &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: #1e72fd !important;"&gt; Exactitud y Precisión &lt;/td&gt;
+   &lt;td style="text-align:left;width: 25em; "&gt; Posición previa del robot. Error promedio 0.54-3.21 mm. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Fuente de Alimentación &lt;/td&gt;
-   &lt;td style="text-align:left;width: 16em; "&gt; Fuentes eléctrónicas y eléctricas. &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: #1e72fd !important;"&gt; Fuente de Alimentación &lt;/td&gt;
+   &lt;td style="text-align:left;width: 25em; "&gt; Fuentes eléctrónicas y eléctricas. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Rigidez &lt;/td&gt;
-   &lt;td style="text-align:left;width: 16em; "&gt; De apariencia liviana y movimiento suave. &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: #1e72fd !important;"&gt; Rigidez &lt;/td&gt;
+   &lt;td style="text-align:left;width: 25em; "&gt; De apariencia liviana y movimiento suave. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Seguridad &lt;/td&gt;
-   &lt;td style="text-align:left;width: 16em; "&gt; No interferir con el espacio de trabajo de otros elementos. Mecanismo de parada de emergencia. &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: #1e72fd !important;"&gt; Seguridad &lt;/td&gt;
+   &lt;td style="text-align:left;width: 25em; "&gt; No interferir con el espacio de trabajo de otros elementos. Mecanismo de parada de emergencia. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: blue !important;"&gt; Esterilización &lt;/td&gt;
-   &lt;td style="text-align:left;width: 16em; "&gt; De fácil limpieza supercial y uso hospitalario. &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: #1e72fd !important;"&gt; Esterilización &lt;/td&gt;
+   &lt;td style="text-align:left;width: 25em; "&gt; De fácil limpieza supercial y uso hospitalario. &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-]]
+]
+
+???
+Acerca del robot clínico, se tiene que los requerimientos mínimos son diversos. Por ejemplo:
+* Exacti.... El estado de arte de robot para biopsias percutáneas en experimentos tienen errores de posición promedio desde 0.54...
+* Fuente ..: El uso US, no exige alguna restricción .... Lo que si ocurre con resonancia magnética. 
+
+* Esterilizac...: La superficie y material del robot deben permitir su facil desinfección.
+
 
 ---
 
 
-## .orange[Diseño de requerimientos]
-### Del efector final
+# .orange[Diseño de requerimientos]
+## .greenC2[Del efector final]
 &lt;div class="figure"&gt;
 &lt;img src="image/efectorFinalDexter.svg" alt="Componentes del sistema robótico Dexter. (a) Robot llevando el (b) Efector final para
-guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali Tonet, et al., 2001)" width="100%" /&gt;
+guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali, et al., 2001)" width="95%" /&gt;
 &lt;p class="caption"&gt;Componentes del sistema robótico Dexter. (a) Robot llevando el (b) Efector final para
-guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali Tonet, et al., 2001)&lt;/p&gt;
+guía de agujas adaptado con sensores de movimiento. (c) Transductor de US sensorizado (Megali, et al., 2001)&lt;/p&gt;
 &lt;/div&gt;
 
+???
+Acerca del efector final, que es la parte encargada de manipular las herramientas e instrumentos se inspiró en:
+
+Sistema de riel para un movimiento rectilineo donde se monta el dispositivo de biopsia que al desplazarse, su aguja pasa mediante un agujero sensoriado para medir milimetricamente su avance. 
+
 ---
-## .orange[Diseño de requerimientos]
-### De la biopsia
+# .orange[Diseño de requerimientos]
+## .purple2[De la biopsia]
 &lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -251,48 +346,61 @@ guía de agujas adaptado con sensores de movimiento. (c) Transductor de US senso
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 1 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Trayectoria ideal fue una línea recta. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 2 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Desplazamiento del objetivo de biopsia fue mínima (nulo) &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 3 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Espacio de tarea (task space) no realista. Aproximado a un volumen cónico truncado a partir de dimensiones anatómicas. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 4 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Volumen cónico caracterizado en cuatro tamaños promedio o copa (A,B,C y D). &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:left;width: 45em; "&gt; Un objetivo de biopsia se define como el centroide de una posible anamolía o elegido por criterio médico (ausente). Posicón en el espacio cartersiano. &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 45em; "&gt; Un objetivo de biopsia se define como el centroide de una posible anamolía o elegido por criterio médico (ausente). Posición en el espacio cartersiano. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 6 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Localización y visualización mediante un Sistema Automatizado de Ultrasonido de Mama (ABUS). Rotación total y radial de 360° &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 7 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Uso de un Dispositivo Sujetador para:  Estabilización e inmovilización. Y soporte estructural de la mama. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 8 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Inserción de tipo oblícua. Confianza en la correcta localización del objetivo por el sistema ABUS. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;font-weight: bold;color: blue !important;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: #8a0bd2 !important;"&gt; 9 &lt;/td&gt;
    &lt;td style="text-align:left;width: 45em; "&gt; Uso de dispositivos de biopsia básicos: Aguja fina para aspiración (FNA) y aguja gruesa (CN) &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+???
+Acerca de la biopsia misma, se asumió diferentes características para poder ser modelado y finalmente simulado:
+
+1. ::  
+2. :: Debido a que se asumió un comportamiento rígido de las agujas, en vez de flexibles.
+3. :: Ya que no se trabajó con un modelo anatómico realista de la mama, sino a partir de dimensiones promedio que llevaron aproximar su forma y volumen a una figura cónica truncada.
+4. Con base a lo anterior, se obtuvo 4 modelos por tamaño 
+5. Cuando se habla de un objetivo de biopsia, .... Por tanto, utilizar posiciones...
+6. Se requiere la inclusión de algún sitema ...  denominado ABUS para localizar y visualizar imagenes de US 3D a partir de una rotacion ...
+7. .... Con función de estabilizar.  Pero tambien para servir como soporte estructural o superficie durante la etapa de escaneo con US. 
+8. El tipo de inserción será... A pesar de que las guias clínicas recomienden una inserción horizontal, paralela al abdominal, debido a la confianza ...
+9. Para modelor y simular el movimiento agujas, se utilizaron disposit. básiscos de biopsia:  ... abreviado como FNA en ingles, 
+
 ---
 .pull-left[
-## .greenC[Procedimiento]
-### Para el flujo de trabajo: .black[.footnotesize[Espacio de trabajo del Robot]]
+# .greenC[Procedimiento]
+## .purple[Para el flujo de trabajo:] .black[.footnotesize[Espacio de trabajo del Robot]]
 
 
 &lt;div class="figure" style="text-align: center"&gt;
@@ -301,6 +409,7 @@ guía de agujas adaptado con sensores de movimiento. (c) Transductor de US senso
 &lt;/div&gt;
 ]
 
+--
 .pull-rightNN[
 &lt;img src="image/perfilesHolder.svg" width="100%" /&gt;
 
@@ -308,23 +417,29 @@ guía de agujas adaptado con sensores de movimiento. (c) Transductor de US senso
 `$$z = {H_\text{holder}} - \frac{{{H_\text{holder}}(r - {R_\text{lower}})}}{{{R_\text{upper}} - {R_\text{lower}}}}$$`
 ]
 
+???
+Utilizando los datos anatómicos y funciones polinómicas de Huang2011 fue posible reconstruir los distintos perfiles mamarios por tamaño de copa. Para luego, mediante el Algoritmo 5 (Manteniendo la numeración de algoritmos en el informe de tesis) se obtuvo rectas que circunden dichos perfiles para finalmente, obtener las radios y altura para un modelamiento cónico truncado del disposit. sujetador.
+
+Y también, encontrar una función de las variables radio cónico r y su altura mediante:
+
 ---
-.pull-left[
-## .greenC[Procedimiento]
-### Para el flujo de trabajo: .black[.footnotesize[Dispositivo sujetador de mama]]
+.pull-leftNN[
+# .greenC[Procedimiento]
+## .purple[Para el flujo de trabajo:] .black[.footnotesize[Dispositivo sujetador de mama]]
 .full-width[.content-box-blue[
 1. De **Capa intermedia** entre mama y transductor de US (.black[Etapa de diag. por imagen]).
 2. Para acceso a la mama manteniendo **fijo y estable** el tejido (.black[Etapa de biopsia]).
 ]]
 .full-width[.content-box-red[
-Tres partes básicas:
-.center[
-* Soporte estructural
+Con tres partes básicas:
+* Soporte estructural hueco
 * Tapas desplegables
-* Varillas de giro]
-]]
+* Punto de giro para tapas]
 ]
-.pull-right[
+]
+
+--
+.pull-rightNN[
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="image/holderConcept.svg" alt="Estructura cónica" width="80%" /&gt;
 &lt;p class="caption"&gt;Estructura cónica&lt;/p&gt;
@@ -333,13 +448,17 @@ Tres partes básicas:
 &lt;img src="image/baseCanastilla.png" alt="Concepto de sujetador" width="60%" /&gt;
 &lt;p class="caption"&gt;Concepto de sujetador&lt;/p&gt;
 &lt;/div&gt;
-.full-width[.content-box-yellow[.large[Fenómeno de Acople Acústico requerido]]]
+.full-width[.content-box-yellow[.large[.center[Fenómeno de Acople Acústico requerido]]]]
 ]
+???
+Para este sujetador si bien toma como punto de partida las dimensiones anteriores, son las funciones que de debe cumplir durante las etapas de diagnóstio por imagen y biopsia las que determinaron su forma y detalles:
+
+Así se buscó obtener algún mecanismo con las siguientes partes básicas:
 
 ---
 .pull-left[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[La cadena cinemática]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Cadena cinemática]]
 
 &lt;table&gt;
  &lt;thead&gt;
@@ -381,16 +500,28 @@ Tres partes básicas:
 &lt;/table&gt;
 ]
 
+--
 .pull-rightN[.middlePos[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="image/esquemaRobot1.svg" alt="Esquema del robot clínico" width="95%" /&gt;
-&lt;p class="caption"&gt;Esquema del robot clínico&lt;/p&gt;
+&lt;img src="image/esquemaRobot1.svg" alt="Cadena cinemática RPRPP" width="100%" /&gt;
+&lt;p class="caption"&gt;Cadena cinemática RPRPP&lt;/p&gt;
 &lt;/div&gt;
 ]]
+???
+De aquí el que más destaca es la ultima articulación o joint que es de tipo prismático y pasivo. Es decir, permite un movimento lineal del efector final pasivo o no motorizado, ideal para el control total del médico durante la inserción.
+
+Se presenta la cadena cinemática del robot en conjunto con otros elementos de trabajo como el disp. sujetador y la mesa de biopsia.
+
+*El primer joint permite una rotación simétrica y total del robot por debajo del dispositivo sujetador.
+*El segundo joint eleva el resto del robot hacia una altura de la mesa.
+*El tercer joint permitar rotar el efector final y orientarse en la dirección de inserción.
+*EL cuarto joint acercar el robot lo más seguro posible, frente al dispositivo sujetador. 
+*Para finalmente, dejar el movimiento del efector final en el joint 5 de tipo pasivo.
+
 ---
 .pull-left[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Cáculo de dimensiones]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Dimensiones]]
 Utilizando el **Algoritmo 6: Modelo geométrico de robot clínico**.
 
 &lt;div class="figure" style="text-align: center"&gt;
@@ -399,16 +530,32 @@ Utilizando el **Algoritmo 6: Modelo geométrico de robot clínico**.
 &lt;/div&gt;
 ]
 
+--
 .pull-rightN[.middlePos[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="image/esquemaRobot2.svg" alt="Esquema para cálculo de dimensiones" width="95%" /&gt;
+&lt;img src="image/esquemaRobot2.svg" alt="Esquema para cálculo de dimensiones" width="100%" /&gt;
 &lt;p class="caption"&gt;Esquema para cálculo de dimensiones&lt;/p&gt;
 &lt;/div&gt;
 ]]
+
+???
+Para hallar las dimensiones de la cadena cinemática se utilizó el algoritmo 6. Este se basó primero, en hallar un modelo geométrico particular del robot para cada tamaño de dispositivo sujetador. Para luego, obtener un único modelo general que englobe lo anterior. 
+
+Así utilizando este esquema, se representó dos posible casos extremos de movimiento manteniendo el criterio de la ruta de inserción más corta (dirección de inserción es perpendicular a la superficie del sujetador.)
+
+Así, se tiene un caso extremo inferior en el radio menor del sujetador....
+Y un caso extremo superior, en el radio mayor, con una distancia ...
+
+Del mismo análisis, se puede encontrar una altura maxima dado por el joint 2 y el avance máximo del joint 4 para acercarse al sujetador. 
+
+También se buscaron dimensiones documentadas del equipo de ultrasonido, como este transductor y posible altura de la mesa de biopsia.
+
+El mismo esquema, ofrece un panorama de lo que supondría ser el fundamento de un sistema ABUS, que permita escaneos de imagen en forma total, alrededor de la mama, y radial, manteniendo esta inclinación.
+
 ---
 .pull-leftNN[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Cinemática Directa]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Cinemática Directa]]
 
 
 `$$\begin{equation}
@@ -462,12 +609,6 @@ Utilizando el **Algoritmo 6: Modelo geométrico de robot clínico**.
 				0&amp;1&amp;0&amp;0\\
 				0&amp;0&amp;1&amp;{{L_0} + {L_1}}\\
 				0&amp;0&amp;0&amp;1
-		\end{array}} \right]\\
-		{M_3} = \left[ {\begin{array}{*{20}{c}}
-				1&amp;0&amp;0&amp;{ - {H_1}}\\
-				0&amp;{ - 1}&amp;0&amp;0\\
-				0&amp;0&amp;1&amp;{L_*}\\
-				0&amp;0&amp;0&amp;1
 		\end{array}} \right]
 	\end{array}
 \end{equation}$$`
@@ -477,6 +618,12 @@ Utilizando el **Algoritmo 6: Modelo geométrico de robot clínico**.
 .pull-right[
 `$$\begin{equation}
 	\begin{array}{c}
+	  {M_3} = \left[ {\begin{array}{*{20}{c}}
+				1&amp;0&amp;0&amp;{ - {H_1}}\\
+				0&amp;{ - 1}&amp;0&amp;0\\
+				0&amp;0&amp;1&amp;{L_*}\\
+				0&amp;0&amp;0&amp;1
+		\end{array}} \right]
 		{M_4} = \left[ {\begin{array}{*{20}{c}}
 				0&amp;0&amp;1&amp;{ - {H_1}}\\
 				0&amp;{ - 1}&amp;0&amp;{{H_3}}\\
@@ -507,10 +654,17 @@ Basado en la **Fórmula del Producto de Exponenciales** descrita por Park, et al
 		\end{equation}$$`
 ]
 
+???
+Para la cinemática directa y dinámica, se utilizaron diferentes formulas derivadoas de la teoría robótica conocida ahora como screw theory, basado en la representación de coordenadas exponencialmente. Como la formula de Producto exponenciales...
+
+que utiliza las variables thetas son las variables articulates y S1, S2 ... Sn que son vectores de 6x1 denominados screw axis definidos en cada joint, donde los tres primeros componentes representa una dirección angular, y los tres ultimos, una dirección de movimiento lineal. Por ejmeplo, 
+
+Además, de necesitar solo una matriz de transformación homogénea en posición reposo de algun sistema de coordendas de interes, como el del efector final.
+
 ---
 .pull-leftN2[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Cinemática Directa]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Cinemática Directa]]
 
 `$$\begin{equation}
 	\begin{array}{l}
@@ -542,47 +696,56 @@ Basado en la **Fórmula del Producto de Exponenciales** descrita por Park, et al
 
 ---
 .pull-leftN[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Cinemática Inversa]
-Utilizando el **Algoritmo 7. Modelo de Cinemática Inversa**:
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Cinemática Inversa]]
+Dado el **Algoritmo 7. Modelo de Cinemática Inversa**:
 `$$\begin{align}
 				\begin{array}{*{20}{c}}{\left[ {\begin{array}{*{20}{c}}{{h_s}}\\1\end{array}} \right] = {T_{sc}}\left[ {\begin{array}{*{20}{c}}{{h_c}}\\1\end{array}} \right]{\text{,  }}{{\hat n}_s} = {R_{sc}}{{\hat n}_c}}\\{\left[ {\begin{array}{*{20}{c}}{{c_s}}\\1\end{array}} \right] = {T_{sc}}\left[ {\begin{array}{*{20}{c}}c\\1\end{array}} \right]}\end{array}
 \end{align}$$`
 
 &lt;hr class="divider"&gt;
 `$$\begin{align}
-        {q_1} &amp;= atan2({h_{sy}},{h_{sx}}{\rm{)}}\\
-				&amp;{\theta_1} = {q_1} + \pi \\
-				&amp;{\theta_1} = {q_1} - \pi \\
-			{\theta_4} &amp;= \frac{{{r_{14}} + {H_1} - {L_3}\cos ({\theta_3})}}{{\cos ({\theta_3})}}\\
+			{\theta_1} &amp; = \begin{cases}
+			{q_1} + \pi &amp; \text{Si, } q_{1}=atan2({h_{sy}},{h_{sx}}{\rm{)}}\ge 0 \\
+			{q_1} - \pi &amp; \text{Caso contario}
+			\end{cases}\\
 			{\theta _3} &amp;= atan2({r_{33}},{r_{13}})\\
+			{\theta_4} &amp;= \frac{{{r_{14}} + {H_1} - {L_3}\cos ({\theta_3})}}{{\cos ({\theta_3})}}\\
 			{\theta_2} &amp;= {r_{34}} - {L_2} - {H_2} - \sin(\theta_3) ({L_3} + {q_4})
 \end{align}$$`
 
 ]
 .pull-rightN[
-&lt;div class="figure" style="text-align: center"&gt;
+&lt;div class="figure" style="text-align: right"&gt;
 &lt;img src="image/cinematicaInversa.svg" alt="Esquema de cálculo" width="100%" /&gt;
 &lt;p class="caption"&gt;Esquema de cálculo&lt;/p&gt;
 &lt;/div&gt;
 ]
+
+???
+Se escogío un modelo intuitivo de tipo geométrico y algebraico por ser una solución rápida y siempre convergente. 
+
+Las variables de entrada fueron definidas respecto del frame C del sujetador, ya que es donde ocurre el proceso de selección de inserción y definición del objetivo de biopsia. Como la posición hc y nc. Para luego ser trasnformados respecto de la base del robot y utilizar el algoritmo 7.
+
+
+Cabe destacar, que para algunas variables se calcularon utilizando lo que se conoce como desacople cinemático. 
+
 ---
 .pull-leftN[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Dinámica Inversa]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Dinámica Inversa]]
 
-
+Dado el **Algoritmo 4: Método Newton-Euler**
 
 ```r
-Algoritmo 4: Método Newton-Euler
 1. Inicialización
 *2. Iteración hacia adelante (Forward step)
 *3. Iteración hacia atras (Backward step)
 ```
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="image/esquemaDinamicaInversa.svg" alt="Diagrama de cuerpo libre. Adaptado de Lynch and Park (2017)" width="100%" /&gt;
-&lt;p class="caption"&gt;Diagrama de cuerpo libre. Adaptado de Lynch and Park (2017)&lt;/p&gt;
+&lt;img src="image/esquemaDinamicaInversa.svg" alt="Diagrama de cuerpo libre. De Lynch and Park (2017)" width="100%" /&gt;
+&lt;p class="caption"&gt;Diagrama de cuerpo libre. De Lynch and Park (2017)&lt;/p&gt;
 &lt;/div&gt;
 ]
 
@@ -611,15 +774,28 @@ Para .black[paso 3], de `\(i=n-1\)` hacia `\(1\)`:
 &amp;= {\text{Potencia lineal + Potencia rotacional (par motor)}}
 \end{align}$$`
 ]
+
+???
+El modelamiento dinámico se caracteriza por trabajar con frames en el centro de masa de cada eslabón {li}, a diferencia de la cinemática que se definen en cada joint. ´
+
+Esto implica que todas las variables se definen entre estas ubicaciones. Para ello se utilizó el algoritmo 4 para el método Newton-Euler por ser compatible con la teoría cinemática.
+
+Así, destacan las matrices entre los frames de eslabones vecinos ...
+Los screw axis Ai.
+
+Al final del algoritmo que tiene 3 pasos principales, es posible encontrar los torques mediante una nueva formulación llamada wrench (que engloba tanto las fuerzas y momentos producidos por la rotación en cada eslabón)
 ---
 .pull-leftN[
-## .greenC[Procedimiento]
-### Para modelamiento del robot clínico: .black[Dinámica Directa]
+# .greenC[Procedimiento]
+## .orange2[Para modelamiento del robot:] .black[.footnotesize[Dinámica Directa]]
 Dado `\(\theta, \dot{\theta}, \tau\)` y un wrench `\(F_\text{tip}\)` en el efector final:
 `$$\begin{align}
-  \tau  &amp;= M(\theta )\ddot \theta  + c(\theta ,\dot \theta ) + N(\theta ) + {J^T}(\theta ){F_\text{tip}}\\
-  \tau  &amp;= M(\theta )\ddot \theta  + h(\theta ,\dot \theta ) + {J^T}(\theta ){F_\text{tip}}\\
-  &amp; \text{Por lo tanto, para } \ddot{\theta} :\\ 
+  \tau  &amp;= M(\theta )\ddot \theta  + C(\theta ,\dot \theta ) + N(\theta ) + {J^T}(\theta ){F_\text{tip}}\\
+  \tau  &amp;= M(\theta )\ddot \theta  + h(\theta ,\dot \theta ) + {J^T}(\theta ){F_\text{tip}}
+\end{align}$$`
+
+Por lo tanto, para `\(\ddot{\theta}\)`:
+`$$\begin{align}
   M(\theta )\ddot \theta  &amp;= \tau  - h(\theta ,\dot \theta ) - {J^T}(\theta ){F_\text{tip}}\\
   \ddot \theta  &amp; = {M(\theta )^{ - 1}}\left( {\tau  - h(\theta ,\dot \theta ) - {J^T}(\theta ){F_\text{tip}}} \right)
 \end{align}$$`
@@ -628,7 +804,6 @@ Dado `\(\theta, \dot{\theta}, \tau\)` y un wrench `\(F_\text{tip}\)` en el efect
 
 
 .middlePos[
-
 &lt;table&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -691,10 +866,16 @@ From, et al. (2014) y Murray, et al. (1994) &lt;/td&gt;
 ]
 ]
 
+???
+Para la cinemática directa, se propuso hallar primero cada uno de los elementos matriciales de la ecuación dinámica general de cuerpos rígidos por algunod de los métodos de la tabla ...
+
+Para finalmente, despejar lasa aceleraciones de interes. 
+
 ---
 .pull-left[
-## .greenC[Procedimiento]
-### Para la generación de trayectorias. .blue[Planificación de ruta del Efector final(EE)] .black[Riesgo por colisiones]
+# .greenC[Procedimiento]
+## .greenC3[Para la generación de trayectorias]
+### .black[Riesgo por colisiones del Efector Final]
 &lt;img src="image/riesgoPorColisiones.svg" width="100%" style="display: block; margin: auto;" /&gt;
 &gt; .red[Alcanzabilidad]
 
@@ -715,24 +896,48 @@ From, et al. (2014) y Murray, et al. (1994) &lt;/td&gt;
 
 &lt;img src="image/colision124.svg" width="100%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
----
-## .greenC[Procedimiento]
-### Para la generación de trayectorias: .black[Riesgo por colisiones]
-&lt;img src="image/algoritmoInsercion.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+???
+Para la generación de traeyctorias: el cual basicamente tiene dos procesos: Planificación de ruta y planificación de trayectoria.
+Pero antes de ello, fue preciso determinar ...
+
+
+En la figura se aprecia que considerar el movimiento del robot clinico como exitoso depende de varios factores. Siendo los principales los que responden estas preguntas?
+* .... Es decir, el joint 4 o joint 2 deben exceder sus valores máximos para mover el efector final.
+* Existe colisión de la trayectoria de inserción (orientación del efector final) para alcanzar el objetivo de biopsia.
+
+Así, la primera respuesta, puede formularse un criterio de alcanzabilidad basado en : ....
+
+Mientras que para las colisiones prinipales, el fenómeno fue estudiado puede identificarse en cuatro tipos:
 
 ---
-## .greenC[Procedimiento]
-### Para la generación de trayectorias: .black[Casos de Inserción]
+# .greenC[Procedimiento]
+## .greenC3[Para la gener. de trayectorias:] .blue[.footnotesize[Planificación de ruta del EE]]
+&lt;img src="image/algoritmoInsercion.svg" width="76%" style="display: block; margin: auto;" /&gt;
+
+???
+Así, el primer paso de la generación de trayectorias, es la planificación de ruta, el cual está sujeto a la presencia de las colisiones anteriores para encontrar la posición y dirección final del efector final (Que en estas figuras es hc y nc). Para ello, se utilizó el algoritmo 8 para seleccionar trayectorias posibles de inserción de agujas al interior del disposito sujetador. 
+
+Ambas figuras respresentan posibles cortes radiales del dispositivo sujetador. Las zonas de color rosado representan su perfil cónico, con los espacios libres para acceso a la biopsia. 
+
+Lo importante aquí es que dado una dirección inicial por defecto, distancia de inserción más corta, 
+---
+# .greenC[Procedimiento]
+## .greenC3[Para la generación de trayectorias.] .black[.scriptsize[Casos de Inserción]]
 &lt;img src="image/casosInserción.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
-## .greenC[Procedimiento]
-### Para la generación de trayectorias: .black[Casos de Inserción]
-&lt;img src="image/casosInserción4y5.svg" width="83%" style="display: block; margin: auto;" /&gt;
+# .greenC[Procedimiento]
+## .greenC3[Para la generación de trayectorias.] .black[.scriptsize[Casos de Inserción]]
+&lt;img src="image/casosInserción4y5.svg" width="96%" style="display: block; margin: auto;" /&gt;
+???
+Ahora como pueden observar, dependiendo de donde se ubique la dirección inicial se puede identificar 5 casos:
+
+El primero, cuando la dirección inicial no presenta colisión ...
 
 ---
-## .greenC[Procedimiento]
-### Para la generación de trayectorias: .black[Cálculo de desplazamiento del Efector Final]
+# .greenC[Procedimiento]
+## .greenC3[Para la generación de trayectorias.] .black[.scriptsize[Su desplazamiento]]
 &lt;img src="image/diagramaCalculoDistancias.svg" width="85%" style="display: block; margin: auto;" /&gt;
 
 `$$\begin{align}
@@ -742,9 +947,15 @@ From, et al. (2014) y Murray, et al. (1994) &lt;/td&gt;
 	\end{cases}\\
 	{\text{Retiro máximo del EE}} &amp;= {\theta _4}{\text{ + Offse}}{{\text{t}}_{L5}}{\text{ - }}\left( {{\text{Offset}}{{\text{t}}_{{\text{needle}}}} + {\text{Longitud de aguja}}} \right)
 \end{align}$$`
+
+???
+Para el desplazamiento de la aguja se utilizó la siguiente configuración tanto para agujas finas y gruesas. El cálculo fue puramente geométrico, teniendo en cuenta las principales dimensiones de las agujas, como largo y las distancias throw (que es una ranura o canal para la toma de muestras de tejido en agujas gruesas) y deadspace.
+
+Así, se pudo calcularse las distancias para el retiro el mínimo y máximo.
+
 ---
-## .greenC[Procedimiento]
-### Para la generación de trayectorias: .blue[Planificación de trayectorias del Efector Final]
+# .greenC[Procedimiento]
+## .greenC3[Para la generación de trayectorias:] .blue[.footnotesize[Planificación de trayectorias del Efector Final]]
 
 
 .left-column[
@@ -758,6 +969,10 @@ From, et al. (2014) y Murray, et al. (1994) &lt;/td&gt;
 &lt;img src="image/jointTrajectoryModel.svg" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
+???
+Para el proceso de planificación de trayectorias se utiizó el siguiente procedimiento descrito en Siciliano2008, donde el paso de planificación de rutas dió como resultados los puntos de ruta o waypoints. Pra la planificación de trayectorias, se escogió trabajar en el espacio articular  según: .....
+
+Dando como resultado, calcular para una ruta dada calcular una única vez la cinematica inversa para obtener las variables articulares y proceder a interpolar.  
 ---
 class: inverse, center, middle
 # Resultados
@@ -767,9 +982,9 @@ class: inverse, center, middle
 
 
 .pull-leftNN[
-## Del Modelamiento: .orange[Dispositivo sujetador]
+# Del Modelamiento: .orange[.footnotesize[Dispositivo sujetador]]
 &lt;div class="figure"&gt;
-&lt;img src="image/tipoSujetadores.png" alt="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D." width="95%" /&gt;
+&lt;img src="image/tipoSujetadores.png" alt="Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D." width="90%" /&gt;
 &lt;p class="caption"&gt;Dispositivos sujetadores de mama según tamaño de copa: A, B, C y D.&lt;/p&gt;
 &lt;/div&gt;
 ]
@@ -781,21 +996,37 @@ class: inverse, center, middle
 &lt;/div&gt;
 ]
 
+???
+Respecto del disp....
+Se implementaron cuatro dispositivos sujetadores para copas A, B, C y D cumpliendo las exigencias anteriores: De tener una forma compacta para la etapa de diagnóstico por imagen, pero ser capaz de abrirse de forma parcial mediante alguna de sus tapas desplagables para permitir la biopsia. 
+
+---
+# Del Modelamiento: .orange[.footnotesize[Espacio de trabajo mamario]]
+&lt;img src="image/espacioMamario.svg" width="62%" style="display: block; margin: auto;" /&gt;
+
+???
+Para esos mismos sujetadores y las ecuaciones del perfil cónico truncado se implementaron posibles espacios de trabajo mamario con múltiples puntos (posiciones vectoriales)  en su interior para emular distintos objetivos de biopsia.
+
 ---
 .pull-leftNN[
-## Del Modelamiento. Robot clinico: .orange[Morfología]
-&lt;img src="image/valoresInicialesAreaTrabajo.svg" width="86%" /&gt;
+# Del Modelamiento: .blue[.footnotesize[Robot clinico.]] .black[.scriptsize[Morfología]]
+&lt;img src="image/valoresInicialesAreaTrabajo.svg" width="84%" /&gt;
 ]
 
 .pull-rightNN[
 &lt;img src="image/dimensionesRobot.svg" width="100%" /&gt;
 ]
 
+???
+Sobre la morfología del robot, primero se consideraron diveras valores iniciales relaciones con la posible estructura mecánico-electrica del robot, sobre todo de motores. 
+
+Mediante el algoritmo de dimensiones del robot, esta tabla resume sus diferentes dimensiones parciales de la cadena cinemática según tamaño de copa.
+
+Un análisis simple de la misma, permite descubir que existen relaciones proporciales directas e inversas según el tamaño de copa, lo que reafirma el propósito de utilizar los casos extremos (A y D) para englobar los demas casos y finalmente obtener los valores finales en esta otra tabla.
 ---
 .pull-left[
-## Del Modelamiento: .orange[Cinemático]
+# Del Modelamiento: .orange[.footnotesize[Cinemático]]
 `$$\begin{equation}
-	\begin{array}{*{5}{c}}
 		{{S_1} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
@@ -803,21 +1034,21 @@ class: inverse, center, middle
 					0 \\ 
 					0 \\ 
 					0 
-			\end{array} } \right]}&amp;{{S_2} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_2} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					0 \\ 
 					1 
-			\end{array} } \right]}&amp;{{S_3} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_3} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					{ - 1} \\ 
 					0 \\ 
 					{876} \\ 
 					0 \\ 
 					{300} 
-			\end{array}} \right]}\\
+			\end{array}} \right]}
 			{{S_4} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
@@ -825,7 +1056,7 @@ class: inverse, center, middle
 					1 \\ 
 					0 \\ 
 					0 
-			\end{array} } \right]}&amp;{{S_5} = \left[ {\begin{array}{*{20}{c}}
+			\end{array} } \right]}{{S_5} = \left[ {\begin{array}{*{20}{c}}
 					0 \\ 
 					0 \\ 
 					0 \\ 
@@ -833,7 +1064,6 @@ class: inverse, center, middle
 					0 \\ 
 					0 
 			\end{array} } \right]} 
-	\end{array}
 \end{equation}$$`
 
 `$$\begin{array}{*{20}{c}}
@@ -882,13 +1112,17 @@ class: inverse, center, middle
 &lt;img src="image/EspacioTrabajoRobot.svg" width="85%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
 
+???
+Para ello se calcularon los 5 screw axis para cada joint del robot. Y de igual modo, las configuraciones matriciales en reposo. Con las mismas ecuaciones pero de forma simbólica fue posible visualizar las diversas variaciones angular del efector final para cada joint, manteniendo el reso a cero.
 ---
-## Del Modelamiento: .orange[Modelo CAD]
-&lt;img src="image/partesRobot.svg" width="88%" style="display: block; margin: auto;" /&gt;
+# Del Modelamiento: .orange[.footnotesize[Modelo CAD]]
+&lt;img src="image/partesRobot.svg" width="85%" style="display: block; margin: auto;" /&gt;
 
+???
+Del mismo modo, se presenta el modelo CAD final del robot. La parte más resaltante es la último eslabón se compone de dos partes: una externa y otra interna que es intercambiable para cada tipo de dispositivo sujetador. 
 ---
 .pull-leftNN[
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 `$$\begin{equation}
 	\begin{array}{*{20}{l}}
 			{{M_{{l_1}}} = \left[ {\begin{array}{*{20}{c}}
@@ -1007,9 +1241,12 @@ class: inverse, center, middle
 
 ]
 
+???
+Tambien se contraron todas las configuraciones matriciales de cada frame definido en el centro de masa e incluido sis screw axis denotados como Ai.
+
 ---
 .pull-leftN3[
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 &lt;img src="image/variablesDinamicas.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
@@ -1066,10 +1303,15 @@ class: inverse, center, middle
 
 .full-width[.content-box-yellow[Usando las variables anteriores, la dinámica inversa mediante el **Algoritmo 4: Método Newton-Euler** resultó definido.]]
 .full-width[.content-box-blue[De igual modo, el modelo de dinámica directa se resolvió mediante las soluciones parciales `\(M, C , N, h, J*F\)` en la ecuación dinámica.]]
-
 ]
+
+???
+Gracias al modelo CAD, se pudo simplificar el cálculo variables inerciales como masas y momentos de inercial. Con todo ello y con ayuda del algoritmo Newton-Euler, el modelo dinámico inverso para hallar los torques articulares fueron definidos de forma numérica.
+
+Lo mismo se realizó para la dinámica directa, al calcular las matrices de Masa inercial, Fuerzas de coriolis, Fuerzas gravitaciones y los torques externos causados por alguna fuerza externa.
+
 ---
-## Del Modelamiento: .orange[Dinámico]
+# Del Modelamiento: .orange[.footnotesize[Dinámico]]
 .center[
 `$$\begin{equation}
   \begin{array}{*{20}{c}}
@@ -1098,57 +1340,64 @@ class: inverse, center, middle
 	\end{equation}$$`
 ]
 
-
+???
+Que justamente están aquí de forma simbólica para la implementación de algún sistema de control a bajo nivel.
 ---
 .pull-leftNN[
-## Del Modelamiento.Generación de trayectorias: .orange[Del robot]
-Utilizando la función **getPathtPlanner**.
-&lt;img src="image/pathRobot.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+# Del Modelamiento: .greenC3[.footnotesize[Generación de trayectorias.]] .black[.scriptsize[Del robot]]
+&lt;img src="image/pathRobot.svg" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-rightNN[
-.content-box-blue[Trayectorias mediante la interpolación polinómica:]
-* Polinomios de tercer orden.
-* Polinomios de quinto orden.
+.content-box-yellow[Path Planner: Mediante la función **getPathtPlanner**.]
+
+.content-box-blue[Trajectory Planner: Interpolación punto a punto:]
+&gt; * Polinomios de tercer orden.
+&gt; * Polinomios de quinto orden.
+
+
 &lt;img src="image/trayectoriaRobot.svg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
+???
+Respecto de la generación de trayectorias para el robot, los resultados de la planificación de ruta utilizando la función getPathPlanner implementada en Matlab, pueden apreciarse estas figuras. 
+
+---
+# Del Modelamiento: .greenC3[.footnotesize[Generación de trayectorias.]] .black[.scriptsize[De la inserción]]
+Utilizando los casos de **riesgo por colisiones** y el **Algoritmo 8: Selección de la trayectoria de inserción de agujas** se obtuvo:
+
+&lt;img src="image/trayectoriaEE.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+???
+Todas los resultados anteriores, junto al ........ permitieron simular el posicionamiento del robot cerca del dispositivo sujetador antes de la biopsia, se definió como preposicionmianto. Cualquier movimiento del robot (como el eslabón 5 que es no motorizado) se denominó posposcionamiento.
+
+Es retirado hasta una distancia segura (mayor a 90 mm), para volver a avanzar, es decir, producir la inserción de aguja hasta una distancia mínima que garantiza quel extremo de la aguja alcance el objetivo de biopsia. 
+
 ---
 .pull-leftNN[
-## Del Modelamiento.Generación de trayectorias: .orange[De la inserción]
-&lt;img src="image/trayectoriaEE.svg" width="95%" style="display: block; margin: auto auto auto 0;" /&gt;
+# Del Modelamiento: .purple[.footnotesize[Del Área de trabajo]]
+&lt;img src="tablas/tab_dimensionesAreaTrabajo.svg" width="85%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-rightNN[
-**Poner Animación**
-**Poner Nuevo diagrama de flujo reducido simplificado**
-]
-
----
-.pull-leftNN[
-## Del Modelamiento: .orange[Del Área de trabajo]
-&lt;img src="tablas/tab_dimensionesAreaTrabajo.svg" width="85%" style="display: block; margin: auto auto auto 0;" /&gt;
-]
-
-.pull-rightNN[
-&lt;img src="image/espacioDeTrabajoFrontal.png" width="74%" style="display: block; margin: auto;" /&gt;
-&lt;img src="image/areaTrabajoABUS.svg" width="78%" style="display: block; margin: auto;" /&gt;
+&lt;img src="image/mesaBiopsia.gif" height="291" width="342"/&gt;
+&lt;img src="image/areaTrabajoABUS.svg" width="76%" style="display: block; margin: auto;" /&gt;
 ]
 ---
-## Del Modelamiento: .orange[Del Área de trabajo]
+# Del Modelamiento: .purple[.footnotesize[Del Área de trabajo]]
 
 
 &lt;img src="image/dimensionesAreaTrabajo.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
-## De la simulación. .orange[De la GUI]
+# De la simulación: .orange[.footnotesize[De la GUI]]
 .panelset[
 .panel[.panel-name[Obtener objetivo de biopsia]
 &lt;img src="image/GUI_inicio.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Definición de inserción]
-&lt;img src="image/GUI_inserion.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="image/GUI_insercion.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Preposicionamiento]
@@ -1158,14 +1407,19 @@ Utilizando la función **getPathtPlanner**.
 .panel[.panel-name[Posposicionamiento]
 &lt;img src="image/GUI_resumen.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
+
 ]
+
+---
+&lt;img src="image/seleccionInsercion.gif" /&gt;
+
 ---
 .panelset[
-.panel[.panel-name[Verificar colisiones tipo 1 y 2]
+.panel[.panel-name[Verificar colisiones tipo 1, 2 y 4]
 &lt;img src="image/GUI_colisiones.svg" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
-.panel[.panel-name[Verificar colsiones tipo 4]
+.panel[.panel-name[Verificar colisiones tipo 4]
 &lt;img src="image/GUI_colisiones2.svg" width="100%" style="display: block; margin: auto;" /&gt;
 &gt; * La **profundidad del objetivo** y el **tipo de aguja** (sobre todo CN) condicionan un posible daño en la pared torácica (riesgo de neumotórax).
 &gt; * Su conocimiento y manipulación a priori influyen positivamente en el criterio medico.
@@ -1178,15 +1432,14 @@ Utilizando la función **getPathtPlanner**.
 ]
 
 ---
-## De la simulación.Del entorno robótico:.orange[Modelos de simulación]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Modelos de simulación]]
 &lt;img src="image/SIM_GeneralModel.svg" width="75%" style="display: block; margin: auto;" /&gt;
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
-1. **Preparación del paciente**
+1. Preparación del paciente
 2. **Localización de la lesión**
 3. **Selección del objetivo**
 4. **Preparación de biopsia**
@@ -1201,8 +1454,7 @@ Según flujo de trabajo clínico:
 &lt;img src="image/sim_pasos1_4.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
@@ -1222,8 +1474,7 @@ Según flujo de trabajo clínico:
 ]
 
 ---
-## De la simulación.
-### Del entorno robótico: .orange[Procedimiento de biopsia]
+# De la simulación: .blue[.footnotesize[Del entorno robótico.]] .black[.scriptsize[Procedimiento de biopsia]]
 .pull-leftN3[
 .full-width[.content-box-yellow[
 Según flujo de trabajo clínico:
@@ -1243,7 +1494,10 @@ Según flujo de trabajo clínico:
 ]
 
 ---
-## De la simulación:.orange[Resultados de simulación múltiple]
+&lt;img src="image/procesoBiopsia2.gif" /&gt;
+
+---
+# De la simulación: .blue[.footnotesize[Resultados de simulaciones múltiples]]
 .panelset[
 .panel[.panel-name[Experimento aleatorio]
 &lt;img src="tablas/tab_SIM1.svg" width="100%" style="display: block; margin: auto;" /&gt;
@@ -1264,24 +1518,58 @@ class: inverse, center, middle
 &lt;div class="my-footer"&gt;&lt;span&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama&lt;/span&gt;&lt;/div&gt;  
 
 
+* Un robot clínico para guiado de biopsias percutáneas de mama implica definir al **órgano femenino como espacio de trabajo** (forma, dimensiones y ubicación).
 
-* Un robot clínico para guiado de biopsias percutáneas de mama requiere de la definición del órgano femenino como espacio de trabajo (forma, dimensiones y ubicación). 
 --
-* Una biopsia percutánea de mama guiada robóticamente y asistida por US 3D impulsa la descripción de un nuevo flujo de trabajo clínico en el servicio de Diagnóstico por Imágenes. 
+* Una biopsia percutánea de mama guiada robóticamente y asistida por US 3D impulsa la descripción de un **nuevo flujo de trabajo clínico** (Servicio de Diagnóstico por Imágenes).
+
 --
-* La morfología de un robot clínico para guiado de biopsias percutáneas de mama asistido por US 3D requiere del estudio comparativo entre las principales técnicas convencionales de biopsia de mama (ventajas, desventajas y procedimientos). 
+* La morfología de un robot clínico para guiado de biopsias percutáneas de mama asistido por US 3D requiere del **estudio comparativo entre las principales técnicas convencionales de biopsia de mama** (ventajas, desventajas y procedimientos).
+
 --
-* La propuesta de un dispositivo sujetador de mama con forma cónica truncada, tapas desplegables y material fotoacústico puede unir de forma secuencial las etapas de adquisición de imágenes con US 3D y biopsia percutánea para mejora el diagnóstico temprano de cáncer de mama. 
+* La **propuesta de un dispositivo sujetador de mama** con forma cónica truncada, tapas desplegables y material fotoacústico puede unir de forma secuencial las etapas de adquisición de imágenes con US 3D y biopsia percutánea para mejora el diagnóstico temprano de cáncer de mama.
+
 --
-* La cinemática directa del robot basada en la teoría de screw theory permite obtener un modelo cinemático general, sencillo y de fácil implementación, sin la dependencia de múltiples frames por cada DOF. Todo lo contrario, para el modelo de cinemática inversa que utiliza un método intuitivo, a partir de cálculos geométricos y algebraicos, para obtener una solución particular, rápida y siempre convergente.
+* La cinemática directa del robot basada en la **teoría de screw theory** permite obtener un modelo cinemático general, sencillo y de fácil implementación, sin la dependencia de múltiples frames por cada DOF. Todo lo contrario, para el modelo de cinemática inversa que utiliza un **método intuitivo**, a partir de cálculos geométricos y algebraicos, para obtener una solución particular, rápida y siempre convergente.
+
 --
-* Los modelos dinámicos inverso y directo basados en el algoritmo de Newton-Euler y soluciones parciales de la ecuación dinámica para cuerpos rígidos (cinemáticamente compatibles), permiten metódicamente obtener los torques y aceleraciones robóticas respectivamente. 
+* Los modelos dinámicos inverso y directo basados en el **algoritmo de Newton-Euler** y **soluciones parciales de la ecuación dinámica** para cuerpos rígidos (cinemáticamente compatibles), permiten metódicamente obtener los torques y aceleraciones robóticas respectivamente.
+
 --
-* La implementación de modelos CAD para el robot y demás elementos involucrados en el espacio de trabajo, facilitan la verificación espacial del procedimiento de biopsia guiado robóticamente y su interacción con los mismos. Además, de simplificar el cálculo de variables dinámicas como masas y momentos de inercia. 
+* La implementación de **modelos CAD** para el robot y demás elementos involucrados en el espacio de trabajo, facilitan la verificación espacial del procedimiento de biopsia guiado robóticamente y su interacción con los mismos. Además, de simplificar el cálculo de variables dinámicas como masas y momentos de inercia. 
+
 --
-* La inserción de agujas rígidas en línea recta (sin deflexiones) para una biopsia percutánea de mama implica la generación de trayectorias simples a partir del movimiento rectilíneo del efector final por desplazamiento manual y controlado del médico radiólogo. 
+* La inserción de agujas rígidas en línea recta (sin deflexiones) para una biopsia percutánea de mama implica la **generación de trayectorias simples a partir del movimiento rectilíneo del efector final** por desplazamiento manual y controlado del médico radiólogo. 
+
 --
-* La simulación por computador permite explorar el concepto de guiado robótico y verificar de forma visual, gráfica y numérica su influencia en una biopsia percutánea de mama asistida por US 3D.
+* La **simulación por computador** permite explorar el concepto de guiado robótico y verificar de forma visual, gráfica y numérica su influencia en una biopsia percutánea de mama asistida por US 3D.
+
+---
+class: inverse, center, middle
+#Recomendaciones
+
+---
+
+* Verificación del modelo de dispositivo sujetador:
+    * Estáticamente y esfuerzos.  
+    * Fabricación, funcionamiento y material. Nuevos tamaños o formas.
+    
+* Mejora de los modelos CAD:
+  * Del robot
+    * Mecanismos y componentes internos.  
+  * De la aguja  
+    * Modelo flexible.
+        
+* Uso de simuladores Open-Source:
+    * Entornos más realistas. Interconectividad para aplicaciones biomédicas. 
+
+* Implementación de algún sistema de control:  
+    * Guiado realista de agujas flexibles.
+
+* Verificación y análisis estadístico de la biopsia guiada robóticamente:  
+    * Emulación de un diseño de investigación clínica de tipo prueba diagnóstica:  
+        * Precisión de biopsia y Estimadores de validez como sensibilidad, especificidad, etc.
+        * Comparación con otras técnicas de biopsia convencional.  
 
 ---
 class: center, middle

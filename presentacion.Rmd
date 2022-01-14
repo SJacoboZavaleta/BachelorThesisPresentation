@@ -2,7 +2,7 @@
 title: "Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama"
 subtitle: "Tesis para obtar el Título Profesional de Ingeniero Mecatrónico"
 author: "Br. Sergio Augusto Antenor Jácobo Zavaleta"
-date: "`r Sys.Date()`"
+date: "14 de enero del 2022"
 output:
   xaringan::moon_reader:
     css:
@@ -40,6 +40,7 @@ header-includes:
   - \usepackage{makecell}
   - \usepackage{xcolor}
 ---
+class: middle, center
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -69,10 +70,14 @@ xaringanExtra::use_tile_view()
 xaringanExtra::use_freezeframe()
 xaringanExtra::use_scribble()
 ```
+
+```{r logoMecatronica, echo=FALSE, out.width = '32%'}
+knitr::include_graphics("image/logoEscuela.png")
+```
+
 ---
 class: inverse, center, middle 
 # Introducción
-
 ---
 ```{r echo=FALSE}
 dominique2018 = Citep(biblio,"Dominique2018")
@@ -81,7 +86,7 @@ ministerio2020Cancer1 = Citep(biblio,"ministerio2020Cancer1")
 ```
 .pull-leftN[
 # Realidad Problemática
-## .purple[Del paciente]
+## .purple3[De la paciente]
   * Elevadas tasas de incidencia, nuevos casos y mortalidad de cáncer de mama a nivel nacional.
   * Diagnóstico tardío del cáncer.
   * Disminuir la experiencia traumática del cribado (<b style="color :blue;">screnning</b>):
@@ -89,6 +94,16 @@ ministerio2020Cancer1 = Citep(biblio,"ministerio2020Cancer1")
       + Repeticiones innecesarias de biopsia.
       + Daño por dosis de radiación (Rx).]
 
+???
+La realidad problemática del presente estudio está basado en la situacion y condiciones actuales de los principales partícipes durante un diagnóstico de cáncer de mama en mujeres: Paciente y médico.
+
+Entonces, desde la perspectiva de la paciente, se tiene que:
+* Es preocupante que aún existan:: Elevadas tasas ..., aumento de nuevos casos, .. Y sobre todo que Mujeres son las principales afectadas ya que solo el 1% de varones sufren este cáncer.
+* A ello, se suma la pobre eduación clínica y familiar sobre la autoexaminación y chequeos periódicas que llevan ..:: Diagnóstico ...
+* Ya, durante la etapa de tratamiento, los testimonios recogidos coinciden que la experiencia no es la mejor ya que::
+	* Existen dolor durante el diagnóstico por mamografía.
+	* Complicado por el número de repeticiones ...
+	* Y quizas, lo más controversial, la exposición a 		pequeñas dosis de Rx también por Mamografía.
 --
 .pull-rightN[
 ```{r realidadPaciente1, echo=FALSE, fig.cap=ministerio2020Cancer1, out.width = '83%', fig.align="center"}
@@ -99,24 +114,39 @@ knitr::include_graphics("image/distribucionCancerTipoYdiagnostico.svg")
 [a] Radiografía
 ]
 
+???
+Así se tiene que, de los últimos reportes a nivel nacional sobre cáncer.
+
+En esta primera gráfica, se apecaia que el cáncer de mama sigue siendo uno de los prinpales cánceres femeninos en conjunto con el de cuello uterino.
+
+Y que de ellos, la principales base de diagnóstico es el uso de imágenes clínicas (US, Mamografía, Resonancia magnética y Tomografía). Lo que refleja su gran impacto y rol clínico.
+
+
 ---
 ```{r echo=FALSE}
 Eviva2013 = Citep(biblio,"Eviva2013")
 ```
 .pull-leftN[
 # Realidad Problemática
-## .purple[Del paciente]
+## .purple3[De la paciente]
 ```{r realidadPaciente2, echo=FALSE, fig.cap=paste0("Adaptado de ",Eviva2013), out.width = '75%', fig.align="center"}
 knitr::include_graphics("image/radiografiaComprension2.svg")
 ```
 ]
+
+???
+Continuando, se ejemplifica una de las causas de dolor en mujeres durante el diagnóstico mamográfico que involucra:
+* Dos placas compresoras métalicas que reducen el espacio o ancho natural de la mama a un mínimo.
+* Así mismo, desde la decada pasada existe una tendencia de aumento del número de casos diagnóstico por cáncer, lo que ha llevado que las principales regiones donde ocurren sean:
+
 --
 .pull-rightN[
 ```{r realidadPaciente3, echo=FALSE, fig.cap=ministerio2018cancer1, out.width = '75%', fig.align="center"}
 knitr::include_graphics("image/numeroMujeres_ExamenClinicoYDepartamental.svg")
 ```
 ]
-
+???
+* Así mismo, desde la decada pasada existe una tendencia de aumento del número de casos diagnóstico por cáncer, lo que ha llevado que las principales regiones donde ocurren sean:
 
 ---
 ```{r include=FALSE}
@@ -130,13 +160,19 @@ labelTecnologiaScreening = paste0("a) ",Dominique2018,". b) ",Gao2020, ". c) ",A
 # Realidad Problemática
 ## .blue[Del médico radiólogo]
   * Biopsia y diagnóstico por imagen más rápidos y precisos para detención y control de cáncer mamario.
-  * Naturaleza .green[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
+  * Naturaleza .blue[operador-dependiente] de la biopsia percutánea guiada por US a mano alzada (HHUS).
       - Fatiga por localización anatómica de la zona de sospecha y ubicación precisa de agujas.
       - Baja reproducibilidad.
-  * Indisponibilidad para acceder a todos los diversos screenings guiados por imagen:
-      - Radiografía.
+  * Disponibilidad y acceso a screenings más costosos pero eficaces:
+      - Mamografía digital (Rx).
       - Imagen de Resonancia Magnética (MRI).
       - Tomografía Computarizada (TC).]
+      
+???
+El segúndo partícipe de esta realidad problemática, es la del médico, específicamente la del médico radiólogo encargado de diagnósticar e intervenir en actividades a fines al cáncer.
+* Lo que llevadado a la busqueda de nuevas tecnologías para su diagnóstico y control. Pero, que algunas de ellas depende de la experiencia y habilidad del médico (conocido como operador-dependencia). Tal es el caso de, 
+
+* Por otro lado, existe una indisponibilidad de acceder siempre a tecnologías validamente más eficases pero costosas.
 --
 .pull-right[
 ```{r realidadMedico, echo=FALSE, fig.cap=labelTecnologiaScreening, out.width = '80%'}
@@ -145,22 +181,57 @@ knitr::include_graphics("image/tecnologiasScreening.svg")
 ]
 
 ---
-# Planteamiento del Problema
-![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
-![:col_list 
-¿Puede mejorarse el proceso actual de biopsias percutáneas de mama guiados por US para beneficio de pacientes y médicos?, 
-
-¿Puede automatizarse el diagnóstico por imagen y biopsia de mama bajo US para mejorar la detección temprana de cáncer a nivel hospitalario?, 
-
-¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusón robótica que aproveche las ventajas del diagnóstico de cáncer por imagen con US?
-]
-
---
-## Formulación del Problema
+# Formulación del Problema
 .full-width[.content-box-blue[
 .Large[*¿Cómo mejorar el guiado de agujas de manera precisa y autónoma en biopsia percutánea de
 mama para el diagnóstico de cáncer en mujeres?*]
 ]]
+
+???
+Entonces, con base a lo anterior, es que se formuló el siguiente problema de investigación.
+
+Que a su vez, derivó en intentar responder 3 preguntas de estudio. 
+
+--
+![:col_header Pregunta 1, Pregunta 2, Pregunta 3]
+![:col_list 
+¿Puede mejorarse el proceso actual de biopsias percutáneas de mama para beneficio de pacientes y médicos?, 
+
+¿Puede automatizarse el diagnóstico por imagen y biopsia de mama para mejorar la detección temprana de cáncer?, 
+
+¿Como mejorar la precisión de biopsas percutánas de mama mediante la inclusión tecnológica que aproveche las ventajas del diagnóstico por imagen?
+]
+
+
+???
+Y para dar respuesta, es que se planteó la siguiente hipótesis
+
+---
+.left-column[
+# Hipótesis
+.full-width[.content-box-red[
+Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
+]]
+]
+
+???
+Como pueden notar, la ténica de US fue la escogida como base del estudio robótico porque? Por los siguiente motivos que justifican:
+--
+.right-column[
+# Justificación
+```{r justificacion, echo=FALSE, out.width = '88%'}
+knitr::include_graphics("image/flowCharts/justificacion.svg")
+```
+]
+
+???
+*Relevancia social: Al Intenta ofrecer una alternativa para diagnóstico de cáncer. Mediante la manipulación de herramientas y dispositivo médicos, 
+* Tiene un gran impacto económico: Por que el US es la técnica más barata y por ende, ... hospitales de categoria media y alta.
+* A nivel teórico tambien, porque aporta conocimiento en el campo de la robótica medica ...
+Y porque puede abrir una nueva linea .... mecatrónica médica ...
+* A nivel tech., porque pretende aprovechar el potencial robótico para mejorar técnicas convencionales.
+* A nivel metodologíco, porque la hipotesis planteada funciona sobre la una simulación computacional que : ...
+* Y finalmente, por su gran impacto en salud, al buscar mejorar y aliviar el procedimiento de biopsia tanto para médico y paciente en cáncer de mama.
 
 ---
 # Objetivos
@@ -170,18 +241,20 @@ mama para el diagnóstico de cáncer en mujeres?*]
 como sistema de guiado de agujas en biopsia percutánea de mama.
 ]]]
 
+???
+* Así, el objetivo principal a lo largo de todo el estudio fue:...
+
 --
 .right-column[.full-width[.content-box-green[
 ### Objetivos Específicos
-- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot
-clínico para biopsia percutánea de mama guiado por US 3D.
-- Determinar la morfología del robot clínico cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
-- Determinar un modelo cinemático para el robot clínico.
-- Determinar un modelo dinámico pare el robot clínico.
-- Definir un modelo CAD<sup>b</sup> de la estructura física del robot clínico.
+- Identificar las funciones, espacio de trabajo y requerimientos que debe cumplir un robot clínico para biopsia percutánea de mama guiado por US 3D.
+- Determinar la morfología del robot cumpliendo las exigencias de una biopsia percutánea guiada por US 3D.
+- Determinar un modelo cinemático para el robot.
+- Determinar un modelo dinámico pare el robot.
+- Definir un modelo CAD<sup>b</sup> de la estructura física del robot.
 - Generar trayectorias de inserción para agujas en biopsia percutánea de mama guiada robóticamente.
-- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno
-virtual robótico.
+- Simular y verificar por computador el modelo propuesto para el robot clínico en un entorno virtual robótico.
+
 ]]]
 
 .footnote[
@@ -190,29 +263,23 @@ virtual robótico.
 [b] Dibujo Asistido por Computadora.
 ]
 
----
-.left-column[
-# Hipótesis
-.full-width[.content-box-red[
-Mediante el modelamiento y simulación de un robot clínico asistido por US 3D como sistema de guiado de inserción de agujas será posible mejorar la precisión de biopsia percutánea de mama.
-]]
-]
---
-.right-column[
-# Justificación
-```{r justificacion, echo=FALSE, out.width = '88%'}
-knitr::include_graphics("image/flowCharts/justificacion.svg")
-```
-]
+???
+* Y para ello, se cumplió los siguiente objetivos específicos:
+
+Primero, ...
+Seguido por..
+Además de ...
+Obtener un ..
+Para luego...
+Y finalmente, ...
 
 ---
 class: inverse, center, middle
-# Métodos y Materiales
+# Materiales y Métodos
 
 ---
 ```{r child = 'materialesMetodos.Rmd'}
 ```
-
 ---
 class: inverse, center, middle
 # Resultados
@@ -231,6 +298,14 @@ class: inverse, center, middle
 <div class="my-footer"><span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama</span></div>  
 
 ```{r child = 'conclusiones.Rmd'}
+```
+
+---
+class: inverse, center, middle
+#Recomendaciones
+
+---
+```{r child = 'recomendacion.Rmd'}
 ```
 
 ---
