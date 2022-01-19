@@ -173,6 +173,14 @@ thead, tfoot, tr:nth-child(even) { background: none; }
   margin-bottom: 50px;
 }
 
+
+margin-top: 0;
+padding: 0 1em;
+
+margin-bottom: 0.25em;
+
+
+
 /* H2 fonts */
 .title-slide h2 {
   color: #c83737;
