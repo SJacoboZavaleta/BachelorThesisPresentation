@@ -1,14 +1,16 @@
-# Presentaci髇 de Tesis
-## Para obtener el t韙ulo profesional de Ingeniero Mecatr髇ico.
+# Modelamiento y simulaci贸n de un robot cl铆nico asistido por Ultrasonido 3D para mejorar el guiado de inserci贸n de agujas en biopsia percut谩nea de mama
+
+## Presentaci贸n de Tesis para obtener el t铆tulo profesional de Ingeniero Mecatr贸nico.
+
+### Universidad Nacional de Trujillo
+
 ---
-
-> Autor: Sergio Augusto Antenor J醕obo Zavaleta 
-
-> Enlace de reuni髇: [Link to meet-room](https://meet.google.com/ryd-rkbm-hsp)
-
-> Enlace a presentaci髇: [Link to slides](https://uekitayler.github.io/presentacion.html)
-
+> Autor: Sergio Augusto Antenor J谩cobo Zavaleta.  
+> Enlace de reuni贸n: [Link to meet-room](https://meet.google.com/ryd-rkbm-hsp).  
+> Enlace a presentaci贸n: [Link to slides](https://uekitayler.github.io/presentacion.html).  
 > Fecha: 9:00 am. viernes 14 de enero del 2022
 
 
 Slides creados con Rmarkdown, [Xaringan](https://github.com/yihui/xaringan), [XaringanExtra](https://github.com/gadenbuie/xaringanExtra/) y apoyo del workshop para [JavaScript for Shiny Users](https://github.com/rstudio-conf-2020/js-for-shiny).
+
+> Updated: 09-05-2022. Link al repositorio digital de la universidad DSpace [Versi贸n digital](https://dspace.unitru.edu.pe/handle/UNITRU/18679).
