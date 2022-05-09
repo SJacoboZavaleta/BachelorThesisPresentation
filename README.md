@@ -1,6 +1,6 @@
 # Modelamiento y simulación de un robot clínico asistido por Ultrasonido 3D para mejorar el guiado de inserción de agujas en biopsia percutánea de mama
 
-## Presentación de Tesis para obtener el título profesional de Ingeniero Mecatrónico.
+## Presentación de Tesis para obtener el título profesional de Ingeniero Mecatrónico
 
 ### Universidad Nacional de Trujillo
 
@@ -10,7 +10,6 @@
 > Enlace a presentación: [Link to slides](https://sjacobozavaleta.github.io/BachelorThesisPresentation/presentacion.html).  
 > Fecha: 9:00 am. viernes 14 de enero del 2022
 
-
 Slides creados con Rmarkdown, [Xaringan](https://github.com/yihui/xaringan), [XaringanExtra](https://github.com/gadenbuie/xaringanExtra/) y apoyo del workshop para [JavaScript for Shiny Users](https://github.com/rstudio-conf-2020/js-for-shiny).
 
-> Updated: 09-05-2022. Link al repositorio digital de la universidad DSpace [Versión digital](https://dspace.unitru.edu.pe/handle/UNITRU/18679).
+> Updated: 09-05-2022. Link al repositorio digital de la universidad DSpace [Versión digital](https://dspace.unitru.edu.pe/handle/UNITRU/18679)  
